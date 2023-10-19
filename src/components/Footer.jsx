@@ -1,6 +1,7 @@
 import Facebook from "../assets/facebook.svg";
 import Instagram from "../assets/instagram.svg";
 import Twitter from "../assets/twitter.svg";
+import "./CSS/Footer.css";
 
 export default function Footer() {
   return (
@@ -26,7 +27,7 @@ export default function Footer() {
                 <p>Resource Center</p>
               </a>
               <a href="/PokéAPI">
-                <p>PokéAPI</p>
+                <p>V&A Collection</p>
               </a>
               <a href="/Contact">
                 <p>Contact</p>
