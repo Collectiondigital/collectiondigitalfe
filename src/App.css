@@ -1,21 +1,13 @@
-/* whole  Navbar.jsx container  */
-.nav_search {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: rgb(60, 60, 60);
-}
-
 /* Navbar  */
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border-bottom: 1px solid black; */
+  border-bottom: 3px solid rgb(3, 200, 200);
   margin-right: 0.5em;
   margin-bottom: 20px;
   height: 60px;
+  background-color: rgb(60, 60, 60);
 }
 .logo {
   margin-left: 0.5em;
@@ -36,13 +28,19 @@
 }
 /* searchbar  */
 .search {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#search_icon {
+  min-height: 25px;
+  min-width: 25px;
 }
 .search_bar {
   width: 100%;
-  margin-bottom: 20px;
   height: 60px;
 }
 .submit {
