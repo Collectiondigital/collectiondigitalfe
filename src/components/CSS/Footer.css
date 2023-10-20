@@ -1,5 +1,6 @@
 .sb__footer {
   flex-direction: column;
+  background-color: rgb(60, 60, 60);
 }
 .sb__footer-links {
   display: flex;
@@ -49,20 +50,21 @@ a {
 .sb__footer-below-links {
   display: flex;
   flex-direction: row;
+  margin-right: 1em;
 }
 .sb__footer-below-links p {
   font-size: 13px;
   line-height: 15px;
   margin-left: 2rem;
-  color: white;
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.657);
+  font-weight: 400;
 }
 
 .sb__footer-copyright {
   font-size: 13px;
   line-height: 15px;
-  color: rgb(255.255.255);
-  font-weight: 600;
+  color: rgba(255, 255, 255, 0.657);
+  font-weight: 400;
 }
 a:hover {
   color: rgb(113, 113, 230);
@@ -80,14 +82,11 @@ a:hover {
     line-height: 20px;
   }
   .sb__footer-below {
-    flex-direction: column;
     justify-content: left;
   }
   .sb__footer-below-links {
-    flex-direction: column;
   }
   .sb__footer-below-links p {
-    margin-left: 0rem;
     margin-top: 1rem;
   }
 }

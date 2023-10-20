@@ -1,3 +1,50 @@
-* {
-  background-color: grey;
+/* whole  Navbar.jsx container  */
+.nav_search {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(60, 60, 60);
+}
+
+/* Navbar  */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid black; */
+  margin-right: 0.5em;
+  margin-bottom: 20px;
+  height: 60px;
+}
+.logo {
+  margin-left: 0.5em;
+  background-color: white;
+}
+.nav_buttons_container {
+  width: 30%;
+}
+.nav_buttons {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+}
+.nav_a {
+  text-decoration: none;
+  color: white;
+}
+/* searchbar  */
+.search {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  display: flex;
+}
+.search_bar {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 60px;
+}
+.submit {
+  height: 60px;
 }
