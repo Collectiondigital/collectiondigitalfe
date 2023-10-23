@@ -36,35 +36,26 @@ export default function Footer() {
                 <p>About us</p>
               </a>
             </div>
-            <div className="sb__footer-links_div">
-              <h4>Partner</h4>
-              <a href="/Company">
-                <p>Company</p>
-              </a>
-              <a href="/Sponsors">
-                <p>Sponsors</p>
-              </a>
-            </div>
-            <div className="socialmedia">
-              <p>
-                <a className="social" href="/Facebook">
-                  <img src={Facebook} alt="FACEBOOK" />
-                </a>
-              </p>
 
-              <p>
-                <a className="social" href="/Twitter">
-                  <img src={Twitter} alt="TWITTER" />
+            <div className="socialmedia">
+              <div className="social1">
+                <a href="/Facebook">
+                  <div className="social-containerf"></div>
                 </a>
-              </p>
-              <p>
-                <a className="social" href="/Instagram">
-                  <img src={Instagram} alt="INSTA" />
+              </div>
+              <div className="social1">
+                <a href="/Twitter">
+                  <div className="social-containert"></div>
                 </a>
-              </p>
+              </div>
+              <div className="social1">
+                <a href="/Instagram">
+                  <div className="social-containeri"></div>
+                </a>
+              </div>
             </div>
           </div>
-          <div style={{ margin: "1rem", color: "rgb(175, 175, 179)" }}>
+          <div style={{ marginBottom: "1rem", color: "rgb(175, 175, 179)" }}>
             <p className="disclaim">
               The Data used on this Website is provided by V&A Collection Click{" "}
               <a href="" style={{ textDecoration: "underline" }}>
@@ -80,8 +71,11 @@ export default function Footer() {
           <div className="sb__footer-copyright">
             <p>
               @{new Date().getFullYear()} WBS Group Four. All rights are
-              reserved. This Website was built and designed by Sona Chaboud,
-              Jennifer Rothrock and Kevin Kalus
+              reserved.
+            </p>
+            <p style={{ marginTop: "4px" }}>
+              Built and designed by Sona Chaboud, Jennifer Rothrock and Kevin
+              Kalus
             </p>
           </div>
           <div className="sb__footer-below-links">
