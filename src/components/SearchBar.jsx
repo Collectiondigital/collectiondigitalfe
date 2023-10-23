@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import "./CSS/Searchbar.css";
+
 export default function Searchbar() {
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
@@ -21,34 +23,40 @@ export default function Searchbar() {
 
   return (
     <>
-      <div className="bar">
+      <div className="searchbar_container">
         <label style={{ margin: "0.4em" }}>
           <FaSearch />
         </label>
         <input
-          className="searcher"
+          className="searchbar"
           placeholder="Type here to search ..."
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
-      <br />
-      <div className="searched">
+
+      <div className="search_results_container">
+        <h1>Search Results : </h1>
+      </div>
+
+      <div className="card_container">
         {data
           ? data.map((record) => (
-              <div key={record.accessionNumber} className="results">
-                <h5>
-                  {record._primaryTitle
-                    ? record._primaryTitle
-                    : "There is no name for this Collection :("}
-                </h5>
+            <div className="item_card" key={record.id}>
+              <div className="img_card">
                 <img
-                  className="result_pic"
-                  src={`${record._images._iiif_image_base_url}/full/900,/0/default.jpg`}
-                />
+                  className="result_img"
+                  src={`${record._images._iiif_image_base_url}/full/250,/0/default.jpg`} />
               </div>
-            ))
+
+              <div className="text_card">
+                <h3>{record.objectType ? record.objectType : "Object type unknown"}</h3>
+                <p>{record.name ? record.name : "Maker unknown"}</p>
+                <p>{record._primaryDate ? record._primaryDate : "Date unknown"}</p>
+              </div>
+            </div>
+          ))
           : null}
       </div>
     </>
