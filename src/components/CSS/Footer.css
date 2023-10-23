@@ -65,6 +65,7 @@ a {
   line-height: 15px;
   color: rgba(255, 255, 255, 0.657);
   font-weight: 400;
+  margin-left: 1em;
 }
 a:hover {
   color: rgb(113, 113, 230);
