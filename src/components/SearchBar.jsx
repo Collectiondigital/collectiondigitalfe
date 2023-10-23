@@ -37,26 +37,33 @@ export default function Searchbar() {
       </div>
 
       <div className="search_results_container">
-        <h1>Search Results : </h1>
+        <h1>{`Search Results : ${data.length} Items found`} </h1>
       </div>
 
       <div className="card_container">
         {data
           ? data.map((record) => (
-            <div className="item_card" key={record.id}>
-              <div className="img_card">
-                <img
-                  className="result_img"
-                  src={`${record._images._iiif_image_base_url}/full/250,/0/default.jpg`} />
-              </div>
+              <div className="item_card" key={record.id}>
+                <div className="img_card">
+                  <img
+                    className="result_img"
+                    src={`${record._images._iiif_image_base_url}/full/250,/0/default.jpg`}
+                  />
+                </div>
 
-              <div className="text_card">
-                <h3>{record.objectType ? record.objectType : "Object type unknown"}</h3>
-                <p>{record.name ? record.name : "Maker unknown"}</p>
-                <p>{record._primaryDate ? record._primaryDate : "Date unknown"}</p>
+                <div className="text_card">
+                  <h3>
+                    {record.objectType
+                      ? record.objectType
+                      : "Object type unknown"}
+                  </h3>
+                  <p>{record.name ? record.name : "Maker unknown"}</p>
+                  <p>
+                    {record._primaryDate ? record._primaryDate : "Date unknown"}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))
+            ))
           : null}
       </div>
     </>

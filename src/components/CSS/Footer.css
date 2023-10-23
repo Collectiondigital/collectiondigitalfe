@@ -25,7 +25,30 @@ a {
 .socialmedia {
   display: flex;
   flex-direction: row;
-  margin: 1%;
+}
+.social-containerf {
+  background-image: url(../../assets/Facebook.svg);
+  background-position: cover;
+  background-repeat: inherit;
+  width: 36px;
+  height: 36px;
+}
+.social-containert {
+  background-image: url(../../assets/Twitter.svg);
+  background-position: cover;
+  background-repeat: inherit;
+  width: 36px;
+  height: 36px;
+}
+.social-containeri {
+  background-image: url(../../assets/Instagram.svg);
+  background-position: cover;
+  background-repeat: inherit;
+  width: 36px;
+  height: 36px;
+}
+.social1 {
+  margin: 5px;
 }
 .socialmedia img {
   width: 80%;
@@ -67,6 +90,7 @@ a {
   color: rgba(255, 255, 255, 0.657);
   font-weight: 400;
   margin-left: 1em;
+  margin-top: 5px;
 }
 a:hover {
   color: rgb(113, 113, 230);
