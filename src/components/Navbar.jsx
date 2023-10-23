@@ -3,10 +3,9 @@ import Logo from "../assets/CD_logo.svg";
 import { AuthContext } from "../context/authContext";
 import { useContext } from "react";
 import { useJwt } from "react-jwt";
-// import { Routes, Route } from "react-router-dom";
 
 import "../assets/CD_logo.svg";
-// import { Routes, Route } from "react-router-dom";
+
 import Login from "./Login";
 import "./CSS/Navbar.css";
 
@@ -20,7 +19,8 @@ export default function Navbar() {
   };
 
   const { decodedToken } = useJwt(token);
-
+  console.log(decodedToken);
+  console.log("TOKEEEN", token);
   return (
     <>
       <div className="navbar_container">
@@ -57,19 +57,17 @@ export default function Navbar() {
         <nav>
           {token !== null && (
             <div>
-              <span style={{ padding: "10px" }}>
-                Hello, {decodedToken?.name}
-              </span>
-              <button onClick={handleClick}>Log out</button>
+              <span className="hello">Hello, {decodedToken?.name}</span>
+              <div>
+                <button className="logout-button" onClick={handleClick}>
+                  Log out
+                </button>
+              </div>
             </div>
           )}
           {token === null && (
             <div>
-              {/*  <button
-                type="submit"
-                onClick={() => navigate("user/login")}
-              ></button> */}
-              <NavLink to="/user/login">Login</NavLink>
+              <NavLink to="/user/login">Login </NavLink>
 
               <NavLink to="/user/signup">Signup</NavLink>
             </div>
