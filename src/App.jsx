@@ -14,9 +14,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Signup />
-      <Login />
-      <SearchBar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/user/login" element={<Login />} />
@@ -35,6 +33,7 @@ function App() {
         />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <SearchBar />
       <Footer />
     </>
   );

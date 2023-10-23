@@ -40,9 +40,8 @@ export default function Login() {
 
   return (
     <>
-
       <div>
-        <h1>hello from logiiin</h1>
+        <h1>Login</h1>
       </div>
       <LoadingOverlay active={isLoading} spinner text="Logging in...">
         <form className="login" onSubmit={handleSubmit}>
@@ -64,7 +63,6 @@ export default function Login() {
           {error && <div className="error">{error}</div>}
         </form>
       </LoadingOverlay>
-
     </>
   );
 }

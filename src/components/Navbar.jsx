@@ -1,4 +1,3 @@
-
 import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../assets/CD_logo.svg";
 import { AuthContext } from "../context/authContext";
@@ -10,7 +9,6 @@ import "../assets/CD_logo.svg";
 // import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import "./CSS/Navbar.css";
-
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -28,7 +26,7 @@ export default function Navbar() {
       <div className="navbar_container">
         <div className="logo">
           <a href="./Home">
-            <img alt="logo" src="./src/assets/CD_logo.svg" className="logo" />
+            <img alt="logo" src="../src/assets/CD_logo.svg" className="logo" />
           </a>
         </div>
         <div className="nav_items_container">
@@ -77,9 +75,6 @@ export default function Navbar() {
             </div>
           )}
         </nav>
-
-      
-
       </div>
     </>
   );

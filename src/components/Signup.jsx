@@ -39,7 +39,7 @@ export default function Signup({ setUser }) {
 
   return (
     <>
-      <h1>huu from signup</h1>
+      <h1>Signup</h1>
       <LoadingOverlay active={isLoading} spinner text="Signing in...">
         <form className="signup" onSubmit={handleSubmit}>
           <label>username: </label>
