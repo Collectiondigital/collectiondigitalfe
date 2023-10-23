@@ -20,24 +20,28 @@ export default function Searchbar() {
   console.log("QUERY: ", query);
 
   return (
-    <div>
-      <label style={{ margin: "0.4em" }}>
-        <FaSearch />
-      </label>
-      <input
-        className="searcher"
-        placeholder="Type here to search ..."
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
+    <>
+      <div className="bar">
+        <label style={{ margin: "0.4em" }}>
+          <FaSearch />
+        </label>
+        <input
+          className="searcher"
+          placeholder="Type here to search ..."
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </div>
       <br />
       <div className="searched">
         {data
           ? data.map((record) => (
               <div key={record.accessionNumber} className="results">
                 <h5>
-                  {record._primaryTitle ? record._primaryTitle : "No name"}
+                  {record._primaryTitle
+                    ? record._primaryTitle
+                    : "There is no name for this Collection :("}
                 </h5>
                 <img
                   className="result_pic"
@@ -47,6 +51,6 @@ export default function Searchbar() {
             ))
           : null}
       </div>
-    </div>
+    </>
   );
 }
