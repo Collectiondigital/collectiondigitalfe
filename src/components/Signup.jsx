@@ -2,9 +2,10 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import LoadingOverlay from "react-loading-overlay";
 
-export default function Login() {
+export default function Signup({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,10 +17,10 @@ export default function Login() {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch("http://localhost:7070/user/login", {
+    const response = await fetch("http://localhost:7070/user/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, password, username }),
     });
 
     const data = await response.json();
@@ -30,22 +31,24 @@ export default function Login() {
     }
 
     if (response.ok) {
-      setTimeout(() => {
-        localStorage.setItem("token", data.token);
-        setIsLoading(false);
-        login(data.token);
-      }, 5000);
+      localStorage.setItem("token", data.token);
+      setIsLoading(false);
+      login(data.token);
     }
   };
 
   return (
     <>
+      <h1>huu from signup</h1>
+      <LoadingOverlay active={isLoading} spinner text="Signing in...">
+        <form className="signup" onSubmit={handleSubmit}>
+          <label>username: </label>
+          <input
+            type="text"
+            onChange={(e) => setUsername(e.target.value)}
+            value={username}
+          />
 
-      <div>
-        <h1>hello from logiiin</h1>
-      </div>
-      <LoadingOverlay active={isLoading} spinner text="Logging in...">
-        <form className="login" onSubmit={handleSubmit}>
           <label>email: </label>
           <input
             type="email"
@@ -60,11 +63,10 @@ export default function Login() {
             value={password}
           />
 
-          <button className="login_button">Log in</button>
+          <button>Sign up</button>
           {error && <div className="error">{error}</div>}
         </form>
       </LoadingOverlay>
-
     </>
   );
 }

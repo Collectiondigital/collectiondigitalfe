@@ -1,9 +1,28 @@
+
+import { NavLink, useNavigate } from "react-router-dom";
+import Logo from "../assets/CD_logo.svg";
+import { AuthContext } from "../context/authContext";
+import { useContext } from "react";
+import { useJwt } from "react-jwt";
+// import { Routes, Route } from "react-router-dom";
+
 import "../assets/CD_logo.svg";
 // import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import "./CSS/Navbar.css";
 
+
 export default function Navbar() {
+  const navigate = useNavigate();
+  const { logout, token } = useContext(AuthContext);
+
+  const handleClick = () => {
+    localStorage.removeItem("token");
+    logout();
+  };
+
+  const { decodedToken } = useJwt(token);
+
   return (
     <>
       <div className="navbar_container">
@@ -36,9 +55,31 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="login_button">
-          <button className="login_button">Login</button>
-        </div>
+
+        <nav>
+          {token !== null && (
+            <div>
+              <span style={{ padding: "10px" }}>
+                Hello, {decodedToken?.name}
+              </span>
+              <button onClick={handleClick}>Log out</button>
+            </div>
+          )}
+          {token === null && (
+            <div>
+              {/*  <button
+                type="submit"
+                onClick={() => navigate("user/login")}
+              ></button> */}
+              <NavLink to="/user/login">Login</NavLink>
+
+              <NavLink to="/user/signup">Signup</NavLink>
+            </div>
+          )}
+        </nav>
+
+      
+
       </div>
     </>
   );

@@ -2,6 +2,7 @@ export default function Home() {
 
 
 
+
     return (
         <>
             {/* Navbar */}
@@ -50,3 +51,4 @@ export default function Home() {
 
     );
 }
+
