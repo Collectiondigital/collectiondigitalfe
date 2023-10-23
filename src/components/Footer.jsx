@@ -64,13 +64,24 @@ export default function Footer() {
               </p>
             </div>
           </div>
+          <div style={{ margin: "1rem", color: "rgb(175, 175, 179)" }}>
+            <p className="disclaim">
+              The Data used on this Website is provided by V&A Collection Click{" "}
+              <a href="" style={{ textDecoration: "underline" }}>
+                {" "}
+                here
+              </a>{" "}
+              to access the Data
+            </p>
+          </div>
         </div>
         <hr></hr>
         <div className="sb__footer-below">
           <div className="sb__footer-copyright">
             <p>
               @{new Date().getFullYear()} WBS Group Four. All rights are
-              reserved.
+              reserved. This Website was built and designed by Sona Chaboud,
+              Jennifer Rothrock and Kevin Kalus
             </p>
           </div>
           <div className="sb__footer-below-links">
