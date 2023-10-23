@@ -46,3 +46,22 @@
 .submit {
   height: 60px;
 }
+.searched {
+  border: 2px solid red;
+  justify-content: center;
+  align-items: center;
+}
+.results {
+  border: 2px solid green;
+  width: 210px;
+  height: 160px;
+  margin: 20px;
+  padding: 5px;
+}
+.result_pic {
+  width: 210px;
+  height: 140px;
+}
+.searcher {
+  margin-bottom: 10px;
+}

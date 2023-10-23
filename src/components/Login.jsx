@@ -1,7 +1,7 @@
 export default function Login() {
   return (
     <>
-      <button>Login</button>
+      <button className="login_button">Login</button>
     </>
   );
 }
