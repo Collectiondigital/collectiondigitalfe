@@ -24,10 +24,21 @@ export default function Searchbar() {
   return (
     <>
       <div className="searchbar_container">
-        <label style={{ margin: "0.4em" }}>
-          <FaSearch />
+        <label style={{ alignItems: "center", display: "flex" }}>
+          <button
+            style={{
+              height: "100%",
+              width: "100%",
+              padding: "5px",
+              borderRadius: "0",
+              border: "none",
+            }}
+          >
+            <FaSearch />
+          </button>
         </label>
         <input
+          style={{ height: "100%", width: "100%" }}
           className="searchbar"
           placeholder="Type here to search ..."
           type="text"
