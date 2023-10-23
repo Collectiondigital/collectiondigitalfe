@@ -50,6 +50,7 @@ a {
 .sb__footer-below-links {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-right: 1em;
 }
 .sb__footer-below-links p {
