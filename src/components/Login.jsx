@@ -40,6 +40,7 @@ export default function Login() {
 
   return (
     <>
+
       <div>
         <h1>hello from logiiin</h1>
       </div>
@@ -63,6 +64,7 @@ export default function Login() {
           {error && <div className="error">{error}</div>}
         </form>
       </LoadingOverlay>
+
     </>
   );
 }

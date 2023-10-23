@@ -1,9 +1,16 @@
+
 import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../assets/CD_logo.svg";
 import { AuthContext } from "../context/authContext";
 import { useContext } from "react";
 import { useJwt } from "react-jwt";
 // import { Routes, Route } from "react-router-dom";
+
+import "../assets/CD_logo.svg";
+// import { Routes, Route } from "react-router-dom";
+import Login from "./Login";
+import "./CSS/Navbar.css";
+
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -18,17 +25,22 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="navbar">
+      <div className="navbar_container">
         <div className="logo">
-          <a className="img_logo" href="/CD_logo">
-            <img src={Logo} alt="TWITTER" />
+          <a href="./Home">
+            <img alt="logo" src="./src/assets/CD_logo.svg" className="logo" />
           </a>
         </div>
-        <div className="nav_buttons_container">
-          <ul className="nav_buttons">
+        <div className="nav_items_container">
+          <ul>
             <li>
               <a className="nav_a" href="#">
                 Home
+              </a>
+            </li>
+            <li>
+              <a className="nav_a" href="#">
+                Pricing
               </a>
             </li>
             <li>
@@ -43,6 +55,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
+
         <nav>
           {token !== null && (
             <div>
@@ -64,6 +77,9 @@ export default function Navbar() {
             </div>
           )}
         </nav>
+
+      
+
       </div>
     </>
   );
