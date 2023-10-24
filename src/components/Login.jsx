@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import LoadingOverlay from "react-loading-overlay";
-
+import Navbar from "./Navbar";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,6 +43,7 @@ export default function Login() {
 
   return (
     <>
+      <Navbar />
       <div>
         <h1>Login</h1>
       </div>

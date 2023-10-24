@@ -1,9 +1,5 @@
-body  {
+body {
   max-width: 960px;
   margin: auto;
   background-color: #242424;
-}
-.disclaim {
-  font-size: 12px;
-  line-height: 15px;
 }
