@@ -55,7 +55,7 @@ export default function Home() {
         </div>
       </div>
       <h3 style={{ marginTop: "2%", marginBottom: "2%", color: "white" }}>
-        Offer
+        New Collections
       </h3>
 
       <div className="new_collections_card">

@@ -21,6 +21,7 @@ export default function Navbar() {
   const { decodedToken } = useJwt(token);
   console.log(decodedToken);
   console.log("TOKEEEN", token);
+
   return (
     <>
       <div className="navbar_container">
@@ -66,10 +67,10 @@ export default function Navbar() {
             </div>
           )}
           {token === null && (
-            <div>
-              <NavLink to="/user/login">Login </NavLink>
+            <div className="login_signup_container">
+              <NavLink className="login" to="/user/login">Login</NavLink>
 
-              <NavLink to="/user/signup">Signup</NavLink>
+              <NavLink className="signup" to="/user/signup">Signup</NavLink>
             </div>
           )}
         </nav>

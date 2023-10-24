@@ -26,7 +26,7 @@ export default function Footer() {
               <a href="/Resources">
                 <p>Resource Center</p>
               </a>
-              <a href="/PokéAPI">
+              <a href="/V&A Collection">
                 <p>V&A Collection</p>
               </a>
               <a href="/Contact">

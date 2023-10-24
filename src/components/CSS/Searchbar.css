@@ -1,24 +1,16 @@
 .searchbar_container {
   height: 60px;
   margin-bottom: 20px;
-  border: 2px solid #5d5d5d;
   display: flex;
-}
-
-.search {
-  color: #000;
-}
-
-input {
-  color: #000;
 }
 
 .search_results_container {
   margin-bottom: 20px;
+  
 }
 
 h1 {
-  color: #c3b1e1;
+  color: rgb(3, 200, 200);
 }
 
 .card_container {

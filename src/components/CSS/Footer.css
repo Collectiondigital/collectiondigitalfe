@@ -93,8 +93,10 @@ a {
   margin-top: 5px;
 }
 a:hover {
-  color: rgb(113, 113, 230);
+  color: rgb(3, 200, 200);
 }
+
+
 @media screen and (max-width: 500px) {
   .sb__footer-heading h1 {
     font-size: 34px;
