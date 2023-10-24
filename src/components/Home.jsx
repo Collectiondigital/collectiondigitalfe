@@ -5,7 +5,7 @@ import Footer from "./Footer";
 export default function Home() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div
         style={{
           display: "flex",
@@ -54,16 +54,25 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <h3 style={{ marginTop: "2%", marginBottom: "2%", color: "white" }}>
         New Collections
-      </h3>
+      <h3
+        style={{
+          marginTop: "2em",
+          marginBottom: "2%",
+          color: "white",
+          borderTop: "1px solid grey",
+          paddingTop: "2%",
+        }}
+      >
 
       <div className="new_collections_card">
         <img src="" alt="" />
         <h5>name of collection</h5>
         <p>short description of collection</p>
       </div>
-      
+
       <Footer />
     </>
   );
