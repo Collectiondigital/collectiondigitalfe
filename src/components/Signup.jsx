@@ -45,6 +45,7 @@ export default function Signup({ setUser }) {
 
   return (
     <div>
+      <Navbar />
       <div>
         <NavLink to="/">
           <span>
