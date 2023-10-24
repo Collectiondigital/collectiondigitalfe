@@ -19,11 +19,14 @@ export default function Signup({ setUser }) {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch("http://localhost:7070/user/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password, username }),
-    });
+    const response = await fetch(
+      "https://collectiondigitalbe.onrender.com/user/signup",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password, username }),
+      }
+    );
 
     const data = await response.json();
 

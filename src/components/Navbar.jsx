@@ -3,6 +3,7 @@ import Logo from "../assets/CD_logo.svg";
 import { AuthContext } from "../context/authContext";
 import { useContext } from "react";
 import { useJwt } from "react-jwt";
+import LoginModal from "./LoginModal";
 
 import "../assets/CD_logo.svg";
 
@@ -62,8 +63,12 @@ export default function Navbar() {
             </div>
           )}
           {token === null && (
-            <div className="login_signup_container">
-              <NavLink className="login" to="/user/login">Login</NavLink>
+
+            <div>
+              <NavLink to="/user/login">Login /</NavLink>
+
+           
+
 
               <NavLink className="signup" to="/user/signup">Signup</NavLink>
             </div>
