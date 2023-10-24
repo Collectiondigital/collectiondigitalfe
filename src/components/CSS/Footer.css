@@ -155,7 +155,7 @@ a:hover {
   --s: 50px; /* the size of the image */
   --b: 4px; /* the border thickness*/
   --g: -3px;
-  --c: #c3b1e1; /* the color */
+  --c: rgb(3, 200, 200); /* the color */
 
   width: var(--s);
   aspect-ratio: 1;
