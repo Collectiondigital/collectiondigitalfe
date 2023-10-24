@@ -57,15 +57,7 @@ export default function Home() {
 
       <h3 style={{ marginTop: "2%", marginBottom: "2%", color: "white" }}>
         New Collections
-      <h3
-        style={{
-          marginTop: "2em",
-          marginBottom: "2%",
-          color: "white",
-          borderTop: "1px solid grey",
-          paddingTop: "2%",
-        }}
-      >
+      </h3>
 
       <div className="new_collections_card">
         <img src="" alt="" />
