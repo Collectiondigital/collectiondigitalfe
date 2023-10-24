@@ -3,6 +3,7 @@ import { AuthContext } from "../context/authContext";
 import LoadingOverlay from "react-loading-overlay";
 import "./CSS/Signup.css";
 import Navbar from "./Navbar";
+import { NavLink } from "react-router-dom";
 
 export default function Signup({ setUser }) {
   const [email, setEmail] = useState("");

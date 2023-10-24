@@ -20,6 +20,12 @@ label.label-text {
   color: white;
 }
 
+.arrow-image {
+  background-color: #242424;
+  width: 5%;
+  height: 10%;
+}
+
 .posts {
   text-align: center;
   max-width: 600px;
@@ -84,7 +90,7 @@ input.error {
 form.signup,
 form.login {
   max-width: 400px;
-  margin: 40px auto;
+  margin: 100px auto;
   padding: 20px;
   background: rgb(60, 60, 60);
   border-radius: 4px;
