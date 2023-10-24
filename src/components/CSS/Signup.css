@@ -3,8 +3,21 @@ body {
 }
 
 :root {
-  --primary: #1aac83;
+  --primary: #242424;
   --error: #e7195a;
+}
+
+label.label-text {
+  color: white;
+}
+
+.hello {
+  color: white;
+}
+
+.logout-button {
+  background-color: #242424;
+  color: white;
 }
 
 .posts {
@@ -73,6 +86,6 @@ form.login {
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
-  background: #fff;
+  background: rgb(60, 60, 60);
   border-radius: 4px;
 }

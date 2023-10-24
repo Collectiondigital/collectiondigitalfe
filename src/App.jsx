@@ -14,17 +14,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <Signup />
-      <Login />
-      <SearchBar />
+
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/user/login" element={<Login />} />
-        <Route path="/user/signup" element={<Signup />} />
-        <Route
-          path="/"
-          element={token ? <Home /> : <Navigate to="/user/login" />}
-        />
+        <Route path="/" element={token ? <Home /> : <Navigate to="/" />} />
         <Route
           path="/user/login"
           element={!token ? <Login /> : <Navigate to="/" />}
@@ -35,6 +27,8 @@ function App() {
         />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <br />
+      <SearchBar />
       <Footer />
     </>
   );
