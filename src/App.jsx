@@ -8,6 +8,8 @@ import SearchBar from "./components/SearchBar";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Home from "./components/Home";
+import IndItemPage from "./components/IndItemPage";
+import SearchResults from "./components/SearchResults";
 
 function App() {
   const { token } = useContext(AuthContext);
@@ -25,10 +27,12 @@ function App() {
           path="/user/signup"
           element={!token ? <Signup /> : <Navigate to="/" />}
         />
+        <Route path="/IndItemPage" element={<IndItemPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <br />
       <SearchBar />
+      {/* <SearchResults /> */}
       <Footer />
     </>
   );

@@ -25,7 +25,7 @@ export default function Navbar() {
     <>
       <div className="navbar_container">
         <div className="logo">
-          <a href="./Home">
+          <a href="./">
             <img alt="logo" src="../src/assets/CD_logo.svg" className="logo" />
           </a>
         </div>

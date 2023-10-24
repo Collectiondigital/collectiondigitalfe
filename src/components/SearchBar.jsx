@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./CSS/Searchbar.css";
 
 export default function Searchbar() {
@@ -18,13 +19,13 @@ export default function Searchbar() {
   useEffect(() => {
     fetchData();
   }, [query]);
-
+  const [a, rest] = query;
   console.log("QUERY: ", query);
 
   return (
     <>
       <div className="searchbar_container">
-        <label style={{ alignItems: "center", display: "flex" }}>
+        <label style={{ display: "flex", margin: "0px", padding: "0px" }}>
           <button
             style={{
               height: "100%",
@@ -38,7 +39,7 @@ export default function Searchbar() {
           </button>
         </label>
         <input
-          style={{ height: "100%", width: "100%" }}
+          style={{ height: "100%", width: "100%", margin: "0" }}
           className="searchbar"
           placeholder="Type here to search ..."
           type="text"
@@ -56,10 +57,12 @@ export default function Searchbar() {
           ? data.map((record) => (
               <div className="item_card" key={record.id}>
                 <div className="img_card">
-                  <img
-                    className="result_img"
-                    src={`${record._images._iiif_image_base_url}/full/250,/0/default.jpg`}
-                  />
+                  <NavLink to="/IndItemPage">
+                    <img
+                      className="result_img"
+                      src={`${record._images._iiif_image_base_url}/full/250,/0/default.jpg`}
+                    />
+                  </NavLink>
                 </div>
 
                 <div className="text_card">
