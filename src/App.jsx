@@ -8,14 +8,13 @@ import IndItemPage from "./components/IndItemPage";
 import Home from "./components/Home";
 import Searchbar from "./components/SearchBar";
 
-
 function App() {
   const { token } = useContext(AuthContext);
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/search" element={<Searchbar />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Searchbar />} />
 
         <Route path="/" element={token ? <Home /> : <Navigate to="/" />} />
         <Route

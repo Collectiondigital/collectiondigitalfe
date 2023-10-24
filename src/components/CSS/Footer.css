@@ -1,5 +1,21 @@
 .sb__footer {
+  display: flex;
   flex-direction: column;
+  background-color: rgb(60, 60, 60);
+  width: 80%;
+  justify-content: center;
+  border-top: 1px solid white;
+  margin-top: 2em;
+}
+.sb__footer-padding {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid white;
+}
+.centering {
+  display: flex;
+  justify-content: center;
   background-color: rgb(60, 60, 60);
 }
 .sb__footer-links {
@@ -10,11 +26,14 @@
   width: 100%;
   text-align: left;
 }
+.sb__footer-links .socialmedia {
+  align-self: center;
+}
 .sb__footer-links_div {
   width: 150px;
   margin: 1rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
   color: white;
 }
@@ -27,28 +46,22 @@ a {
   flex-direction: row;
 }
 .social-containerf {
-  background-image: url(../../assets/Facebook.svg);
-  background-position: cover;
-  background-repeat: inherit;
-  width: 36px;
-  height: 36px;
+  background-color: #3c3c3c;
+  width: 50px;
+  height: 50px;
 }
 .social-containert {
-  background-image: url(../../assets/Twitter.svg);
-  background-position: cover;
-  background-repeat: inherit;
-  width: 36px;
-  height: 36px;
+  background-color: #3c3c3c;
+  width: 50px;
+  height: 50px;
 }
 .social-containeri {
-  background-image: url(../../assets/Instagram.svg);
-  background-position: cover;
-  background-repeat: inherit;
-  width: 36px;
-  height: 36px;
+  background-color: #3c3c3c;
+  width: 50px;
+  height: 50px;
 }
 .social1 {
-  margin: 5px;
+  margin: 1em;
 }
 .socialmedia img {
   width: 80%;
@@ -66,7 +79,7 @@ a {
 }
 .sb__footer-below {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin-top: 0.2rem;
 }
@@ -79,7 +92,7 @@ a {
 .sb__footer-below-links p {
   font-size: 13px;
   line-height: 15px;
-  margin-left: 2rem;
+  margin-left: 1rem;
   color: rgba(255, 255, 255, 0.657);
   font-weight: 400;
 }
@@ -92,8 +105,21 @@ a {
   margin-left: 1em;
   margin-top: 5px;
 }
+.botline {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
 a:hover {
   color: rgb(113, 113, 230);
+}
+.disclaim {
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 1em;
 }
 @media screen and (max-width: 500px) {
   .sb__footer-heading h1 {
@@ -122,4 +148,27 @@ a:hover {
     font-size: 27px;
     line-height: 38px;
   }
+}
+
+.social1 img {
+  --s: 50px; /* the size of the image */
+  --b: 4px; /* the border thickness*/
+  --g: -3px;
+  --c: #c3b1e1; /* the color */
+
+  width: var(--s);
+  aspect-ratio: 1;
+
+  outline-offset: calc(var(--s) / -2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.social1 img:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--g);
+  border-radius: 100%;
+}
+
+.social1 img + img {
+  border-radius: 50%;
 }
