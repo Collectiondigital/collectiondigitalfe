@@ -1,0 +1,31 @@
+.new_collections_card {
+  padding-bottom: 2%;
+  border-bottom: 1px solid grey;
+}
+.test {
+  display: flex;
+  justify-content: space-around;
+}
+.homepage_card {
+  width: 25%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid grey;
+}
+.homepage_h5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homepage_h5 p {
+  text-align: center;
+  color: white;
+}
+.homepage_h5 h5 {
+  color: #c3b1e1;
+  margin: 5px;
+  font-size: 15px;
+}
