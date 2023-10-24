@@ -44,6 +44,7 @@ export default function Login() {
 
   return (
     <>
+      <Navbar />
       <div>
         <NavLink to="/">
           <span>

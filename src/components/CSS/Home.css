@@ -1,6 +1,10 @@
 .new_collections_card {
   padding-bottom: 2%;
   border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .test {
   display: flex;
@@ -25,7 +29,7 @@
   color: white;
 }
 .homepage_h5 h5 {
-  color: #c3b1e1;
+  color: rgb(3, 200, 200);
   margin: 5px;
   font-size: 15px;
 }

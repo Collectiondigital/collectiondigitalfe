@@ -5,7 +5,7 @@ import Footer from "./Footer";
 export default function Home() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div
         style={{
           display: "flex",
@@ -54,8 +54,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <h3 style={{ marginTop: "2%", marginBottom: "2%", color: "white" }}>
-        Offer
+        New Collections
       </h3>
 
       <div className="new_collections_card">
@@ -63,7 +64,7 @@ export default function Home() {
         <h5>name of collection</h5>
         <p>short description of collection</p>
       </div>
-      
+
       <Footer />
     </>
   );

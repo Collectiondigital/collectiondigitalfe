@@ -21,35 +21,33 @@ export default function Navbar() {
   const { decodedToken } = useJwt(token);
   console.log(decodedToken);
   console.log("TOKEEEN", token);
+
   return (
     <>
       <div className="navbar_container">
         <div className="logo">
-          <a href="./">
-            <img alt="logo" src="../src/assets/CD_logo.svg" className="logo" />
-          </a>
+          <NavLink to="/">
+            {" "}
+            <img
+              alt="logo"
+              src="../src/assets/CD_logo.svg"
+              className="logo"
+            />{" "}
+          </NavLink>
         </div>
         <div className="nav_items_container">
           <ul>
             <li>
-              <a className="nav_a" href="#">
-                Home
-              </a>
+              <NavLink to="/Pricing">Pricing </NavLink>
             </li>
             <li>
-              <a className="nav_a" href="#">
-                Pricing
-              </a>
+              <NavLink to="/About">About </NavLink>
             </li>
             <li>
-              <a className="nav_a" href="#">
-                About
-              </a>
+              <NavLink to="/Contact">Contact </NavLink>
             </li>
             <li>
-              <a className="nav_a" href="#">
-                Contact
-              </a>
+              <NavLink to="/Search">Search </NavLink>
             </li>
             <li>
               <nav>
