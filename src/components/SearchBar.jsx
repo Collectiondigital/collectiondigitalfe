@@ -27,23 +27,36 @@ export default function Searchbar() {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="searchbar_container">
-        <label style={{ display: "flex", margin: "0px", padding: "0px" }}>
+
+        <label style={{
+          display: "flex",
+          margin: "0px",
+          padding: "0px"
+        }}>
           <button
             style={{
               height: "100%",
               width: "100%",
-              padding: "5px",
+              padding: "15px",
               borderRadius: "0",
               border: "none",
             }}
           >
             <FaSearch />
           </button>
+
         </label>
         <input
-          style={{ height: "100%", width: "100%", margin: "0" }}
+          style={{
+            height: "100%",
+            width: "100%",
+            margin: "0",
+            paddingLeft: "15px",
+            borderRadius: "0",
+            outline: "none"
+          }}
           className="searchbar"
           placeholder="Type here to search ..."
           type="text"
@@ -59,29 +72,29 @@ export default function Searchbar() {
       <div className="card_container">
         {data
           ? data.map((record) => (
-              <div className="item_card" key={record.id}>
-                <div className="img_card">
-                  <NavLink to="/IndItemPage">
-                    <img
-                      className="result_img"
-                      src={`${record._images._iiif_image_base_url}/full/250,/0/default.jpg`}
-                    />
-                  </NavLink>
-                </div>
-
-                <div className="text_card">
-                  <h3>
-                    {record.objectType
-                      ? record.objectType
-                      : "Object type unknown"}
-                  </h3>
-                  <p>{record.name ? record.name : "Maker unknown"}</p>
-                  <p>
-                    {record._primaryDate ? record._primaryDate : "Date unknown"}
-                  </p>
-                </div>
+            <div className="item_card" key={record.id}>
+              <div className="img_card">
+                <NavLink to="/IndItemPage">
+                  <img
+                    className="result_img"
+                    src={`${record._images._iiif_image_base_url}/full/250,/0/default.jpg`}
+                  />
+                </NavLink>
               </div>
-            ))
+
+              <div className="text_card">
+                <h3>
+                  {record.objectType
+                    ? record.objectType
+                    : "Object type unknown"}
+                </h3>
+                <p>{record.name ? record.name : "Maker unknown"}</p>
+                <p>
+                  {record._primaryDate ? record._primaryDate : "Date unknown"}
+                </p>
+              </div>
+            </div>
+          ))
           : null}
       </div>
       <Footer />

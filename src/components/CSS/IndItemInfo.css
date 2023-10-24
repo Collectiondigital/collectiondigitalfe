@@ -1,0 +1,74 @@
+.item_info_container {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.object_info_container {
+  width: 45%;
+  background-color: rgb(60, 60, 60);
+}
+
+.object_info {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.actions_container {
+  background-color: rgb(60, 60, 60);
+  width: 45%;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action_click {
+  cursor: pointer;
+}
+
+.action_click:hover {
+  color: rgb(3, 200, 200);
+}
+
+.social_media_icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Fb {
+  background-image: url(../../assets/Facebook.svg);
+  background-position: cover;
+  background-repeat: inherit;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.Insta {
+  background-image: url(../../assets/Instagram.svg);
+  background-position: cover;
+  background-repeat: inherit;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.Twit {
+  background-image: url(../../assets/Twitter.svg);
+  background-position: cover;
+  background-repeat: inherit;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
