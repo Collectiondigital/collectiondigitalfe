@@ -32,24 +32,19 @@ export default function Navbar() {
         <div className="nav_items_container">
           <ul>
             <li>
-              <a className="nav_a" href="#">
-                Home
-              </a>
+              <NavLink to="/">Home </NavLink>
             </li>
             <li>
-              <a className="nav_a" href="#">
-                Pricing
-              </a>
+              <NavLink to="/Pricing">Pricing </NavLink>
             </li>
             <li>
-              <a className="nav_a" href="#">
-                About
-              </a>
+              <NavLink to="/About">About </NavLink>
             </li>
             <li>
-              <a className="nav_a" href="#">
-                Contact
-              </a>
+              <NavLink to="/Contact">Contact </NavLink>
+            </li>
+            <li>
+              <NavLink to="/Search">Search </NavLink>
             </li>
           </ul>
         </div>
