@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import LoadingOverlay from "react-loading-overlay";
 import "./CSS/Signup.css";
+import { NavLink } from "react-router-dom";
 
 export default function Signup({ setUser }) {
   const [email, setEmail] = useState("");
@@ -43,7 +44,18 @@ export default function Signup({ setUser }) {
 
   return (
     <div>
-      <h1>Signup</h1>
+      <div>
+        <NavLink to="/">
+          <span>
+            <img
+              className="arrow-image"
+              src="../src\assets\arrow-back.png"
+              alt="back"
+            />
+          </span>
+        </NavLink>
+      </div>
+
       <LoadingOverlay active={isLoading} spinner text="Signing in...">
         <form className="signup" onSubmit={handleSubmit}>
           <label className="label-text">username: </label>

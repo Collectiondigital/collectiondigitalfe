@@ -3,7 +3,6 @@ import Logo from "../assets/CD_logo.svg";
 import { AuthContext } from "../context/authContext";
 import { useContext } from "react";
 import { useJwt } from "react-jwt";
-import LoginModal from "./LoginModal";
 
 import "../assets/CD_logo.svg";
 
@@ -52,28 +51,26 @@ export default function Navbar() {
                 Contact
               </a>
             </li>
+            <li>
+              <nav>
+                {token !== null && (
+                  <div>
+                    <span className="hello">Hello, {decodedToken?.name}! </span>
+                    <button className="logout-button" onClick={handleClick}>
+                      Log out
+                    </button>
+                  </div>
+                )}
+                {token === null && (
+                  <div>
+                    <NavLink to="/user/login">Login</NavLink>
+                    <NavLink to="/user/signup">Signup</NavLink>
+                  </div>
+                )}
+              </nav>
+            </li>
           </ul>
         </div>
-
-        <nav>
-          {token !== null && (
-            <div>
-              <span className="hello">Hello, {decodedToken?.name}</span>
-              <div>
-                <button className="logout-button" onClick={handleClick}>
-                  Log out
-                </button>
-              </div>
-            </div>
-          )}
-          {token === null && (
-            <div>
-              <NavLink to="/user/login">Login /</NavLink>
-
-              <NavLink to="/user/signup">Signup</NavLink>
-            </div>
-          )}
-        </nav>
       </div>
     </>
   );

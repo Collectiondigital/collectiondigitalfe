@@ -2,41 +2,23 @@ import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import axios from "axios";
 import React from "react";
-/* import "bootstrap/dist/css/bootstrap.css"; */
+import { AuthContext } from "../context/authContext";
 
-export default function LoginModal() {
-  const [show, setShow] = useState(false);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+export default function LoginModal({ show, toggleModal }) {
+  const navigate = useNavigate();
+  const { logout, token } = useContext(AuthContext);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClick = () => {
+    localStorage.removeItem("token");
+    logout();
+  };
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  /*   const onSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const formData = new FormData();
-
-      formData.append("email", email);
-      formData.append("password", password);
-
-      console.log("FORM DAA", formData);
-
-      const response = await axios.post(
-        `https://collectiondigitalbe.onrender.com/user/login`,
-        formData
-      );
-
-      setError(false);
-      handleClose();
-    } catch (error) {
-      setError(true);
-      console.error(error);
-    }
-  }; */
+  /*   const { login } = useContext(AuthContext); */
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,18 +47,16 @@ export default function LoginModal() {
         localStorage.setItem("token", data.token);
         setIsLoading(false);
         login(data.token);
-      }, 5000);
+      }, 1000);
     }
   };
 
+  const { decodedToken } = useJwt(token);
+
   return (
     <>
-      <div>
-        <button onClick={handleShow}>Login</button>
-      </div>
-
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header closeButton onClick={toggleModal}>
           <Modal.Title>Login</Modal.Title>
         </Modal.Header>
 
