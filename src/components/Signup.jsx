@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import LoadingOverlay from "react-loading-overlay";
 import "./CSS/Signup.css";
+import Navbar from "./Navbar";
 
 export default function Signup({ setUser }) {
   const [email, setEmail] = useState("");
@@ -40,6 +41,7 @@ export default function Signup({ setUser }) {
 
   return (
     <div>
+      <Navbar />
       <h1>Signup</h1>
       <LoadingOverlay active={isLoading} spinner text="Signing in...">
         <form className="signup" onSubmit={handleSubmit}>
