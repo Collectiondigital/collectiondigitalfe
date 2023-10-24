@@ -27,15 +27,17 @@ export default function Navbar() {
     <>
       <div className="navbar_container">
         <div className="logo">
-          <a href="./">
-            <img alt="logo" src="../src/assets/CD_logo.svg" className="logo" />
-          </a>
+          <NavLink to="/">
+            {" "}
+            <img
+              alt="logo"
+              src="../src/assets/CD_logo.svg"
+              className="logo"
+            />{" "}
+          </NavLink>
         </div>
         <div className="nav_items_container">
           <ul>
-            <li>
-              <NavLink to="/">Home </NavLink>
-            </li>
             <li>
               <NavLink to="/Pricing">Pricing </NavLink>
             </li>
@@ -63,14 +65,12 @@ export default function Navbar() {
             </div>
           )}
           {token === null && (
-
             <div>
               <NavLink to="/user/login">Login /</NavLink>
 
-           
-
-
-              <NavLink className="signup" to="/user/signup">Signup</NavLink>
+              <NavLink className="signup" to="/user/signup">
+                Signup
+              </NavLink>
             </div>
           )}
         </nav>
