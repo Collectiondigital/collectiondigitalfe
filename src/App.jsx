@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Home />
+
       <Routes>
         <Route path="/" element={token ? <Home /> : <Navigate to="/" />} />
         <Route
