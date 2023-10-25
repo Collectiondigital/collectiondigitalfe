@@ -69,28 +69,6 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-
-        <nav>
-          {token !== null && (
-            <div>
-              <span className="hello">Hello, {decodedToken?.name}</span>
-              <div>
-                <button className="logout-button" onClick={handleClick}>
-                  Log out
-                </button>
-              </div>
-            </div>
-          )}
-          {token === null && (
-            <div>
-              <NavLink to="/user/login">Login /</NavLink>
-
-              <NavLink className="signup" to="/user/signup">
-                Signup
-              </NavLink>
-            </div>
-          )}
-        </nav>
       </div>
     </>
   );

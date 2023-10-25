@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import LoadingOverlay from "react-loading-overlay";
-import Navbar from "./Navbar";
 import { NavLink } from "react-router-dom";
+import Navbar from "./Navbar";
 
 export default function Login() {
   const [email, setEmail] = useState("");

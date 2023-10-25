@@ -46,7 +46,18 @@ export default function Signup({ setUser }) {
   return (
     <div>
       <Navbar />
-      <h1>Signup</h1>
+      <div>
+        <NavLink to="/">
+          <span>
+            <img
+              className="arrow-image"
+              src="../src\assets\arrow-back.png"
+              alt="back"
+            />
+          </span>
+        </NavLink>
+      </div>
+
       <LoadingOverlay active={isLoading} spinner text="Signing in...">
         <form className="signup" onSubmit={handleSubmit}>
           <label className="label-text">username: </label>
