@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./CSS/Searchbar.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 
 export default function Searchbar() {
   const [query, setQuery] = useState("");
@@ -17,7 +15,7 @@ export default function Searchbar() {
     console.log("DATA: ", data.records);
     setData(data.records);
   };
-
+  
   useEffect(() => {
     fetchData();
   }, [query]);
@@ -95,7 +93,7 @@ export default function Searchbar() {
             ))
           : null}
       </div>
-      <Footer />
+
     </>
   );
 }
