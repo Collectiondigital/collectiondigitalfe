@@ -26,7 +26,6 @@ export default function Searchbar() {
 
   return (
     <>
-      <Navbar />
       <div className="searchbar_container">
         <label
           style={{
@@ -73,7 +72,7 @@ export default function Searchbar() {
           ? data.map((record) => (
               <div className="item_card" key={record.id}>
                 <div className="img_card">
-                  <NavLink to="/IndItemPage">
+                  <NavLink to="/itempage">
                     <img
                       className="result_img"
                       src={`${record._images._iiif_image_base_url}/full/250,/0/default.jpg`}
