@@ -1,5 +1,4 @@
 import { NavLink, useNavigate } from "react-router-dom";
-
 import { AuthContext } from "../context/authContext";
 import { useContext } from "react";
 import { useJwt } from "react-jwt";
@@ -25,7 +24,7 @@ export default function Navbar() {
         <div className="logo">
           <NavLink to="/">
             {" "}
-            <img alt="logo" src="./CD_logo.svg" className="logo" />{" "}
+            <img alt="logo" src="/CD_logo.svg" className="logo" />{" "}
           </NavLink>
         </div>
         <div className="nav_items_container">
