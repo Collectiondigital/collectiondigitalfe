@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./CSS/Searchbar.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-
 
 export default function Searchbar() {
   const [query, setQuery] = useState("");
@@ -27,7 +24,6 @@ export default function Searchbar() {
 
   return (
     <>
-      <Navbar />
       <div className="searchbar_container">
 
         <label style={{
@@ -97,7 +93,6 @@ export default function Searchbar() {
           ))
           : null}
       </div>
-      <Footer />
     </>
   );
 }
