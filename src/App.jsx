@@ -14,7 +14,6 @@ function App() {
   const { token } = useContext(AuthContext);
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Searchbar />} />
