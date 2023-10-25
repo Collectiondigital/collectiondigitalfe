@@ -8,6 +8,7 @@
   height: 60px;
 }
 .logo {
+  background-color: #ddd;
   width: 150px;
   height: 50px;
   cursor: pointer;
