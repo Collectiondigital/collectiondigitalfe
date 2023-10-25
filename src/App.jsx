@@ -4,7 +4,7 @@ import "./App.css";
 import { AuthContext } from "./context/authContext";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import IndItemPage from "./components/IndItemPage";
+import ItemPage from "./components/ItemPage";
 import Home from "./components/Home";
 import Searchbar from "./components/SearchBar";
 import Navbar from "./components/Navbar";
@@ -28,7 +28,7 @@ function App() {
           path="/user/signup"
           element={!token ? <Signup /> : <Navigate to="/" />}
         />
-        <Route path="/IndItemPage" element={<IndItemPage />} />
+        <Route path="/itempage" element={<ItemPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />
