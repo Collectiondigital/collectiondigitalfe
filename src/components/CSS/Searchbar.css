@@ -6,7 +6,6 @@
 
 .search_results_container {
   margin-bottom: 20px;
-  
 }
 
 h1 {
@@ -40,4 +39,9 @@ img {
   line-height: 26px;
   letter-spacing: 1.25px;
   padding: 10px;
+}
+
+.result_img:hover {
+  opacity: 0.5;
+  transition: 0.5s ease-out;
 }
