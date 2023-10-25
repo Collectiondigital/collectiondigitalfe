@@ -95,7 +95,6 @@ export default function Searchbar() {
             ))
           : null}
       </div>
-      <Footer />
     </>
   );
 }
