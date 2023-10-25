@@ -7,6 +7,7 @@ import Signup from "./components/Signup";
 import IndItemPage from "./components/IndItemPage";
 import Home from "./components/Home";
 import Searchbar from "./components/SearchBar";
+import LoginModal from "./components/LoginModal";
 
 function App() {
   const { token } = useContext(AuthContext);

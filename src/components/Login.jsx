@@ -1,7 +1,9 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import LoadingOverlay from "react-loading-overlay";
+import { NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -45,7 +47,15 @@ export default function Login() {
     <>
       <Navbar />
       <div>
-        <h1>Login</h1>
+        <NavLink to="/">
+          <span>
+            <img
+              className="arrow-image"
+              src="../src\assets\arrow-back.png"
+              alt="back"
+            />
+          </span>
+        </NavLink>
       </div>
       <LoadingOverlay active={isLoading} spinner text="Logging in...">
         <form className="login" onSubmit={handleSubmit}>
