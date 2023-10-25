@@ -1,12 +1,9 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import Logo from "../assets/CD_logo.svg";
+
 import { AuthContext } from "../context/authContext";
 import { useContext } from "react";
 import { useJwt } from "react-jwt";
 
-import "../assets/CD_logo.svg";
-
-import Login from "./Login";
 import "./CSS/Navbar.css";
 
 export default function Navbar() {
@@ -28,11 +25,7 @@ export default function Navbar() {
         <div className="logo">
           <NavLink to="/">
             {" "}
-            <img
-              alt="logo"
-              src="../src/assets/CD_logo.svg"
-              className="logo"
-            />{" "}
+            <img alt="logo" src="./CD_logo.svg" className="logo" />{" "}
           </NavLink>
         </div>
         <div className="nav_items_container">
