@@ -2,12 +2,13 @@ import "./CSS/ItemPage.css";
 import ItemImages from "./ItemImages";
 import { useParams } from "react-router-dom";
 
-export default function ItemPage() {
-  // const { id } = useParams();
+export default function ItemPage({ data }) {
+  const { systemNumber } = useParams();
+  console.log(systemNumber, data);
 
-  // const oneItem = data.records.find((el) => el.id == parseInt(id, 10));
+  const oneItem = data.find((el) => el.systemNumber === systemNumber);
 
-  // console.log(oneItem);
+  console.log(oneItem);
 
   return (
     <>
@@ -15,7 +16,7 @@ export default function ItemPage() {
       <div className="item_info_container">
         <div className="object_info_container">
           <ul className="object_info">
-            <li>Object Type: </li>
+            <li>Object Type: {oneItem.objectType ? oneItem.objectType: "Object type unknown"}</li>
             <li>Date: </li>
             <li>Artist/Maker: </li>
             <li>Origin: </li>
