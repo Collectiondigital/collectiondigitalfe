@@ -1,8 +1,8 @@
-import "./CSS/IndItemPage.css";
-import "./CSS/IndItemInfo.css";
-import IndItemInfo from "./IndItemInfo";
+import "./CSS/ItemImages.css";
 
-export default function IndItemPage() {
+
+
+export default function ItemImages() {
   return (
     <>
       <div className="main_image_container">
@@ -21,7 +21,6 @@ export default function IndItemPage() {
         </div>
       </div>
 
-      <IndItemInfo />
     </>
   );
 }
