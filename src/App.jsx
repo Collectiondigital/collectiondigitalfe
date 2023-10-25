@@ -27,7 +27,7 @@ function App() {
           path="/user/signup"
           element={!token ? <Signup /> : <Navigate to="/" />}
         />
-        <Route path="/itempage" element={<ItemPage />} />
+        <Route path="/itempage/:id" element={<ItemPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />

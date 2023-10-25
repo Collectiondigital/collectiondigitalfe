@@ -1,7 +1,14 @@
 import "./CSS/ItemPage.css";
 import ItemImages from "./ItemImages";
+import { useParams } from "react-router-dom"
 
 export default function ItemPage() {
+    const { id } = useParams();
+
+    const oneItem = data.records.find((el) => el.id == parseInt(id, 10));
+
+    console.log(oneItem);
+    
 
     return (
         <>

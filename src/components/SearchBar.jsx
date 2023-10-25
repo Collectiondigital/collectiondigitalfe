@@ -17,7 +17,7 @@ export default function Searchbar() {
     console.log("DATA: ", data.records);
     setData(data.records);
   };
-
+  
   useEffect(() => {
     fetchData();
   }, [query]);
