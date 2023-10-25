@@ -22,7 +22,7 @@ export default function Home() {
         What we offer
       </h3>
 
-      <div className="test">
+      <div className="homepage_container">
         <div className="homepage_card">
           <div className="homepage_h5">
             <h5>Document</h5>

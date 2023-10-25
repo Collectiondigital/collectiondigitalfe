@@ -1,3 +1,14 @@
+.main_image_container {
+  margin-bottom: 20px;
+}
+
+.main_image {
+  width: 500px;
+  height: 600px;
+  display: block;
+  margin: auto;
+}
+
 .item_info_container {
   width: 100%;
   margin-bottom: 20px;
@@ -6,7 +17,8 @@
 }
 
 .object_info_container {
-  width: 45%;
+  width: 49%;
+  margin-right: 10px;
   background-color: rgb(60, 60, 60);
 }
 
@@ -15,16 +27,20 @@
   flex-direction: column;
 }
 
+h3 {
+  margin-bottom: 10px;
+}
+
 li {
   color: #fff;
   font-size: 20px;
-  font-weight: 600;
   margin: 20px;
 }
 
 .actions_container {
   background-color: rgb(60, 60, 60);
-  width: 45%;
+  width: 49%;
+  margin-left: 10px;
 }
 
 .action {
@@ -33,7 +49,12 @@ li {
   align-items: center;
 }
 
+hr {
+  width: 80%;
+}
+
 .action_click {
+  margin: 40px;
   cursor: pointer;
 }
 
@@ -44,31 +65,4 @@ li {
 .social_media_icons {
   display: flex;
   justify-content: space-evenly;
-}
-
-.Fb {
-  background-image: url(../../assets/Facebook.svg);
-  background-position: cover;
-  background-repeat: inherit;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-}
-
-.Insta {
-  background-image: url(../../assets/Instagram.svg);
-  background-position: cover;
-  background-repeat: inherit;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-}
-
-.Twit {
-  background-image: url(../../assets/Twitter.svg);
-  background-position: cover;
-  background-repeat: inherit;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
 }

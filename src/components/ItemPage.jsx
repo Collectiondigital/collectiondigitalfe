@@ -1,5 +1,4 @@
 import "./CSS/ItemPage.css";
-import ItemImages from "./ItemImages";
 import { useParams } from "react-router-dom";
 
 export default function ItemPage({ data }) {
@@ -12,31 +11,53 @@ export default function ItemPage({ data }) {
 
   return (
     <>
-      <ItemImages />
+      <div className="main_image_container">
+        <img
+          className="main_image"
+          src={`${oneItem._images._iiif_image_base_url}/full/500,/0/default.jpg`}
+        />
+      </div>
+
       <div className="item_info_container">
         <div className="object_info_container">
           <ul className="object_info">
-            <li>Object Type: {oneItem.objectType ? oneItem.objectType: "Object type unknown"}</li>
-            <li>Date: </li>
-            <li>Artist/Maker: </li>
-            <li>Origin: </li>
-            <li>Accession number: </li>
-            <li>Display: </li>
+            <li><h3>Object Type: </h3>{oneItem.objectType ? oneItem.objectType : "object type unknown"}</li>
+            <li><h3>Date: </h3>{oneItem.Date ? oneItem.Date : "date unknown"}</li>
+            <li><h3>Artist/Maker: </h3>{oneItem.name ? oneItem.name : "artist/maker unknown"} </li>
+            <li><h3>Origin:</h3>{oneItem._primaryPlace ? oneItem._primaryPlace : "location unknown"}</li>
+            <li><h3>Accession number:</h3>{oneItem.accessionNumber ? oneItem.accessionNumber : "Accession Number unknown"}</li>
+            <li><h3>Display:</h3>{oneItem.onDisplay ? oneItem.onDisplay : "display status unknown"}</li>
           </ul>
         </div>
 
         <div className="actions_container">
           <ul className="action">
             <li className="action_click">Edit Item Listing</li>
+            <hr />
             <li className="action_click">Delete Item Listing</li>
+            <hr />
             <li className="action_click">Print Item Listing</li>
+            <hr />
             <li className="action_click">Preview Item Listing</li>
-            <li>Share on social media</li>
+            <hr />
+            <li>Share on your social media</li>
 
             <div className="social_media_icons">
-              <li className="Fb"></li>
-              <li className="Insta"></li>
-              <li className="Twit"></li>
+              <div className="social1">
+                <a href="/Facebook">
+                  <img className="social-containerf" src="/Facebook.svg" />
+                </a>
+              </div>
+              <div className="social1">
+                <a href="/Twitter">
+                  <img className="social-containert" src="/Twitter.svg" />
+                </a>
+              </div>
+              <div className="social1">
+                <a href="/Instagram">
+                  <img className="social-containeri" src="/Instagram.svg" />
+                </a>
+              </div>
             </div>
           </ul>
         </div>
