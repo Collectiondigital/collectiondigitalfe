@@ -1,13 +1,10 @@
-import "./CSS/IndItemPage.css";
-import "./CSS/IndItemInfo.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import IndItemInfo from "./IndItemInfo";
+import "./CSS/ItemImages.css";
 
-export default function IndItemPage() {
+
+
+export default function ItemImages() {
   return (
     <>
-      <Navbar />
       <div className="main_image_container">
         <img className="main_image" src="https://placehold.co/400x500" alt="placeholder" />
       </div>
@@ -24,8 +21,6 @@ export default function IndItemPage() {
         </div>
       </div>
 
-      <IndItemInfo />
-      <Footer />
     </>
   );
 }
