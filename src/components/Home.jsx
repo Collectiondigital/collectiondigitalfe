@@ -5,7 +5,6 @@ import Footer from "./Footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <div
         style={{
           display: "flex",
@@ -64,8 +63,6 @@ export default function Home() {
         <h5>name of collection</h5>
         <p>short description of collection</p>
       </div>
-
-      <Footer />
     </>
   );
 }

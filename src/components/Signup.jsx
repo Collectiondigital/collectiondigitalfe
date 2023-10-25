@@ -2,7 +2,6 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import LoadingOverlay from "react-loading-overlay";
 import "./CSS/Signup.css";
-import Navbar from "./Navbar";
 import { NavLink } from "react-router-dom";
 
 export default function Signup({ setUser }) {
@@ -45,7 +44,6 @@ export default function Signup({ setUser }) {
 
   return (
     <div>
-      <Navbar />
       <div>
         <NavLink to="/">
           <span>

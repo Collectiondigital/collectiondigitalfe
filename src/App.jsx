@@ -7,12 +7,14 @@ import Signup from "./components/Signup";
 import IndItemPage from "./components/IndItemPage";
 import Home from "./components/Home";
 import Searchbar from "./components/SearchBar";
-import LoginModal from "./components/LoginModal";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   const { token } = useContext(AuthContext);
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Searchbar />} />
@@ -29,6 +31,7 @@ function App() {
         <Route path="/IndItemPage" element={<IndItemPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <Footer />
     </>
   );
 }
