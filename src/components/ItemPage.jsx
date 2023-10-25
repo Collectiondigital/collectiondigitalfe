@@ -1,9 +1,11 @@
-import "./CSS/IndItemInfo.css";
+import "./CSS/ItemPage.css";
+import ItemImages from "./ItemImages";
 
-export default function IndItemInfo() {
+export default function ItemPage() {
 
     return (
         <>
+            <ItemImages />
             <div className="item_info_container">
                 <div className="object_info_container">
                     <ul className="object_info" >

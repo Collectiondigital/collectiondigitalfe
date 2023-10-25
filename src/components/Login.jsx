@@ -2,7 +2,6 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import LoadingOverlay from "react-loading-overlay";
 import { NavLink } from "react-router-dom";
-import Navbar from "./Navbar";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -45,7 +44,6 @@ export default function Login() {
 
   return (
     <>
-      <Navbar />
       <div>
         <NavLink to="/">
           <span>

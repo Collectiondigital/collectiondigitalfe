@@ -4,15 +4,17 @@ import "./App.css";
 import { AuthContext } from "./context/authContext";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import IndItemPage from "./components/IndItemPage";
+import ItemPage from "./components/ItemPage";
 import Home from "./components/Home";
 import Searchbar from "./components/SearchBar";
-import LoginModal from "./components/LoginModal";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   const { token } = useContext(AuthContext);
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Searchbar />} />
@@ -26,9 +28,10 @@ function App() {
           path="/user/signup"
           element={!token ? <Signup /> : <Navigate to="/" />}
         />
-        <Route path="/IndItemPage" element={<IndItemPage />} />
+        <Route path="/itempage" element={<ItemPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      <Footer />
     </>
   );
 }

@@ -32,26 +32,17 @@ export default function Footer() {
               <div className="socialmedia">
                 <div className="social1">
                   <a href="/Facebook">
-                    <img
-                      className="social-containerf"
-                      src="../src/assets/Facebook.svg"
-                    />
+                    <img className="social-containerf" src="./Facebook.svg" />
                   </a>
                 </div>
                 <div className="social1">
                   <a href="/Twitter">
-                    <img
-                      className="social-containert"
-                      src="../src/assets/Twitter.svg"
-                    />
+                    <img className="social-containert" src="./Twitter.svg" />
                   </a>
                 </div>
                 <div className="social1">
                   <a href="/Instagram">
-                    <img
-                      className="social-containeri"
-                      src="../src/assets/Instagram.svg"
-                    />
+                    <img className="social-containeri" src="./Instagram.svg" />
                   </a>
                 </div>
               </div>
