@@ -30,13 +30,13 @@ export default function Navbar() {
               <div className="dropdown-menu">
                 <ul className="drop-ul">
                   <li className="drop-li">
-                    <NavLink to="/Pricing/free">Free</NavLink>
+                    <NavLink to="/Pricing/free">Level-Free</NavLink>
                   </li>
                   <li className="drop-li">
-                    <NavLink to="/Pricing/medium">Medium</NavLink>
+                    <NavLink to="/Pricing/medium">Level-Medium</NavLink>
                   </li>
                   <li className="drop-li">
-                    <NavLink to="/Pricing/premium">Premium</NavLink>
+                    <NavLink to="/Pricing/premium">Level-Unlimited</NavLink>
                   </li>
                 </ul>
               </div>

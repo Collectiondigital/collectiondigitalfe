@@ -9,8 +9,9 @@
   position: absolute;
   /*   background-color: #242424; */
   background-color: rgb(60, 60, 60);
-  /*   opacity: 92%; */
-  border: 1px solid #242424;
+  opacity: 92%;
+  border: 1px solid rgb(231, 229, 229);
+  width: auto;
 }
 
 .nav-link:hover .dropdown-menu {
@@ -27,6 +28,7 @@
 }
 
 .drop-li {
+  width: auto;
   font-size: large;
   display: block;
   margin: 7px;
