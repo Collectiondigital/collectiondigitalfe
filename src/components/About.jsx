@@ -1,9 +1,21 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-
 export default function About() {
 
-    return(
-        
-    )
+    return (
+        <>
+            <div className="about_container">
+                <div className="about_card">
+                    <div className="about_image">
+                        <div className="about_text">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </>
+    );
 }
