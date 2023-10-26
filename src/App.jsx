@@ -10,6 +10,7 @@ import Search from "./components/Search";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { useState } from "react";
+import Error from "./components/Error";
 
 function App() {
   const { token } = useContext(AuthContext);
@@ -31,8 +32,10 @@ function App() {
           path="/user/signup"
           element={!token ? <Signup /> : <Navigate to="/" />}
         />
+
         {data.length > 0 && <Route path="/itempage/:systemNumber" element={!token  ? <ItemPage data={data} /> : <Navigate to= "/search" />} />}
         <Route path="*" element={<Navigate to="/" />} />
+
       </Routes>
       <Footer />
     </>
