@@ -3,9 +3,8 @@ import { FaSearch } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./CSS/Search.css";
 
-export default function Search({data, setData}) {
+export default function Search({ data, setData }) {
   const [query, setQuery] = useState("");
-  
 
   const API = `https://api.vam.ac.uk/v2/objects/search?q=${query}&page=1&page_size=15`;
 
