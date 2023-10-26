@@ -3,9 +3,9 @@ import { FaSearch } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./CSS/Searchbar.css";
 
-export default function Searchbar() {
+export default function Searchbar({data, setData}) {
   const [query, setQuery] = useState("");
-  const [data, setData] = useState([]);
+  
 
   const API = `https://api.vam.ac.uk/v2/objects/search?q=${query}&page=1&page_size=15`;
 
@@ -68,9 +68,9 @@ export default function Searchbar() {
       <div className="card_container">
         {data
           ? data.map((record) => (
-              <div className="item_card" key={record.id}>
+              <div className="item_card" key={record.systemNumber}>
                 <div className="img_card">
-                  <NavLink to="/itempage">
+                  <NavLink to={`/itempage/${record.systemNumber}`}>
                     <img
                       className="result_img"
                       src={`${record._images._iiif_image_base_url}/full/250,/0/default.jpg`}

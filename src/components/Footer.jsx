@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="sb__footer-padding">
             <div className="sb__footer-links">
               <div className="sb__footer-links_div">
-                <h4>About</h4>
+                <h4>Collection Digital</h4>
                 <a href="/employer">
                   <p>Pricing</p>
                 </a>
@@ -24,7 +24,7 @@ export default function Footer() {
                 <a href="/Resources">
                   <p>For Collectors</p>
                 </a>
-                <a href="/PokéAPI">
+                <a href="/Resources">
                   <p>For Museums</p>
                 </a>
               </div>
@@ -32,17 +32,17 @@ export default function Footer() {
               <div className="socialmedia">
                 <div className="social1">
                   <a href="/Facebook">
-                    <img className="social-containerf" src="./Facebook.svg" />
+                    <img className="social-containerf" src="/Facebook.svg" />
                   </a>
                 </div>
                 <div className="social1">
                   <a href="/Twitter">
-                    <img className="social-containert" src="./Twitter.svg" />
+                    <img className="social-containert" src="/Twitter.svg" />
                   </a>
                 </div>
                 <div className="social1">
                   <a href="/Instagram">
-                    <img className="social-containeri" src="./Instagram.svg" />
+                    <img className="social-containeri" src="/Instagram.svg" />
                   </a>
                 </div>
               </div>
