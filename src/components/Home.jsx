@@ -44,7 +44,6 @@ export default function Home() {
               Easy to use, affordable and scalable as your collection changes.
             </p>
           </div>
-
         </div>
 
         <div className="homepage_card">
@@ -57,7 +56,6 @@ export default function Home() {
               integrated links.
             </p>
           </div>
-
         </div>
       </div>
 
@@ -68,21 +66,26 @@ export default function Home() {
       <div className="new_collections_card_container">
         <div className="new_collections_card">
           <div>
-            <img className="new_collections_card_image"
-              src="/AA_Ace.jpeg" alt="collection image" />
+            <img
+              className="new_collections_card_image"
+              src="/AA_Ace.jpeg"
+              alt="collection image"
+            />
           </div>
           <div className="new_collections_card_text">
             <h3>Trading Cards</h3>
             <p>Game: One Piece</p>
-            <p>Portgas D.Ace</p>
+            <p>Name: Portgas D.Ace</p>
             <p>Collector: KvK</p>
           </div>
         </div>
 
         <div className="new_collections_card">
           <div>
+
             <img className="new_collections_card_image"
               src="/IMG_3938.jpg" alt="collection image" />
+
           </div>
           <div className="new_collections_card_text">
             <h3>Flyer</h3>
@@ -94,8 +97,11 @@ export default function Home() {
 
         <div className="new_collections_card">
           <div>
-            <img className="new_collections_card_image"
-              src="/IMG_3937.jpg" alt="collection image" />
+            <img
+              className="new_collections_card_image"
+              src="/IMG_3937.jpg"
+              alt="collection image"
+            />
           </div>
           <div className="new_collections_card_text">
             <h3>Costume Book</h3>

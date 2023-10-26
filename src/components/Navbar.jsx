@@ -64,25 +64,36 @@ export default function Navbar() {
             <NavLink to="/Contact">Contact</NavLink>
           </li>
           <li>
-            <NavLink to="/Search">Search</NavLink>
+            {token !== null && (
+              <>
+                <NavLink to="/Search">Search</NavLink>
+              </>
+            )}
           </li>
           <li>
-            <nav>
-              {token !== null && (
-                <div>
-                  <span className="hello">Hello, {decodedToken?.name}!</span>
-                  <button className="logout-button" onClick={handleClick}>
-                    Log out
-                  </button>
-                </div>
-              )}
-              {token === null && (
-                <div>
-                  <NavLink to="/user/login">Login</NavLink>
-                  <NavLink to="/user/signup">Signup</NavLink>
-                </div>
-              )}
-            </nav>
+            {token !== null && (
+              <>
+                <NavLink to="/Collection">Collection</NavLink>
+              </>
+            )}
+          </li>
+          <li className="test">
+            {token !== null && (
+              <>
+                <p className="hello">Hello, {decodedToken?.name}!</p>
+                <NavLink to="/" onClick={handleClick}>
+                  Log out
+                </NavLink>
+              </>
+            )}
+            {token === null && (
+              <>
+                <NavLink to="/user/login" style={{ margin: "auto" }}>
+                  Login
+                </NavLink>
+                <NavLink to="/user/signup">Signup</NavLink>
+              </>
+            )}
           </li>
         </ul>
       </div>

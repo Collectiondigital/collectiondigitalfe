@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import Error from "./components/Error";
+import Collection from "./components/Collection";
 
 function App() {
   const { token } = useContext(AuthContext);
@@ -21,8 +22,15 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search data={data} setData={setData} />} />
-
+        <Route
+          path="/search"
+          element={<Search data={data} setData={setData} />}
+        />
+        <Route
+          path="/Collection"
+          element={token ? <Collection /> : <Navigate to="/" />}
+        />
+        <Route />
         <Route path="/" element={token ? <Home /> : <Navigate to="/" />} />
         <Route
           path="/user/login"
@@ -33,10 +41,27 @@ function App() {
           element={!token ? <Signup /> : <Navigate to="/" />}
         />
 
-        {data.length > 0 && <Route path="/itempage/:systemNumber" element={!token  ? <ItemPage data={data} /> : <Navigate to= "/search" />} />}
-        <Route path="*" element={<Navigate to="/" />} />
+        {data.length > 0 && (
+          <Route
+            path="/itempage/:systemNumber"
+            element={
+              token ? <ItemPage data={data} /> : <Navigate to="/search" />
+            }
+          />
+        )}
 
+        {data.length > 0 && (
+          <Route
+            path="/itempage/:systemNumber"
+            element={
+              token ? <ItemPage data={data} /> : <Navigate to="/search" />
+            }
+          />
+        )}
+
+        <Route path="*" element={<Error />} />
       </Routes>
+
       <Footer />
     </>
   );
