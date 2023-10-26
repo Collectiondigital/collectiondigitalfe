@@ -1,0 +1,43 @@
+.nav-link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  /*   background-color: #242424; */
+  background-color: rgb(60, 60, 60);
+  /*   opacity: 92%; */
+  border: 1px solid #242424;
+}
+
+.nav-link:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding-right: 20%;
+}
+
+.drop-ul {
+  display: list-item;
+}
+
+.drop-li {
+  font-size: large;
+  display: block;
+  margin: 7px;
+  padding: 5px;
+}
+
+.dropdown-menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown-menu ul li a:hover {
+  color: rgb(3, 200, 200);
+}
