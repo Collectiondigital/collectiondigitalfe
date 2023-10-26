@@ -1,35 +1,75 @@
-.new_collections_card {
-  padding-bottom: 2%;
-  border-bottom: 1px solid grey;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
 .homepage_container {
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid grey;
+  padding-bottom: 20px;
 }
 .homepage_card {
+  background-color: rgb(60, 60, 60);
   width: 25%;
   padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid grey;
-}
-.homepage_h5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.homepage_h5 p {
-  text-align: center;
-  color: white;
+
+.homepage_card_h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.homepage_h5 h5 {
+
+.homepage_card {
   color: rgb(3, 200, 200);
   margin: 5px;
-  font-size: 15px;
+}
+
+.homepage_card_text {
+  font-size: 16px;
+  width: 240px;
+  height: 150px;
+  padding: 15px;
+}
+
+.homepage_card p {
+  text-align: center;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 1.25px;
+}
+
+.new_collections_card_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new_collections_card {
+  width: 250px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.new_collections_card_image {
+  width: 250px;
+  height: 250px;
+}
+
+.new_collections_card_text {
+  background-color: rgb(60, 60, 60);
+  color: #fff;
+  width: 250px;
+  height: 200px;
+  line-height: 26px;
+  letter-spacing: 1.25px;
+  padding: 10px;
+}
+
+.new_collections_card h3 {
+  color: #fff;
+}
+
+.new_collections_card p {
+  color: #fff;
 }
