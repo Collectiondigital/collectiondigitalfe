@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
-import "./CSS/Searchbar.css";
+import "./CSS/Search.css";
 
-export default function Searchbar({data, setData}) {
+export default function Search({data, setData}) {
   const [query, setQuery] = useState("");
   
 
