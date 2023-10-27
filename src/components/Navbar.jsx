@@ -1,14 +1,11 @@
 import React, { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
-import { useJwt } from "react-jwt";
 import "./CSS/Navbar.css";
 import "./CSS/Dropdown.css";
 
 export default function Navbar() {
-  const navigate = useNavigate();
   const { logout, token } = useContext(AuthContext);
-  const { decodedToken } = useJwt(token);
 
   const handleClick = () => {
     localStorage.removeItem("token");
@@ -100,7 +97,6 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      <p className="hello">Hello, {decodedToken?.name}!</p>
     </>
   );
 }
