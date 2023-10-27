@@ -57,12 +57,9 @@ li {
 .signup:hover {
   color: rgb(3, 200, 200);
 }
-.test {
+
+.logout {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
-}
-.test .hello {
-  justify-content: space-between;
-  margin-right: auto;
+  width: 25%;
 }
