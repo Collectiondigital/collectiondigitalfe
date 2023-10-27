@@ -34,11 +34,10 @@ export default function Login() {
     }
 
     if (response.ok) {
-      setTimeout(() => {
-        localStorage.setItem("token", data.token);
-        setIsLoading(false);
-        login(data.token);
-      }, 5000);
+      console.log(data);
+      localStorage.setItem("token", data.token);
+      setIsLoading(false);
+      login(data.token);
     }
   };
 
@@ -47,9 +46,7 @@ export default function Login() {
       <div>
         <NavLink to="/">
           <span>
-
             <img className="arrow-image" src="/arrow-back.png" alt="back" />
-
           </span>
         </NavLink>
       </div>
