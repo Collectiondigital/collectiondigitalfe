@@ -32,7 +32,7 @@ li {
   font-size: 16px;
 }
 
-.nav_a:hover  {
+.nav_a:hover {
   color: rgb(3, 200, 200);
 }
 
@@ -56,4 +56,10 @@ li {
 
 .signup:hover {
   color: rgb(3, 200, 200);
+}
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+  width: 25%;
 }

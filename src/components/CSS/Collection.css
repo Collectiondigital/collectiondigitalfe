@@ -1,0 +1,43 @@
+.collection_header {
+  display: flex;
+  justify-content: center;
+}
+.collection {
+  display: flex;
+}
+.card_container {
+  margin: 20px;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.heading .collection_buttons {
+  margin-right: auto;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  justify-content: space-between;
+  width: 15%;
+  display: flex;
+  margin-left: 20px;
+}
+
+.button-1 {
+  background-color: #03c8c8;
+  border-radius: 8px;
+  border-style: none;
+  color: rgb(73, 73, 73);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  padding: 10px 16px;
+  transition: color 100ms;
+}
+
+.button-1:hover {
+  background-color: #07eaea;
+}
