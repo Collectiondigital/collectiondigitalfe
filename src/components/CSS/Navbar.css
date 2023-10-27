@@ -64,5 +64,5 @@ li {
 }
 .test .hello {
   justify-content: space-between;
-  margin-right: auto;
+  margin-right: 10px;
 }

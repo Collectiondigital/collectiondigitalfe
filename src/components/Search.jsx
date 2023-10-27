@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./CSS/Search.css";
+import { useContext } from "react";
+import { AuthContext } from "../context/authContext";
+import { useJwt } from "react-jwt";
 
 export default function Search({ data, setData }) {
   const [query, setQuery] = useState("");
-
+  const { token } = useContext(AuthContext);
   const API = `https://api.vam.ac.uk/v2/objects/search?q=${query}&page=1&page_size=15`;
 
   const fetchData = async () => {
@@ -21,8 +24,15 @@ export default function Search({ data, setData }) {
   const [a, rest] = query;
   console.log("QUERY: ", query);
 
+  const { decodedToken } = useJwt(token);
+  console.log("TOKEEEEN", decodedToken);
   return (
     <>
+      {token !== null && (
+        <>
+          <h1 className="hello">Hello, {decodedToken?.name}!</h1>
+        </>
+      )}
       <div className="searchbar_container">
         <label
           style={{

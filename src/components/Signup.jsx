@@ -47,9 +47,7 @@ export default function Signup({ setUser }) {
       <div>
         <NavLink to="/">
           <span>
-
             <img className="arrow-image" src="/arrow-back.png" alt="back" />
-
           </span>
         </NavLink>
       </div>
