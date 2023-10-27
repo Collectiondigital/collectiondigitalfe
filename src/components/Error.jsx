@@ -12,7 +12,7 @@ export default function Error() {
         }}
       >
         <h1>This is an 404 error</h1>
-        <h2 style={{ color: "white", marginBottom: "10px" }}>
+        <h2 style={{ color: "white", marginBottom: "20px" }}>
           This Page is as empty as this case.
         </h2>
         <img
