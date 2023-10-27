@@ -1,8 +1,10 @@
-h1 {
+.about_container h1 {
   margin-bottom: 20px;
+  color: rgb(3, 200, 200);
 }
 
-h2 {
+.about_text h2 {
+  color: rgb(3, 200, 200);
   margin-bottom: 10px;
 }
 
