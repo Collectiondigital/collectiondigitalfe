@@ -38,9 +38,6 @@ export default function Navbar() {
                     <li className="drop-li">
                       <NavLink to="#project">Our Project</NavLink>
                     </li>
-                    <li className="drop-li">
-                      <NavLink to="#future">Future plans</NavLink>
-                    </li>
                   </ul>
                 </div>
               </div>

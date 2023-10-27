@@ -82,18 +82,23 @@ export default function About() {
 
                 <h1>Our Project</h1>
                 <div className="project_container">
-
-                </div>
-                <h1 >Future Plans</h1>
-                <div className="future_container">
-                    
+                    <p>
+                        The concept for Collection Digital came out of my time living in London, working as a collection
+                        assistant for small museums and
+                        individual collectors. Most used Excel or Word to document their collections with separate
+                        files for images, some used a hand written notebook, some nothing at all.
+                        <br />
+                        <br />
+                        Most digital collection software is made for large museums with complex features and an
+                        equally large price tag. What individuals and small museums need is collection software that
+                        is easy to use with social media features included to make sharing collections with the public
+                        simple. I completed the design for the app in 2022, but had no plans to have it built or take the project any further.
+                        <br />
+                        <br />
+                        In July 2023, I began a training course in Full-Stack Web & App Development at WBS Coding School in Berlin. During the course we learned how to build basic web applications, making it possible for the Collection Digital project to go forward. For our final project Sonia & Kevin joined me to build the web application. I'm thankful for the time, effort and fun they contributed to the project and for the chance to see Collection Digital come to life. - Jennifer
+                    </p>
                 </div>
             </div>
-
-
-
-
-
         </>
     );
 }
