@@ -8,14 +8,13 @@ h2 {
 
 .about_card {
   width: 100%;
-  height: 350px;
+  height: 450px;
   margin-bottom: 20px;
   display: flex;
 }
 
 .about_image {
-  width: 350px;
-  height: 350px;
+  height: 450px;
 }
 
 .about_text {

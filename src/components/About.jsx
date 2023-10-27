@@ -1,4 +1,5 @@
 import "./CSS/About.css";
+
 export default function About() {
 
     return (
@@ -7,7 +8,7 @@ export default function About() {
                 <h1>Developer Team</h1>
                 <div className="about_card">
                     <div className="about_image">
-                        <img src="https://placehold.co/350x350" alt="" />
+                        <img src="https://placehold.co/350x450" alt="" />
                     </div>
 
                     <div className="about_text">
@@ -51,7 +52,7 @@ export default function About() {
 
 
                     <div className="about_image">
-                        <img src="https://placehold.co/350x350" alt="" />
+                        <img src="https://placehold.co/350x450" alt="" />
                     </div>
                 </div>
 
@@ -62,7 +63,7 @@ export default function About() {
 
                     <div className="about_text">
                         <h2>Jennifer</h2>
-                        <p>I'm a Jr. Full-Stack Developer who bridges the gap between design and development. With a background in UI design, I understand the importance of aesthetics and user-centered design principles. My proficiency in HTML, CSS, JavaScript & React allows me to bring these designs to life, creating engaging and responsive web applications. My career goals revolve around combining my design & UI skills with coding for organisations dedicated to causes close to my heart, including those that support animals, the environment, people, businesses or heritage</p>
+                        <p>I'm a Jr. Full-Stack Developer who bridges the gap between design and development. With a background in UI design, I understand the importance of aesthetics and user-centered design principles. My proficiency in HTML, CSS, JavaScript & React allows me to bring these designs to life, creating engaging and responsive web applications. My career goals revolve around combining my design & UI skills with coding for organisations dedicated to causes close to my heart, including those that support animals, the environment, people, businesses or heritage.</p>
 
                         <div className="socialmedia">
                             <div className="social1">
@@ -83,7 +84,7 @@ export default function About() {
                 <div className="project_container">
 
                 </div>
-                <h1>Future Plans</h1>
+                <h1 >Future Plans</h1>
                 <div className="future_container">
                     
                 </div>
