@@ -1,7 +1,9 @@
 export default function Collection() {
   return (
     <>
-      <h1>this is collection</h1>
+      <div className="collection_container">
+        <h1>this is collection</h1>
+      </div>
     </>
   );
 }

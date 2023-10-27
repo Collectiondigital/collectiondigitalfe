@@ -4,7 +4,7 @@ export default function Pricing() {
 
     return (
         <>
-            <h1>Pricing</h1>
+            <h1 className="pricing">Pricing</h1>
             <p className="pricing_text">
                 Our pricing is based on the number of objects in one collection.
                 This means you only pay for storage needed for each collection you have.

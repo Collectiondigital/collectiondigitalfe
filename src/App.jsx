@@ -14,6 +14,7 @@ import Error from "./components/Error";
 import About from "./components/About";
 import Collection from "./components/Collection";
 import Pricing from "./components/Pricing";
+import Contact from "./components/Contact";
 
 function App() {
   const { token } = useContext(AuthContext);
@@ -61,9 +62,11 @@ function App() {
           />
         )}
 
+        <Route path="/pricing" element={<Pricing />} />
+
         <Route path="/about" element={<About />} />
 
-        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/contact" element={<Contact />} />
 
         <Route path="*" element={<Error />} />
       </Routes>

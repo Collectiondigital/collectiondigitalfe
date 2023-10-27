@@ -1,3 +1,8 @@
+.pricing {
+  color: rgb(3, 200, 200);
+  margin-bottom: 20px;
+}
+
 .pricing_text {
   color: #fff;
   font-size: 20px;
@@ -5,6 +10,7 @@
   letter-spacing: 1.25px;
   margin-bottom: 20px;
 }
+
 .pricing_card_container {
   display: flex;
   justify-content: space-between;
@@ -15,6 +21,10 @@
   flex-direction: column;
 }
 
+.pricing_card_text h3 {
+  color: rgb(3, 200, 200);
+}
+
 .pricing_card_text {
   background-color: rgb(60, 60, 60);
   color: #fff;
@@ -23,10 +33,6 @@
   line-height: 26px;
   letter-spacing: 1.25px;
   padding: 20px;
-}
-
-.pricing_card h3 {
-  color: #fff;
 }
 
 .pricing_card p {
