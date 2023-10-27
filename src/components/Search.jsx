@@ -26,6 +26,7 @@ export default function Search({ data, setData }) {
 
   const { decodedToken } = useJwt(token);
   console.log("decoded TOKEN", decodedToken);
+  console.log("token", token);
   return (
     <>
       {token !== null && (
