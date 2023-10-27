@@ -29,10 +29,17 @@
 }
 
 .project_container {
-  background-color: thistle;
+  background-color: rgb(60, 60, 60);
   width: 100%;
-  height: 200px;
+  height: 400px;
   margin-bottom: 20px;
+  padding: 20px;
+  line-height: 26px;
+  letter-spacing: 1.25px;
+}
+
+.project_container p {
+  color: #fff;
 }
 
 .future_container {
