@@ -11,7 +11,6 @@ export default function Navbar() {
     localStorage.removeItem("token");
     logout();
   };
-  console.log("decodedToken", decodedToken);
 
   return (
     <>
