@@ -75,7 +75,7 @@ export default function Navbar() {
                 </>
               )}
             </li>
-            <li className="test">
+            <li className="logout">
               {token !== null && (
                 <>
                   <NavLink to="/" onClick={handleClick}>
@@ -88,7 +88,9 @@ export default function Navbar() {
                   <NavLink to="/user/login" style={{ margin: "auto" }}>
                     Login
                   </NavLink>
-                  <NavLink to="/user/signup">Signup</NavLink>
+                  <NavLink to="/user/signup" style={{ margin: "0" }}>
+                    Signup
+                  </NavLink>
                 </>
               )}
             </li>

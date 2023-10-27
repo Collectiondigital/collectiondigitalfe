@@ -9,6 +9,9 @@ label.label-text {
 
 .hello {
   color: white;
+  font-size: 20px;
+  text-align: end;
+  margin: 20px;
 }
 
 .logout-button {
