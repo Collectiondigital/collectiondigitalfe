@@ -48,13 +48,13 @@ export default function Navbar() {
               <div className="dropdown-menu">
                 <ul className="drop-ul">
                   <li className="drop-li">
-                    <NavLink to="/About/team">Developers Team</NavLink>
+                    <NavLink to="/About/team">Developer Team</NavLink>
                   </li>
                   <li className="drop-li">
-                    <NavLink to="/About/history">Collections</NavLink>
+                    <NavLink to="/About/history">Our Project</NavLink>
                   </li>
                   <li className="drop-li">
-                    <NavLink to="/About/mission">Mission</NavLink>
+                    <NavLink to="/About/mission">Future plans</NavLink>
                   </li>
                 </ul>
               </div>

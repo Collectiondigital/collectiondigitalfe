@@ -82,16 +82,16 @@ export default function Home() {
 
         <div className="new_collections_card">
           <div>
-            <img
-              className="new_collections_card_image"
-              src="https://placehold.co/250x250"
-              alt="collection image"
-            />
+
+            <img className="new_collections_card_image"
+              src="/IMG_3938.jpg" alt="collection image" />
+
           </div>
           <div className="new_collections_card_text">
-            <h3>Object Type</h3>
-            <p>Title</p>
-            <p>Collector</p>
+            <h3>Flyer</h3>
+            <p>Artist: Sonson</p>
+            <p>Date: 2021</p>
+            <p>Collector: Sonickaa</p>
           </div>
         </div>
 
