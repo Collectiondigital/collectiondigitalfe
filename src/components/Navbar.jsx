@@ -25,19 +25,6 @@ export default function Navbar() {
             <li>
               <div className="nav-link">
                 <NavLink to="/Pricing">Pricing</NavLink>
-                <div className="dropdown-menu">
-                  <ul className="drop-ul">
-                    <li className="drop-li">
-                      <NavLink to="/Pricing/free">Level-Free</NavLink>
-                    </li>
-                    <li className="drop-li">
-                      <NavLink to="/Pricing/medium">Level-Medium</NavLink>
-                    </li>
-                    <li className="drop-li">
-                      <NavLink to="/Pricing/premium">Level-Unlimited</NavLink>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </li>
             <li>
@@ -46,13 +33,10 @@ export default function Navbar() {
                 <div className="dropdown-menu">
                   <ul className="drop-ul">
                     <li className="drop-li">
-                      <NavLink to="/About/team">Developer Team</NavLink>
+                      <NavLink to="#team">Developer Team</NavLink>
                     </li>
                     <li className="drop-li">
-                      <NavLink to="/About/history">Our Project</NavLink>
-                    </li>
-                    <li className="drop-li">
-                      <NavLink to="/About/mission">Future plans</NavLink>
+                      <NavLink to="#project">Our Project</NavLink>
                     </li>
                   </ul>
                 </div>

@@ -1,21 +1,22 @@
-h1 {
+.about_container h1 {
   margin-bottom: 20px;
+  color: rgb(3, 200, 200);
 }
 
-h2 {
+.about_text h2 {
+  color: rgb(3, 200, 200);
   margin-bottom: 10px;
 }
 
 .about_card {
   width: 100%;
-  height: 350px;
+  height: 450px;
   margin-bottom: 20px;
   display: flex;
 }
 
 .about_image {
-  width: 350px;
-  height: 350px;
+  height: 450px;
 }
 
 .about_text {
@@ -28,10 +29,17 @@ h2 {
 }
 
 .project_container {
-  background-color: thistle;
+  background-color: rgb(60, 60, 60);
   width: 100%;
-  height: 200px;
+  height: 400px;
   margin-bottom: 20px;
+  padding: 20px;
+  line-height: 26px;
+  letter-spacing: 1.25px;
+}
+
+.project_container p {
+  color: #fff;
 }
 
 .future_container {
