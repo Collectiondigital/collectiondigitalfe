@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 import "./CSS/Navbar.css";
@@ -32,11 +32,9 @@ export default function Navbar() {
                 <NavLink to="/About">About</NavLink>
                 <div className="dropdown-menu">
                   <ul className="drop-ul">
-                    <li className="drop-li">
-                      <NavLink to="#team">Developer Team</NavLink>
-                    </li>
-                    <li className="drop-li">
-                      <NavLink to="#project">Our Project</NavLink>
+                    <li>
+                      <NavLink className="project"></NavLink>
+                      <a href="#project">Our Project</a>
                     </li>
                   </ul>
                 </div>
