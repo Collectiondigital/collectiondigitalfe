@@ -12,12 +12,12 @@ export default function Search({ data, setData }) {
   const { token } = useContext(AuthContext);
 
   // heart: change color onClick
-  const [color, setColor] = useState("light")
+  const [color, setColor] = useState("light");
 
   const changeColor = () => {
     if (color !== "light") setColor("light");
-    else setColor("dark")  
-  }
+    else setColor("dark");
+  };
 
   //pagi pagiii
   const [currentPage, setCurrentPage] = useState(1);
@@ -43,7 +43,7 @@ export default function Search({ data, setData }) {
   const fetchData = async () => {
     const res = await fetch(API);
     const responseData = await res.json();
-    console.log("DATA: ", responseData.records);
+    // console.log("DATA: ", responseData.records);
     setData(responseData.records);
   };
 
@@ -57,7 +57,7 @@ export default function Search({ data, setData }) {
   const itemsToDisplay = data.slice(startIndex, endIndex);
 
   const { decodedToken } = useJwt(token);
-  console.log("decoded TOKEN", decodedToken);
+  // console.log("decoded TOKEN", decodedToken);
 
   return (
     <>
@@ -127,9 +127,8 @@ export default function Search({ data, setData }) {
               <p>
                 {record._primaryDate ? record._primaryDate : "Date unknown"}
               </p>
-              <FaHeart className={color} onClick={changeColor}/>
+              <FaHeart className={color} onClick={changeColor} />
             </div>
-            
           </div>
         ))}
       </div>
