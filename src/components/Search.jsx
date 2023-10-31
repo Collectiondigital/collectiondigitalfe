@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaHeart } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./CSS/Search.css";
 import "./CSS/Pagination.css";
@@ -10,6 +10,14 @@ import { useJwt } from "react-jwt";
 export default function Search({ data, setData }) {
   const [query, setQuery] = useState("");
   const { token } = useContext(AuthContext);
+
+  // heart: change color onClick
+  const [color, setColor] = useState("white")
+
+  const changeColor = () => {
+    if (color !== "white") setColor("white");
+    else setColor("rgb(3, 200, 200)")
+  }
 
   //pagi pagiii
   const [currentPage, setCurrentPage] = useState(1);
@@ -119,7 +127,9 @@ export default function Search({ data, setData }) {
               <p>
                 {record._primaryDate ? record._primaryDate : "Date unknown"}
               </p>
+              <FaHeart className="color" onClick={changeColor}/>
             </div>
+            
           </div>
         ))}
       </div>
