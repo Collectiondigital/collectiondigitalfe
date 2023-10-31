@@ -13,6 +13,11 @@ export default function Search({ data, setData }) {
 
   // heart: change color onClick
   const [color, setColor] = useState("light")
+  const [favorites, setFavorites] = useState([])
+
+  const addToFavorites = () => {
+    favorites.map
+  }
 
   const changeColor = () => {
     if (color !== "light") setColor("light");
@@ -127,7 +132,8 @@ export default function Search({ data, setData }) {
               <p>
                 {record._primaryDate ? record._primaryDate : "Date unknown"}
               </p>
-              <FaHeart className={color} onClick={changeColor}/>
+              <FaHeart className="white" onClick={changeColor}/>
+              <FaHeart className="turquoise" onClick={changeColor}/>
             </div>
             
           </div>
