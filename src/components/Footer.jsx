@@ -9,22 +9,22 @@ export default function Footer() {
             <div className="sb__footer-links">
               <div className="sb__footer-links_div">
                 <h4>Collection Digital</h4>
-                <a href="/Pricing">
+                <a href="/pricing">
                   <p>Pricing</p>
                 </a>
                 <a href="/Contact">
                   <p>Contact</p>
                 </a>
-                <a href="/Locations">
+                <a href="/Reviews">
                   <p>Reviews</p>
                 </a>
               </div>
               <div className="sb__footer-links_div">
                 <h4>Our Service</h4>
-                <a href="/About">
+                <a href="/collectors">
                   <p>For Collectors</p>
                 </a>
-                <a href="For-Museums">
+                <a href="/museums">
                   <p>For Museums</p>
                 </a>
               </div>
