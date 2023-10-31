@@ -5,7 +5,7 @@ export default function About() {
     return (
         <>
             <div className="about_container">
-                <h1>Developer Team</h1>
+                <h1 id="developer_team">Developer Team</h1>
                 <div className="about_card">
                     <div className="about_image">
                         <img src="https://placehold.co/350x450" alt="" />
@@ -80,7 +80,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <h1>Our Project</h1>
+                <h1 id="our_project">Our Project</h1>
                 <div className="project_container">
                     <p>
                         The concept for Collection Digital came out of my time living in London, working as a collection
