@@ -1,6 +1,8 @@
 import React, { useContext, useRef } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
+import { HashLink } from 'react-router-hash-link';
+
 import "./CSS/Navbar.css";
 import "./CSS/Dropdown.css";
 
@@ -32,11 +34,11 @@ export default function Navbar() {
                 <NavLink to="/About">About</NavLink>
                 <div className="dropdown-menu">
                   <ul className="drop-ul">
-                  {/* <li>
-                      <a href="#developer_team">Developer Team</a>
-                    </li> */}
+                  <li>
+                      <HashLink to="About/#developer_team">Developer Team</HashLink>
+                    </li>
                     <li>
-                      <a href="#our_project">Our Project</a>
+                      <HashLink to="About/#our_project">Our Project</HashLink>
                     </li>
                   </ul>
                 </div>
