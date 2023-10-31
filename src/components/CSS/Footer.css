@@ -73,7 +73,7 @@ a {
   margin-bottom: 0.9rem;
 }
 .sb__footer-links_div p {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 15px;
   margin: 0.5rem 0;
   cursor: pointer;
@@ -99,6 +99,10 @@ a {
   margin-bottom: 10px;
 }
 
+.sb__footer-below p:hover {
+  color: rgb(3, 200, 200);
+}
+
 .sb__footer-copyright {
   font-size: 13px;
   line-height: 15px;
@@ -120,7 +124,7 @@ a:hover {
 }
 
 .disclaim {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 15px;
   margin-left: 1em;
 }
