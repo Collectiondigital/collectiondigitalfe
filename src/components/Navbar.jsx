@@ -34,7 +34,7 @@ export default function Navbar() {
                 <NavLink to="/About">About</NavLink>
                 <div className="dropdown-menu">
                   <ul className="drop-ul">
-                  <li>
+                    <li>
                       <HashLink to="About/#developer_team">Developer Team</HashLink>
                     </li>
                     <li>
