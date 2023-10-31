@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
               <div className="sb__footer-links_div">
                 <h4>Our Service</h4>
-                <a href="/collectors">
+                <a href="/About">
                   <p>For Collectors</p>
                 </a>
                 <a href="/museums">
