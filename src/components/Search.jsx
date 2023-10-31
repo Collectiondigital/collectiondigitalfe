@@ -12,11 +12,11 @@ export default function Search({ data, setData }) {
   const { token } = useContext(AuthContext);
 
   // heart: change color onClick
-  const [color, setColor] = useState("white")
+  const [color, setColor] = useState("light")
 
   const changeColor = () => {
-    if (color !== "white") setColor("white");
-    else setColor("rgb(3, 200, 200)")
+    if (color !== "light") setColor("light");
+    else setColor("dark")  
   }
 
   //pagi pagiii
@@ -127,7 +127,7 @@ export default function Search({ data, setData }) {
               <p>
                 {record._primaryDate ? record._primaryDate : "Date unknown"}
               </p>
-              <FaHeart className="color" onClick={changeColor}/>
+              <FaHeart className={color} onClick={changeColor}/>
             </div>
             
           </div>
