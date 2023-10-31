@@ -49,3 +49,11 @@
 .color:hover {
   cursor: pointer;
 }
+
+.light {
+  color: #fff;
+}
+
+.dark  {
+  color: rgb(3, 200, 200);
+}
