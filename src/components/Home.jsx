@@ -60,7 +60,7 @@ export default function Home() {
       </div>
 
       <h2 style={{ marginTop: "2%", marginBottom: "2%", color: "white" }}>
-        New Collections
+        New Items
       </h2>
 
       <div className="new_collections_card_container">
@@ -82,10 +82,11 @@ export default function Home() {
 
         <div className="new_collections_card">
           <div>
-
-            <img className="new_collections_card_image"
-              src="/IMG_3938.jpg" alt="collection image" />
-
+            <img
+              className="new_collections_card_image"
+              src="/IMG_3938.jpg"
+              alt="collection image"
+            />
           </div>
           <div className="new_collections_card_text">
             <h3>Flyer</h3>
