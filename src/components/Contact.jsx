@@ -6,8 +6,9 @@ export default function Contact() {
 
     return (
         <>
+        <h1 className="contact">Contact Us</h1>
             <div className="contact_container">
-                <h1 className="contact">Contact Us</h1>
+                
                 <Form>
                     <Form.Group className="mb-2" controlId="inlineFormInput">
 
