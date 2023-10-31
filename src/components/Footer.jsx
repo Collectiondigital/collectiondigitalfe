@@ -9,10 +9,10 @@ export default function Footer() {
             <div className="sb__footer-links">
               <div className="sb__footer-links_div">
                 <h4>Collection Digital</h4>
-                <a href="/employer">
+                <a href="/Pricing">
                   <p>Pricing</p>
                 </a>
-                <a href="/Career">
+                <a href="/Contact">
                   <p>Contact</p>
                 </a>
                 <a href="/Locations">
@@ -21,10 +21,10 @@ export default function Footer() {
               </div>
               <div className="sb__footer-links_div">
                 <h4>Our Service</h4>
-                <a href="/Resources">
+                <a href="/About">
                   <p>For Collectors</p>
                 </a>
-                <a href="/Resources">
+                <a href="For-Museums">
                   <p>For Museums</p>
                 </a>
               </div>
