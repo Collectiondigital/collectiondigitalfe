@@ -32,7 +32,7 @@ export default function Navbar() {
                 <NavLink to="/About">About</NavLink>
                 <div className="dropdown-menu">
                   <ul className="drop-ul">
-                  {/* <li>
+                    {/* <li>
                       <a href="#developer_team">Developer Team</a>
                     </li> */}
                     <li>
