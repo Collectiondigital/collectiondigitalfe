@@ -25,8 +25,7 @@ export default function ItemPage({ data }) {
             <li><h3>Date: </h3>{oneItem.Date ? oneItem.Date : "date unknown"}</li>
             <li><h3>Artist/Maker: </h3>{oneItem.name ? oneItem.name : "artist/maker unknown"} </li>
             <li><h3>Origin:</h3>{oneItem._primaryPlace ? oneItem._primaryPlace : "location unknown"}</li>
-            <li><h3>Accession number:</h3>{oneItem.accessionNumber ? oneItem.accessionNumber : "Accession Number unknown"}</li>
-            <li><h3>Display:</h3>{oneItem.onDisplay ? oneItem.onDisplay : "display status unknown"}</li>
+            <li><h3>Id number:</h3>{oneItem.accessionNumber ? oneItem.accessionNumber : "Accession Number unknown"}</li>
           </ul>
         </div>
 
