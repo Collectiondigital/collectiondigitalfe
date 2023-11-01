@@ -1,8 +1,29 @@
-.contact_container h1{
-    color: rgb(3, 200, 200);
+.contact_container {
+  width: 50%;
+  margin: auto;
+}
+.contact_container h1 {
+  color: rgb(3, 200, 200);
 }
 
+.contact_container {
+  color: white;
+}
 
+.message_field {
+  height: 100px;
+  width: 480px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
 
+.submit_button {
+  background-color: rgb(60, 60, 60);
+  margin-top: 10px;
+  border: 1px solid rgb(3, 200, 200);
+}
 
-
+.submit_button:hover {
+  color: rgb(3, 200, 200);
+}

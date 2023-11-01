@@ -20,7 +20,7 @@
 
 .item_card {
   width: 250px;
-  height: 400px;
+  height: 450px;
   margin-bottom: 20px;
 }
 
@@ -44,4 +44,16 @@
 .result_img:hover {
   opacity: 0.5;
   transition: 0.5s ease-out;
+}
+
+.color:hover {
+  cursor: pointer;
+}
+
+.light {
+  color: #fff;
+}
+
+.dark  {
+  color: rgb(3, 200, 200);
 }
