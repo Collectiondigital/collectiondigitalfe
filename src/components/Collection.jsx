@@ -27,9 +27,9 @@ export default function Collection() {
               </NavLink>
             </div>
             <div className="text_card">
-              <h3>Object Type: Collection Card</h3>
-              <p>Name:</p>
-              <p>Date:</p>
+              <h3>Collection Type: </h3>
+              <p>Collector: </p>
+              <p>Date: </p>
             </div>
           </div>
         </div>
