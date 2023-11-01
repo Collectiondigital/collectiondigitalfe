@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./CSS/Collection.css";
 
 export default function Collection() {
@@ -17,37 +18,18 @@ export default function Collection() {
         <div className="card_container">
           <div className="item_card">
             <div className="img_card">
-              <a href="#">
+              <NavLink to="/CollectionItem">
                 <img
                   className="result_img"
                   src="https://placehold.co/250x250?text=No+image"
                   alt="Holder"
                 />
-              </a>
+              </NavLink>
             </div>
             <div className="text_card">
-              <h3>Collection Name:</h3>
-              <p>Created:</p>
-              <p>Artist/Maker:</p>
-            </div>
-          </div>
-        </div>
-        {/* second card  */}
-        <div className="card_container">
-          <div className="item_card">
-            <div className="img_card">
-              <a href="#">
-                <img
-                  className="result_img"
-                  src="https://placehold.co/250x250?text=No+image"
-                  alt="Holder"
-                />
-              </a>
-            </div>
-            <div className="text_card">
-              <h3>Name:</h3>
-              <p>description:</p>
-              <p>owner:</p>
+              <h3>Object Type: Collection Card</h3>
+              <p>Name:</p>
+              <p>Date:</p>
             </div>
           </div>
         </div>
