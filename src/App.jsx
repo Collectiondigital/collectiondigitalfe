@@ -14,6 +14,8 @@ import About from "./components/About";
 import Collection from "./components/Collection";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
+import CollectItem from "./components/CollectItem";
+import ItemPage2 from "./components/ItemPage2";
 
 function App() {
   const { token } = useContext(AuthContext);
@@ -66,6 +68,10 @@ function App() {
         <Route path="/about" element={<About />} />
 
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="/CollectionItem" element={<CollectItem />} />
+
+        <Route path="/ItemPage2" element={<ItemPage2 />} />
 
         <Route path="*" element={<Error />} />
       </Routes>
