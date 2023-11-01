@@ -15,9 +15,8 @@ function CardComponent({ record, favorites, setFavorites }) {
     if (foundCard) setFavorites(favorites.filter(id => id !== record.systemNumber));
   };
 
-  const changeColor = () => {
-  };
-  console.log(favorites);
+  /* console.log(favorites); */
+  
   return (
     <div className="item_card" >
       <div className="img_card">

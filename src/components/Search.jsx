@@ -10,23 +10,8 @@ import CardComponent from "./CardComponent";
 
 export default function Search({ data, setData }) {
   const [query, setQuery] = useState("");
-  const [favorites, setFavorites] = useState(["O323261"]);
   const { token } = useContext(AuthContext);
-
-  // MOVED TO CARDCOMPONENT.JSX START
-  // heart: change color onClick
-  // const [color, setColor] = useState("light");
-  // const [favorites, setFavorites] = useState([]);
-
-  // const addToFavorites = () => {
-  //   favorites.map;
-  // };
-
-  // const changeColor = () => {
-  //   if (color !== "light") setColor("light");
-  //   else setColor("dark");
-  // };
-  // MOVED TO CARDCOMPONENT.JSX END
+  const [favorites, setFavorites] = useState([]);
 
 
   //pagi pagiii
@@ -68,7 +53,7 @@ export default function Search({ data, setData }) {
 
   const { decodedToken } = useJwt(token);
   console.log("decoded TOKEN", decodedToken);
-  console.log(favorites)
+  console.log(favorites);
   return (
     <>
       {token !== null && (
