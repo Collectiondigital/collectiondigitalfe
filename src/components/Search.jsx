@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { FaSearch, FaHeart } from "react-icons/fa";
-import { NavLink, useNavigate } from "react-router-dom";
 import "./CSS/Search.css";
 import "./CSS/Pagination.css";
 import { useContext } from "react";

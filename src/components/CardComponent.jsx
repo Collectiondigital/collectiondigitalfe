@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
 import "./CSS/Search.css";
-import { NavLink, useNavigate } from "react-router-dom";
-import { FaSearch, FaHeart } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { FaHeart } from "react-icons/fa";
 
 function CardComponent({ record, favorites, setFavorites }) {
   const addToFavorites = async () => {
