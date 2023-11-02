@@ -32,7 +32,7 @@ export default function Collection() {
         <div className="heading">
           <h1>Welcome to your collections</h1>
           <div className="collection_buttons">
-            <button className="button-1">+ Collection</button>
+            <button className="button-1">Add New Collection</button>
           </div>
         </div>
       </div>
