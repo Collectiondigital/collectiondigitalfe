@@ -16,6 +16,8 @@ import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import CollectItem from "./components/CollectItem";
 import ItemPage2 from "./components/ItemPage2";
+import CreateCollForm from "./components/CreateCollForm";
+import CreateItemForm from "./components/CreateItemForm";
 
 function App() {
   const { token } = useContext(AuthContext);
@@ -72,6 +74,10 @@ function App() {
         <Route path="/CollectionItem" element={<CollectItem />} />
 
         <Route path="/ItemPage2" element={<ItemPage2 />} />
+
+        <Route path="/CreateNewCollection" element={<CreateCollForm />} />
+
+        <Route path="/CreateNewItem" element={<CreateItemForm />} />
 
         <Route path="*" element={<Error />} />
       </Routes>
