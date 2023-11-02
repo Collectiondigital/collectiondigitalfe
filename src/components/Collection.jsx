@@ -1,7 +1,30 @@
 import { NavLink } from "react-router-dom";
 import "./CSS/Collection.css";
+import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../context/authContext";
+import { useEffect } from "react";
 
 export default function Collection() {
+  const [selectedColl, setSelectedColl] = useState("");
+  const { token } = useContext(AuthContext);
+
+  const getColls = async () => {
+    const res = await fetch("http://localhost:7070/collection/name", {
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${token}`,
+      },
+    });
+    const data = await res.json();
+    setSelectedColl(data);
+  };
+
+  useEffect(() => {
+    getColls();
+  }, []);
+
+  console.log("selected coll", selectedColl);
   return (
     <>
       {/* header and buttons */}
@@ -27,9 +50,11 @@ export default function Collection() {
               </NavLink>
             </div>
             <div className="text_card">
-              <h3>Collection Type: </h3>
-              <p>Collector: </p>
-              <p>Date: </p>
+
+              <h3>name:</h3>
+              <p>description:</p>
+              <p>owner:</p>
+
             </div>
           </div>
         </div>
