@@ -50,9 +50,11 @@ export default function Collection() {
               </NavLink>
             </div>
             <div className="text_card">
+
               <h3>name:</h3>
               <p>description:</p>
               <p>owner:</p>
+
             </div>
           </div>
         </div>

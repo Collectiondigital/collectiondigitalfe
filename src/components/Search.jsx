@@ -1,23 +1,17 @@
 import { useEffect, useState } from "react";
 import { FaSearch, FaHeart } from "react-icons/fa";
-import { NavLink, useNavigate } from "react-router-dom";
 import "./CSS/Search.css";
 import "./CSS/Pagination.css";
 import { useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import { useJwt } from "react-jwt";
+import CardComponent from "./CardComponent";
 
 export default function Search({ data, setData }) {
   const [query, setQuery] = useState("");
   const { token } = useContext(AuthContext);
+  const [favorites, setFavorites] = useState([]);
 
-  // heart: change color onClick
-  const [color, setColor] = useState("light");
-
-  const changeColor = () => {
-    if (color !== "light") setColor("light");
-    else setColor("dark");
-  };
 
   //pagi pagiii
   const [currentPage, setCurrentPage] = useState(1);
@@ -43,7 +37,7 @@ export default function Search({ data, setData }) {
   const fetchData = async () => {
     const res = await fetch(API);
     const responseData = await res.json();
-    // console.log("DATA: ", responseData.records);
+    console.log("DATA: ", responseData.records);
     setData(responseData.records);
   };
 
@@ -57,8 +51,8 @@ export default function Search({ data, setData }) {
   const itemsToDisplay = data.slice(startIndex, endIndex);
 
   const { decodedToken } = useJwt(token);
-  // console.log("decoded TOKEN", decodedToken);
-
+  console.log("decoded TOKEN", decodedToken);
+  console.log(favorites);
   return (
     <>
       {token !== null && (
@@ -108,29 +102,7 @@ export default function Search({ data, setData }) {
       </div>
 
       <div className="card_container">
-        {itemsToDisplay.map((record) => (
-          <div className="item_card" key={record.systemNumber}>
-            <div className="img_card">
-              <NavLink to={`/itempage/${record.systemNumber}`}>
-                <img
-                  className="result_img"
-                  src={`${record._images._iiif_image_base_url}/full/250,/0/default.jpg`}
-                />
-              </NavLink>
-            </div>
-
-            <div className="text_card">
-              <h3>
-                {record.objectType ? record.objectType : "Object type unknown"}
-              </h3>
-              <p>{record.name ? record.name : "Maker unknown"}</p>
-              <p>
-                {record._primaryDate ? record._primaryDate : "Date unknown"}
-              </p>
-              <FaHeart className={color} onClick={changeColor} />
-            </div>
-          </div>
-        ))}
+        {itemsToDisplay.map((record) => <CardComponent key={record.systemNumber} record={record} favorites={favorites} setFavorites={setFavorites} />)}
       </div>
       {data.length === 0 && (
         <h3 style={{ color: "grey" }}>No results found for "{query}".</h3>
