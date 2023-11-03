@@ -11,6 +11,7 @@ export default function Collection() {
   const { token } = useContext(AuthContext);
 
   const getColls = async () => {
+    console.log("TOKENNNNNN", token);
     const res = await fetch(`http://localhost:7070/collection/name/`, {
       headers: {
         "Content-Type": "application/json",

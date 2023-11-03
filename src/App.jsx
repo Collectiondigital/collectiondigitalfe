@@ -24,8 +24,7 @@ function App() {
   // const [selectedColl, setSelectedColl] = useState(null);
 
   const [data, setData] = useState([]);
-  
-console.log(collections)
+
   return (
     <>
       <Navbar />
