@@ -4,7 +4,7 @@ export default function ItemPage2() {
   return (
     <>
       <h1>Hello from ItemPage2</h1>
-      <NavLink to="/Collection">Collections</NavLink>
+      <NavLink to="/Collection">Back to Collections</NavLink>
       {/* image container  */}
       <div className="main_image_container">
         <img className="main_image" src="https://placehold.co/500x600?" />
