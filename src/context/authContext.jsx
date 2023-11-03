@@ -1,9 +1,10 @@
 import { useState, useEffect, createContext } from "react";
-
+import { jwtDecode } from "jwt-decode";
 export const AuthContext = createContext();
 
 export default function AuthContextProvider(props) {
   const [token, setToken] = useState(null);
+  const decoded = token && jwtDecode(token);
 
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
@@ -29,8 +30,10 @@ export default function AuthContextProvider(props) {
     setToken(null);
   };
 
+  console.log("IN CONTEXT DECODED", decoded);
+
   return (
-    <AuthContext.Provider value={{ token, login, logout }}>
+    <AuthContext.Provider value={{ token, login, logout, decoded }}>
       {props.children}
     </AuthContext.Provider>
   );
