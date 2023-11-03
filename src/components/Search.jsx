@@ -12,7 +12,6 @@ export default function Search({ data, setData }) {
   const { token } = useContext(AuthContext);
   const [favorites, setFavorites] = useState([]);
 
-
   //pagi pagiii
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9; // nr of items per page
@@ -53,6 +52,7 @@ export default function Search({ data, setData }) {
   const { decodedToken } = useJwt(token);
   console.log("decoded TOKEN", decodedToken);
   console.log(favorites);
+
   return (
     <>
       {token !== null && (
@@ -102,7 +102,14 @@ export default function Search({ data, setData }) {
       </div>
 
       <div className="card_container">
-        {itemsToDisplay.map((record) => <CardComponent key={record.systemNumber} record={record} favorites={favorites} setFavorites={setFavorites} />)}
+        {itemsToDisplay.map((record) => (
+          <CardComponent
+            key={record.systemNumber}
+            record={record}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />
+        ))}
       </div>
       {data.length === 0 && (
         <h3 style={{ color: "grey" }}>No results found for "{query}".</h3>

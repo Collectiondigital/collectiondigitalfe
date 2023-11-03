@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 import "./CSS/Navbar.css";
 import "./CSS/Dropdown.css";
+import { decodeToken } from "react-jwt";
 
 export default function Navbar() {
   const { logout, token } = useContext(AuthContext);
@@ -30,7 +31,9 @@ export default function Navbar() {
                 <div className="dropdown-menu">
                   <ul className="drop-ul">
                     <li>
-                      <HashLink to="About/#developer_team">Developer Team</HashLink>
+                      <HashLink to="About/#developer_team">
+                        Developer Team
+                      </HashLink>
                     </li>
                     <li>
                       <HashLink to="About/#our_project">Our Project</HashLink>

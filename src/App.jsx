@@ -21,6 +21,8 @@ import CreateItemForm from "./components/CreateItemForm";
 
 function App() {
   const { token } = useContext(AuthContext);
+  // const [selectedColl, setSelectedColl] = useState(null);
+
   const [data, setData] = useState([]);
 
   return (
