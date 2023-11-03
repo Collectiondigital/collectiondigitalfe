@@ -22,7 +22,8 @@ import CreateItemForm from "./components/CreateItemForm";
 function App() {
   const { token } = useContext(AuthContext);
   const [data, setData] = useState([]);
-
+  
+console.log(collections)
   return (
     <>
       <Navbar />
