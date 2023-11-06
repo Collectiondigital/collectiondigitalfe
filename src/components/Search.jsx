@@ -98,7 +98,7 @@ export default function Search({ data, setData }) {
       </div>
 
       <div className="search_results_container">
-        <h1>{`Search Results: ${data.length} Items found`}</h1>
+        <h1>{`Most Popular : ${data.length} Items found`}</h1>
       </div>
 
       <div className="card_container">

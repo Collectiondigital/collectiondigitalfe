@@ -14,10 +14,6 @@ import About from "./components/About";
 import Collection from "./components/Collection";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
-import CollectItem from "./components/CollectItem";
-import ItemPage2 from "./components/ItemPage2";
-import CreateCollForm from "./components/CreateCollForm";
-import CreateItemForm from "./components/CreateItemForm";
 import Item from "./components/Item";
 
 function App() {
@@ -78,14 +74,6 @@ function App() {
         <Route path="/about" element={<About />} />
 
         <Route path="/contact" element={<Contact />} />
-
-        <Route path="/collectionItem" element={<CollectItem />} />
-
-        <Route path="/ItemPage2" element={<ItemPage2 />} />
-
-        <Route path="/createNewCollection" element={<CreateCollForm />} />
-
-        <Route path="/createNewItem" element={<CreateItemForm />} />
 
         <Route path="*" element={<Error />} />
       </Routes>
