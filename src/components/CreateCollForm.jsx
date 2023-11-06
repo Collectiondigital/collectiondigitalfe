@@ -14,7 +14,7 @@ export default function CreateCollForm({ collections }) {
   console.log("DECODED", decoded);
 
   const createNewCollection = async () => {
-    await fetch("http://localhost:7070/collection/name", {
+    await fetch("http://localhost:7070/collection/", {
       headers: {
         "Content-type": "application/json; charset=UTF-8",
         authorization: `Bearer ${token}`,

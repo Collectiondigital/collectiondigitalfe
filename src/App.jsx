@@ -18,6 +18,7 @@ import CollectItem from "./components/CollectItem";
 import ItemPage2 from "./components/ItemPage2";
 import CreateCollForm from "./components/CreateCollForm";
 import CreateItemForm from "./components/CreateItemForm";
+import Item from "./components/Item";
 
 function App() {
   const { token } = useContext(AuthContext);
@@ -44,8 +45,13 @@ function App() {
         />
 
         <Route
-          path="/Collection"
+          path="/collection"
           element={token ? <Collection /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="/collection/:id"
+          element={token ? <Item /> : <Navigate to="/" />}
         />
 
         <Route
@@ -73,13 +79,13 @@ function App() {
 
         <Route path="/contact" element={<Contact />} />
 
-        <Route path="/CollectionItem" element={<CollectItem />} />
+        <Route path="/collectionItem" element={<CollectItem />} />
 
         <Route path="/ItemPage2" element={<ItemPage2 />} />
 
-        <Route path="/CreateNewCollection" element={<CreateCollForm />} />
+        <Route path="/createNewCollection" element={<CreateCollForm />} />
 
-        <Route path="/CreateNewItem" element={<CreateItemForm />} />
+        <Route path="/createNewItem" element={<CreateItemForm />} />
 
         <Route path="*" element={<Error />} />
       </Routes>
