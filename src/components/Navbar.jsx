@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 import { HashLink } from "react-router-hash-link";
 
 import "./CSS/Navbar.css";
 import "./CSS/Dropdown.css";
-import { decodeToken } from "react-jwt";
 
 export default function Navbar() {
   const { logout, token } = useContext(AuthContext);
@@ -27,7 +26,7 @@ export default function Navbar() {
           <ul>
             <li>
               <div className="nav-link">
-                <NavLink to="/About">About</NavLink>
+                <NavLink to="/about">About</NavLink>
                 <div className="dropdown-menu">
                   <ul className="drop-ul">
                     <li>
@@ -36,7 +35,7 @@ export default function Navbar() {
                       </HashLink>
                     </li>
                     <li>
-                      <HashLink to="About/#our_project">Our Project</HashLink>
+                      <HashLink to="about/#our_project">Our Project</HashLink>
                     </li>
                   </ul>
                 </div>
@@ -44,23 +43,23 @@ export default function Navbar() {
             </li>
             <li>
               <div className="nav-link">
-                <NavLink to="/Pricing">Pricing</NavLink>
+                <NavLink to="/pricing">Pricing</NavLink>
               </div>
             </li>
             <li>
-              <NavLink to="/Contact">Contact</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
             <li>
               {token !== null && (
                 <>
-                  <NavLink to="/Search">Search</NavLink>
+                  <NavLink to="/search">Search</NavLink>
                 </>
               )}
             </li>
             <li>
               {token !== null && (
                 <>
-                  <NavLink to="/Collection">Collection</NavLink>
+                  <NavLink to="/collection">Collection</NavLink>
                 </>
               )}
             </li>

@@ -14,18 +14,14 @@ import About from "./components/About";
 import Collection from "./components/Collection";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
-import CollectItem from "./components/CollectItem";
-import ItemPage2 from "./components/ItemPage2";
-import CreateCollForm from "./components/CreateCollForm";
-import CreateItemForm from "./components/CreateItemForm";
+import Item from "./components/Item";
 
 function App() {
   const { token } = useContext(AuthContext);
   // const [selectedColl, setSelectedColl] = useState(null);
 
   const [data, setData] = useState([]);
-  
-console.log(collections)
+
   return (
     <>
       <Navbar />
@@ -45,8 +41,13 @@ console.log(collections)
         />
 
         <Route
-          path="/Collection"
+          path="/collection"
           element={token ? <Collection /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="/collection/:id"
+          element={token ? <Item /> : <Navigate to="/" />}
         />
 
         <Route
@@ -73,14 +74,6 @@ console.log(collections)
         <Route path="/about" element={<About />} />
 
         <Route path="/contact" element={<Contact />} />
-
-        <Route path="/CollectionItem" element={<CollectItem />} />
-
-        <Route path="/ItemPage2" element={<ItemPage2 />} />
-
-        <Route path="/CreateNewCollection" element={<CreateCollForm />} />
-
-        <Route path="/CreateNewItem" element={<CreateItemForm />} />
 
         <Route path="*" element={<Error />} />
       </Routes>

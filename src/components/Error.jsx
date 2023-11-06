@@ -11,7 +11,7 @@ export default function Error() {
           flexDirection: "column",
         }}
       >
-        <h1 style={{ marginBottom: "20px" }}>This is an 404 error</h1>
+        <h1 style={{ marginBottom: "20px" }}>This is a 404 error</h1>
         <h2 style={{ color: "white", marginBottom: "20px" }}>
           This page is as empty as this case.
         </h2>
@@ -20,8 +20,11 @@ export default function Error() {
           alt=""
         />
         <p style={{ fontSize: "20px", color: "white", marginTop: "20px" }}>
-          The page you are looking for does not exist, please go back to {" "}
-          <NavLink to="/" style={{ fontSize: "20px", textDecoration: "underline" }}>
+          The page you are looking for does not exist, please go back to{" "}
+          <NavLink
+            to="/"
+            style={{ fontSize: "20px", textDecoration: "underline" }}
+          >
             Home
           </NavLink>{" "}
           and try again
