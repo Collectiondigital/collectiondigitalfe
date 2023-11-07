@@ -72,7 +72,7 @@ const successfulNotification = () =>
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: "colored",
+    theme: "dark",
   });
 
 const errorNotification = (error) =>
@@ -84,7 +84,7 @@ const errorNotification = (error) =>
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: "colored",
+    theme: "dark",
   });
 
 export default function Collection() {
@@ -288,7 +288,7 @@ export default function Collection() {
               pauseOnFocusLoss
               draggable
               pauseOnHover
-              theme="colored"
+              theme="dark"
             />
           </div>
         </div>
