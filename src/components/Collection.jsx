@@ -96,7 +96,14 @@ export default function Collection() {
   const deployedAPI = "https://collectiondigitalbe.onrender.com/collections";
   const localAPI = "http://localhost:7070/collections";
 
-  const resetFields = () => { };
+
+  const resetFields = () => {
+    setName("");
+    setDescription("");
+    setCollection_pic("");
+  };
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -179,11 +186,47 @@ export default function Collection() {
 
   console.log("@@@@@@@@@@", collections);
 
+  const deleteCollection = async (id) => {
+    await fetch(`http://localhost:7070/collections/${id}`, {
+      method: "DELETE",
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+    setFlag(!flag);
+  };
+
   return (
     <>
       <div className="collection_header">
         <div className="heading">
           <h1>Welcome to your collections</h1>
+
+          <CardsContainer>
+            {collections ? (
+              collections.map((collection) => (
+                <Link to={`/collection/${collection._id}`} key={collection._id}>
+                  <Card>
+                    <CardImage
+                      src={collection.cloudinaryUrl}
+                      alt="image desc"
+                    />
+                    <CollectionName>{collection.name}</CollectionName>
+                    <CardDescription>{collection.description}</CardDescription>
+                    <button onClick={() => deleteItem(item._id)}>
+                      Delete Collection
+                    </button>
+                  </Card>
+                </Link>
+              ))
+            ) : (
+              <h2 style={{ color: "white" }}>
+                Click on the button down below to create a new collection!
+              </h2>
+            )}
+          </CardsContainer>
+
+
           <div className="collection_buttons">
             <button className="button-1" onClick={handleOpen}>
               Add New Collection
