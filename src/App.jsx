@@ -56,6 +56,11 @@ function App() {
         />
 
         <Route
+          path="/item/:id"
+          element={token ? <CollItemPage /> : <Navigate to="/" />}
+        />
+
+        <Route
           path="/user/login"
           element={!token ? <Login /> : <Navigate to="/collection" />}
         />
