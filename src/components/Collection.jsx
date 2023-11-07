@@ -96,14 +96,11 @@ export default function Collection() {
   const deployedAPI = "https://collectiondigitalbe.onrender.com/collections";
   const localAPI = "http://localhost:7070/collections";
 
-
   const resetFields = () => {
     setName("");
     setDescription("");
     setCollection_pic("");
   };
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -226,7 +223,6 @@ export default function Collection() {
             )}
           </CardsContainer>
 
-
           <div className="collection_buttons">
             <button className="button-1" onClick={handleOpen}>
               Add New Collection
@@ -255,8 +251,8 @@ export default function Collection() {
                   </label>
                   <label>
                     <h3>Select pic:</h3>
-                    <input 
-                    id="file-upload-button"
+                    <input
+                      id="file-upload-button"
                       type="file"
                       accept="image/*"
                       name="collection_pic"
@@ -270,7 +266,9 @@ export default function Collection() {
                       />
                     )}
                   </label>
-                  <button className="save" type="submit">Save Collection</button>
+                  <button className="save" type="submit">
+                    Save Collection
+                  </button>
                 </form>
               </Box>
             </Modal>
@@ -287,26 +285,6 @@ export default function Collection() {
               theme="colored"
             />
           </div>
-          <CardsContainer>
-            {collections ? (
-              collections.map((collection) => (
-                <Link to={`/collection/${collection._id}`} key={collection._id}>
-                  <Card>
-                    <CardImage
-                      src={collection.cloudinaryUrl}
-                      alt="image desc"
-                    />
-                    <CollectionName>{collection.name}</CollectionName>
-                    <CardDescription>{collection.description}</CardDescription>
-                  </Card>
-                </Link>
-              ))
-            ) : (
-              <h2 style={{ color: "white" }}>
-                Click on the button down below to create a new collection!
-              </h2>
-            )}
-          </CardsContainer>
         </div>
       </div>
     </>
