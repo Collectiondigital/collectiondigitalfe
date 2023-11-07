@@ -18,7 +18,6 @@ const CardsContainer = styled.div`
 `;
 
 const Card = styled.div`
-  border: 2px solid white;
   color: white;
   padding: 20px;
   display: flex;
@@ -26,8 +25,9 @@ const Card = styled.div`
   align-items: center;
   text-align: center;
   width: 250px;
+  height: 450px;
   cursor: pointer;
-  background: #2b2f33;
+  background: #3c3c3c;
 `;
 
 const CardImage = styled.img`
@@ -51,10 +51,10 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "rgb(60, 60, 60)",
-  border: "2px solid #000",
-  boxShadow: 24,
+  width: "400px",
+  height: "650px",
+  bgcolor: "#3c3c3c",
+  color:"#03c8c8",
   p: 4,
   borderRadius: "5px",
 };
@@ -112,7 +112,7 @@ export default function Item() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // steeeep ooone
+    // step one
 
     try {
       const formData = new FormData();
@@ -136,7 +136,7 @@ export default function Item() {
       const cloudinaryUrl = imgData.cloudinaryUrl;
       console.log("cloudUrl", imgData.cloudinaryUrl);
 
-      //steeep twoo
+      //step two
       try {
         const itemResponse = await fetch(localAPI, {
           method: "POST",
@@ -211,12 +211,11 @@ export default function Item() {
 
   return (
     <div>
-
         <span onClick={() => navigate(-1)}>
           <img className="arrow-image" src="/arrow-back.png" alt="back" />
         </span>
 
-      <h1>{selectedCollection?.name}</h1>
+      <h1>Collection: {selectedCollection?.name}</h1>
       <h3 style={{ padding: "20px 0px", color: "whitesmoke" }}>
         <CardsContainer>
           {selectedCollectionItems?.length
@@ -228,9 +227,9 @@ export default function Item() {
                       <CardImage src={item.cloudinaryUrl} alt="item picture" />
                       <ItemName>{item.object_type}</ItemName>
                       <CardDescription>
-                        Made by: {item.artist_maker}
+                        {item.artist_maker}
                       </CardDescription>
-                      <button
+                      <button className="button-1"
                         onClick={(e) => {
                           e.preventDefault();
                           deleteItem(item._id);
@@ -257,7 +256,7 @@ export default function Item() {
         <Box sx={style}>
           <form onSubmit={handleSubmit}>
             <label>
-              <h3>Type of object:</h3>
+              <h3>Title/Type of object:</h3>
               <input
                 value={object_type}
                 onChange={(e) => setObject_type(e.target.value)}
@@ -296,11 +295,11 @@ export default function Item() {
                 <img
                   src={item_pic.preview}
                   alt="selected image"
-                  style={{ maxWidth: "100%", maxHeight: "200px" }}
+                  style={{ maxWidth: "100%", maxHeight: "100px" }}
                 />
               )}
             </label>
-            <button type="submit">Save item</button>
+            <button className="save" type="submit">Save item</button>
           </form>
         </Box>
       </Modal>

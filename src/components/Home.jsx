@@ -9,7 +9,6 @@ export default function Home() {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          borderBottom: "1px solid grey",
           paddingBottom: "2%",
           color: "white",
         }}

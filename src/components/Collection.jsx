@@ -26,7 +26,7 @@ const Card = styled.div`
   align-items: center;
   text-align: center;
   width: 250px;
-  height: 350px;
+  height: 400px;
   cursor: pointer;
   background: #3c3c3c;
 `;
@@ -35,7 +35,6 @@ const CardImage = styled.img`
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-bottom: 1px solid black;
 `;
 
 const CollectionName = styled.h2`
@@ -52,13 +51,8 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "400px",
-  height: "600px",
-  bgcolor: "rgb(60, 60, 60)",
-  border: "2px solid #000",
-  boxShadow: 24,
   bgcolor: "#3c3c3c",
   color: "#03c8c8",
-
   p: 4,
   borderRadius: "5px",
 };
@@ -214,7 +208,8 @@ export default function Collection() {
                     <CollectionName>{collection.name}</CollectionName>
                     <CardDescription>{collection.description}</CardDescription>
 
-                    <button
+                    <button 
+                      className="button-1"
                       onClick={(e) => {
                         e.preventDefault();
                         deleteCollection(collection._id);
@@ -227,7 +222,7 @@ export default function Collection() {
               ))
             ) : (
               <h2 style={{ color: "white" }}>
-                Click on the button down below to create a new collection!
+                Click on the button to create a new collection!
               </h2>
             )}
           </CardsContainer>
@@ -274,7 +269,7 @@ export default function Collection() {
                       />
                     )}
                   </label>
-                  <button type="submit">Save Collection</button>
+                  <button className="button-1" type="submit">Save Collection</button>
                 </form>
               </Box>
             </Modal>

@@ -1,6 +1,5 @@
 import "./CSS/ItemPage.css";
-import { useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 
 export default function ItemPage({ data }) {
   const { systemNumber } = useParams();
