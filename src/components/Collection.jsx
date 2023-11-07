@@ -114,13 +114,16 @@ export default function Collection() {
       const formData = new FormData();
       formData.append("image", collection_pic.file);
 
-      const imageResponse = await fetch("http://localhost:7070/api/upload", {
-        method: "POST",
-        headers: {
-          authorization: `Bearer ${token}`,
-        },
-        body: formData,
-      });
+      const imageResponse = await fetch(
+        "https://collectiondigitalbe.onrender.com/api/upload",
+        {
+          method: "POST",
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+          body: formData,
+        }
+      );
 
       const imageData = await imageResponse.json();
 
@@ -135,7 +138,7 @@ export default function Collection() {
 
       /////////////////////// Step 2: Send request for collection details ////////////////////////
       try {
-        const collectionResponse = await fetch(localAPI, {
+        const collectionResponse = await fetch(deployedAPI, {
           method: "POST",
           headers: {
             "Content-type": "application/json; charset=UTF-8",
@@ -188,7 +191,7 @@ export default function Collection() {
   console.log("@@@@@@@@@@", collections);
 
   const deleteCollection = async (id) => {
-    await fetch(`http://localhost:7070/collections/${id}`, {
+    await fetch(`https://collectiondigitalbe.onrender.com/collections/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${token}`,
