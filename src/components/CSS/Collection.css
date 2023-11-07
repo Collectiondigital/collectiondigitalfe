@@ -40,10 +40,6 @@
   color: black;
 }
 
-input::file-upload-button {
-  font-family: Montserrat, sans-serif;
-}
-
 .save {
   background-color: #03c8c8;
   border-radius: 8px;

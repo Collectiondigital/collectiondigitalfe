@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { CollectionsContext } from "../context/collectionsContext";
 import { useContext, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./CSS/CollItemPage.css";
 
 
@@ -31,9 +32,13 @@ export default function CollItemPage() {
     return (
 
         <div>
-            
+            <NavLink to="/collection/:id">
+                <span>
+                    <img className="arrow-image" src="/arrow-back.png" alt="back" />
+                </span>
+            </NavLink>
             <h1>Object Type: {foundItem.object_type}</h1>
-            
+
         </div>
 
 

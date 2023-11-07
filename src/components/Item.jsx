@@ -20,7 +20,6 @@ const CardsContainer = styled.div`
 `;
 
 const Card = styled.div`
-  border: 2px solid white;
   color: white;
   padding: 20px;
   display: flex;
@@ -29,7 +28,7 @@ const Card = styled.div`
   text-align: center;
   width: 250px;
   cursor: pointer;
-  background: #2b2f33;
+  background: #3c3c3c;
 `;
 
 const CardImage = styled.img`
@@ -210,7 +209,7 @@ export default function Item() {
 
   return (
     <div>
-      <NavLink to="/collection">
+      <NavLink to="/collection/:id">
         <span>
           <img className="arrow-image" src="/arrow-back.png" alt="back" />
         </span>
@@ -223,7 +222,7 @@ export default function Item() {
         <CardsContainer>
           {selectedCollectionItems?.length
             ? selectedCollectionItems.map((item) => (
-                /*   <Link to={`/item/${item._id}`} key={item._id}> */
+              <Link to={`/item/${item._id}`} key={item._id}>
                 <div>
                   {console.log("item.cloudinaryUrl", item)}
                   <Card>
@@ -232,13 +231,13 @@ export default function Item() {
                     <CardDescription>
                       Made by: {item.artist_maker}
                     </CardDescription>
-                    <button onClick={() => deleteItem(item._id)}>
+                    <button className="button-1" onClick={() => deleteItem(item._id)}>
                       Delete Item
                     </button>
                   </Card>
                 </div>
-                /*  </Link> */
-              ))
+              </Link>
+            ))
             : "No items in this collection yet!"}
         </CardsContainer>
       </h3>
