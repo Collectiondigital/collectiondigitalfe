@@ -51,13 +51,11 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
-
+  width: "400px",
+  height: "600px",
   bgcolor: "rgb(60, 60, 60)",
   border: "2px solid #000",
   boxShadow: 24,
-
-  maxHeight: 800,
   bgcolor: "#3c3c3c",
   color: "#03c8c8",
 
@@ -189,7 +187,7 @@ export default function Collection() {
 
   console.log("@@@@@@@@@@", collections);
 
-  const deleteItem = async (id) => {
+  const deleteCollection = async (id) => {
     await fetch(`http://localhost:7070/collections/${id}`, {
       method: "DELETE",
       headers: {
