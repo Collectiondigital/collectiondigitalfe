@@ -281,7 +281,7 @@ export default function Item() {
             </label>
 
             <label>
-              <h3>Select picture:</h3>
+              <h3>Select an image:</h3>
               <input
                 type="file"
                 accept="image/*"
