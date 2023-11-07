@@ -1,7 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { CollectionsContext } from "../context/collectionsContext";
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
 import "./CSS/CollItemPage.css";
 
 export default function CollItemPage() {
@@ -22,19 +21,25 @@ export default function CollItemPage() {
     }
 
 
-    if (foundItem) {
-      break;
+        if (foundItem) {
+            break;
+        }
     }
-  }
 
-
+    const navigate= useNavigate();
 
   console.log(foundItem);
 
-  return (
-    <div>
-      <h1>Object Type: {foundItem.object_type}</h1>
-      <h1>Second Type: {foundItem.object_type}</h1>
-    </div>
-  );
-}
+    return (
+
+        <div>
+            <span onClick={() => navigate(-1)}>
+                <img className="arrow-image" src="/arrow-back.png" alt="back" />
+            </span>
+            <h1>Object Type: {foundItem.object_type}</h1>
+
+        </div>
+
+
+    );
+} 

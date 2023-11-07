@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { CollectionsContext } from "../context/collectionsContext";
 import { AuthContext } from "../context/authContext";
 import Box from "@mui/material/Box";
@@ -208,8 +207,15 @@ export default function Item() {
     setFlag(!flag);
   };
 
+  const navigate= useNavigate();
+
   return (
     <div>
+
+        <span onClick={() => navigate(-1)}>
+          <img className="arrow-image" src="/arrow-back.png" alt="back" />
+        </span>
+
       <h1>{selectedCollection?.name}</h1>
       <h3 style={{ padding: "20px 0px", color: "whitesmoke" }}>
         <CardsContainer>
