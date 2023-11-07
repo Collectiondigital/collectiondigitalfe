@@ -8,7 +8,6 @@ import Modal from "@mui/material/Modal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 // Documentation for this library: https://styled-components.com/docs/basics#motivation
 
 const CardsContainer = styled.div`
@@ -20,6 +19,7 @@ const CardsContainer = styled.div`
 `;
 
 const Card = styled.div`
+  border: 2px solid white;
   color: white;
   padding: 20px;
   display: flex;
@@ -28,7 +28,7 @@ const Card = styled.div`
   text-align: center;
   width: 250px;
   cursor: pointer;
-  background: #3c3c3c;
+  background: #2b2f33;
 `;
 
 const CardImage = styled.img`
@@ -54,7 +54,8 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "rgb(60, 60, 60)",
-  color: "rgb(3, 200, 200)",
+  border: "2px solid #000",
+  boxShadow: 24,
   p: 4,
   borderRadius: "5px",
 };
@@ -209,42 +210,38 @@ export default function Item() {
 
   return (
     <div>
-      <NavLink to="/collection/:id">
-        <span>
-          <img className="arrow-image" src="/arrow-back.png" alt="back" />
-        </span>
-      </NavLink>
       <h1>{selectedCollection?.name}</h1>
-      <button onClick={handleOpen} className="button-1">
-        Add New Items
-      </button>
       <h3 style={{ padding: "20px 0px", color: "whitesmoke" }}>
         <CardsContainer>
           {selectedCollectionItems?.length
             ? selectedCollectionItems.map((item) => (
-              <Link to={`/item/${item._id}`} key={item._id}>
-                <div>
-                  {console.log("item.cloudinaryUrl", item)}
-                  <Card>
-                    <CardImage src={item.cloudinaryUrl} alt="item picture" />
-                    <ItemName>{item.object_type}</ItemName>
-                    <CardDescription>
-                      Made by: {item.artist_maker}
-                    </CardDescription>
-                    <button
-                      className="button-1"
-                      onClick={() => deleteItem(item._id)}
-                    >
+                <Link to={`/item/${item._id}`} key={item._id}>
+                  <div>
+                    {console.log("item.cloudinaryUrl", item)}
+                    <Card>
+                      <CardImage src={item.cloudinaryUrl} alt="item picture" />
+                      <ItemName>{item.object_type}</ItemName>
+                      <CardDescription>
+                        Made by: {item.artist_maker}
+                      </CardDescription>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          deleteItem(item._id);
+                        }}
+                      >
                         Delete Item
-                    </button>
-                  </Card>
-                </div>
-              </Link>
-            ))
+                      </button>
+                    </Card>
+                  </div>
+                </Link>
+              ))
             : "No items in this collection yet!"}
         </CardsContainer>
       </h3>
-
+      <button onClick={handleOpen} className="button-1">
+        Add New Items
+      </button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -281,9 +278,8 @@ export default function Item() {
                 onChange={(e) => setItemDate(e.target.value)}
               />
             </label>
-
             <label>
-              <h3>Select an image:</h3>
+              <h3>Select picture:</h3>
               <input
                 type="file"
                 accept="image/*"

@@ -52,9 +52,15 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
+
+  bgcolor: "rgb(60, 60, 60)",
+  border: "2px solid #000",
+  boxShadow: 24,
+
   maxHeight: 800,
   bgcolor: "#3c3c3c",
   color: "#03c8c8",
+
   p: 4,
   borderRadius: "5px",
 };
@@ -209,7 +215,13 @@ export default function Collection() {
                     />
                     <CollectionName>{collection.name}</CollectionName>
                     <CardDescription>{collection.description}</CardDescription>
-                    <button className="button-1" onClick={() => deleteItem(item._id)}>
+
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        deleteCollection(collection._id);
+                      }}
+                    >
                       Delete Collection
                     </button>
                   </Card>
@@ -251,7 +263,6 @@ export default function Collection() {
                   <label>
                     <h3>Select pic:</h3>
                     <input
-                      id="file-upload-button"
                       type="file"
                       accept="image/*"
                       name="collection_pic"
@@ -265,9 +276,7 @@ export default function Collection() {
                       />
                     )}
                   </label>
-                  <button className="save" type="submit">
-                    Save Collection
-                  </button>
+                  <button type="submit">Save Collection</button>
                 </form>
               </Box>
             </Modal>
