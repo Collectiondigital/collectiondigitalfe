@@ -232,7 +232,10 @@ export default function Item() {
                     <CardDescription>
                       Made by: {item.artist_maker}
                     </CardDescription>
-                    <button onClick={() => deleteItem(item._id)}>
+                    <button
+                      className="button-1"
+                      onClick={() => deleteItem(item._id)}
+                    >
                       Delete Item
                     </button>
                   </Card>
