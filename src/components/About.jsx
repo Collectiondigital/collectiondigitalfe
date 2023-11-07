@@ -40,12 +40,16 @@ export default function About() {
           <div className="about_text">
             <h2>Kevin</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Praesentium assumenda sapiente architecto nostrum reprehenderit,
-              cum natus accusantium numquam earum voluptate voluptas adipisci
-              molestias vel ratione? Nulla corrupti laborum, suscipit alias
-              autem nobis iure explicabo provident fugit praesentium
-              consequatur. Quis aliquid debitis necessitatibus rerum.
+              Hello, I am Kevin! As a flexible and agile Person, I love to work
+              in a group and make progress as a team! Seeing a group bonding
+              together and progress further in their work makes me proud and
+              happy personally and professionally. I started coding in July 2023
+              and since then I loved it, creating something from scratch and
+              seeing my work and knowledge grow when time passes by. I started a
+              fullstack Webdeveloper course and learned various programs like
+              React.js. I also had group projects, with changing Teammembers, to
+              simulate diffrent workenviroments, in there we created
+              Webapplications such as Cookbooks or Blogs.
             </p>
 
             <div className="socialmedia">
