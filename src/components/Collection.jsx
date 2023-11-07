@@ -19,7 +19,6 @@ const CardsContainer = styled.div`
 `;
 
 const Card = styled.div`
-  border: 2px solid white;
   color: white;
   padding: 20px;
   display: flex;
@@ -27,14 +26,14 @@ const Card = styled.div`
   align-items: center;
   text-align: center;
   width: 250px;
+  height: 350px;
   cursor: pointer;
-  background: #2b2f33;
+  background: #3c3c3c;
 `;
 
 const CardImage = styled.img`
   width: 100%;
-  max-height: 200px;
-  max-width: 180px;
+  height: 250px;
   object-fit: cover;
   border-bottom: 1px solid black;
 `;
@@ -53,8 +52,9 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: "rgb(60, 60, 60)",
-  color: "rgb(3, 200, 200)",
+  maxHeight: 800,
+  bgcolor: "#3c3c3c",
+  color: "#03c8c8",
   p: 4,
   borderRadius: "5px",
 };
@@ -198,6 +198,30 @@ export default function Collection() {
       <div className="collection_header">
         <div className="heading">
           <h1>Welcome to your collections</h1>
+          <CardsContainer>
+            {collections ? (
+              collections.map((collection) => (
+                <Link to={`/collection/${collection._id}`} key={collection._id}>
+                  <Card>
+                    <CardImage
+                      src={collection.cloudinaryUrl}
+                      alt="image desc"
+                    />
+                    <CollectionName>{collection.name}</CollectionName>
+                    <CardDescription>{collection.description}</CardDescription>
+                    <button className="button-1" onClick={() => deleteItem(item._id)}>
+                      Delete Collection
+                    </button>
+                  </Card>
+                </Link>
+              ))
+            ) : (
+              <h2 style={{ color: "white" }}>
+                Click on the button down below to create a new collection!
+              </h2>
+            )}
+          </CardsContainer>
+
           <div className="collection_buttons">
             <button className="button-1" onClick={handleOpen}>
               Add New Collection
