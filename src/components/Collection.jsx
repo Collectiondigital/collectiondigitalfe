@@ -184,27 +184,6 @@ export default function Collection() {
       <div className="collection_header">
         <div className="heading">
           <h1>Welcome to your collections</h1>
-          <CardsContainer>
-            {collections ? (
-              collections.map((collection) => (
-                <Link to={`/collection/${collection._id}`} key={collection._id}>
-                  <Card>
-                    <CardImage
-                      src={collection.cloudinaryUrl}
-                      alt="image desc"
-                    />
-                    <CollectionName>{collection.name}</CollectionName>
-                    <CardDescription>{collection.description}</CardDescription>
-                  </Card>
-                </Link>
-              ))
-            ) : (
-              <h2 style={{ color: "white" }}>
-                Click on the button down below to create a new collection!
-              </h2>
-            )}
-          </CardsContainer>
-
           <div className="collection_buttons">
             <button className="button-1" onClick={handleOpen}>
               Add New Collection
@@ -265,6 +244,26 @@ export default function Collection() {
               theme="colored"
             />
           </div>
+          <CardsContainer>
+            {collections ? (
+              collections.map((collection) => (
+                <Link to={`/collection/${collection._id}`} key={collection._id}>
+                  <Card>
+                    <CardImage
+                      src={collection.cloudinaryUrl}
+                      alt="image desc"
+                    />
+                    <CollectionName>{collection.name}</CollectionName>
+                    <CardDescription>{collection.description}</CardDescription>
+                  </Card>
+                </Link>
+              ))
+            ) : (
+              <h2 style={{ color: "white" }}>
+                Click on the button down below to create a new collection!
+              </h2>
+            )}
+          </CardsContainer>
         </div>
       </div>
     </>

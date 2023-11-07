@@ -7,6 +7,7 @@ import Modal from "@mui/material/Modal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 // Documentation for this library: https://styled-components.com/docs/basics#motivation
 
 const CardsContainer = styled.div`
@@ -144,7 +145,15 @@ export default function Item() {
 
   return (
     <div>
+      <NavLink to="/collection">
+        <span>
+          <img className="arrow-image" src="/arrow-back.png" alt="back" />
+        </span>
+      </NavLink>
       <h1>{selectedCollection?.name}</h1>
+      <button onClick={handleOpen} className="button-1">
+        Add New Items
+      </button>
       <h3 style={{ padding: "20px 0px", color: "whitesmoke" }}>
         <CardsContainer>
           {selectedCollectionItems?.length
@@ -162,9 +171,7 @@ export default function Item() {
             : "No items in this collection yet!"}
         </CardsContainer>
       </h3>
-      <button onClick={handleOpen} className="button-1">
-        Add New Items
-      </button>
+
       <Modal
         open={open}
         onClose={handleClose}
