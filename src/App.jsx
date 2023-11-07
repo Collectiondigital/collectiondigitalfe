@@ -15,6 +15,7 @@ import Collection from "./components/Collection";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import Item from "./components/Item";
+import CollItemPage from "./components/CollItemPage";
 
 function App() {
   const { token } = useContext(AuthContext);
@@ -48,6 +49,11 @@ function App() {
         <Route
           path="/collection/:id"
           element={token ? <Item /> : <Navigate to="/" />}
+        />
+
+        <Route
+          path="/item/:id"
+          element={token ? <CollItemPage /> : <Navigate to="/" />}
         />
 
         <Route

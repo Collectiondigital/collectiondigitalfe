@@ -54,7 +54,8 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "rgb(60, 60, 60)",
-  color: "rgb(3, 200, 200)",
+  border: "2px solid #000",
+  boxShadow: 24,
   p: 4,
   borderRadius: "5px",
 };
@@ -198,7 +199,6 @@ export default function Collection() {
       <div className="collection_header">
         <div className="heading">
           <h1>Welcome to your collections</h1>
-
           <CardsContainer>
             {collections ? (
               collections.map((collection) => (
@@ -210,7 +210,12 @@ export default function Collection() {
                     />
                     <CollectionName>{collection.name}</CollectionName>
                     <CardDescription>{collection.description}</CardDescription>
-                    <button onClick={() => deleteItem(item._id)}>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        deleteCollection(collection._id);
+                      }}
+                    >
                       Delete Collection
                     </button>
                   </Card>
@@ -252,7 +257,6 @@ export default function Collection() {
                   <label>
                     <h3>Select pic:</h3>
                     <input
-                      id="file-upload-button"
                       type="file"
                       accept="image/*"
                       name="collection_pic"
@@ -266,9 +270,7 @@ export default function Collection() {
                       />
                     )}
                   </label>
-                  <button className="save" type="submit">
-                    Save Collection
-                  </button>
+                  <button type="submit">Save Collection</button>
                 </form>
               </Box>
             </Modal>
