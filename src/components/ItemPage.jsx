@@ -28,38 +28,6 @@ export default function ItemPage({ data }) {
             <li><h3>Id number:</h3>{oneItem.accessionNumber ? oneItem.accessionNumber : "Accession Number unknown"}</li>
           </ul>
         </div>
-
-        <div className="actions_container">
-          <ul className="action">
-            <li className="action_click">Edit Item Listing</li>
-            <hr />
-            <li className="action_click">Delete Item Listing</li>
-            <hr />
-            <li className="action_click">Print Item Listing</li>
-            <hr />
-            <li className="action_click">Preview Item Listing</li>
-            <hr />
-            <li>Share on your social media</li>
-
-            <div className="social_media_icons">
-              <div className="social1">
-                <a href="/Facebook">
-                  <img className="social-containerf" src="/Facebook.svg" />
-                </a>
-              </div>
-              <div className="social1">
-                <a href="/Twitter">
-                  <img className="social-containert" src="/Twitter.svg" />
-                </a>
-              </div>
-              <div className="social1">
-                <a href="/Instagram">
-                  <img className="social-containeri" src="/Instagram.svg" />
-                </a>
-              </div>
-            </div>
-          </ul>
-        </div>
       </div>
     </>
   );

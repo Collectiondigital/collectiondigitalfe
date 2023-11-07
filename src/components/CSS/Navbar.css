@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 3px solid rgb(3, 200, 200);
+  border-bottom: 3px solid #03c8c8;
   margin-right: 0.5em;
   margin-bottom: 20px;
   height: 60px;
@@ -33,7 +33,7 @@ li {
 }
 
 .nav_a:hover {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }
 
 .login_signup_container {
@@ -46,7 +46,7 @@ li {
 }
 
 .login:hover {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }
 
 .signup {
@@ -55,7 +55,7 @@ li {
 }
 
 .signup:hover {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }
 
 .logout {

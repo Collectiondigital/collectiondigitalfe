@@ -112,7 +112,7 @@ export default function Search({ data, setData }) {
         ))}
       </div>
       {data.length === 0 && (
-        <h3 style={{ color: "grey" }}>No results found for "{query}".</h3>
+        <h3 style={{ color: "white" }}>No results found for "{query}".</h3>
       )}
       <div className="pagination">
         <button

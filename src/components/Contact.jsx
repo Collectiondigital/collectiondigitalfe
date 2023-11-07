@@ -23,7 +23,7 @@ export default function Contact() {
             />
           </FloatingLabel>
 
-          <Button className="submit_button" type="submit">
+          <Button className="send_button" type="submit">
             Send
           </Button>
         </Form>
