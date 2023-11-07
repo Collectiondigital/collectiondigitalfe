@@ -52,12 +52,12 @@ function App() {
 
         <Route
           path="/user/login"
-          element={!token ? <Login /> : <Navigate to="/search" />}
+          element={!token ? <Login /> : <Navigate to="/collection" />}
         />
 
         <Route
           path="/user/signup"
-          element={!token ? <Signup /> : <Navigate to="/search" />}
+          element={!token ? <Signup /> : <Navigate to="/collection" />}
         />
 
         {data.length > 0 && (

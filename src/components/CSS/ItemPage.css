@@ -1,3 +1,4 @@
+/* Search Results Item Page */
 .main_image_container {
   margin-bottom: 20px;
 }
@@ -17,9 +18,8 @@
 }
 
 .object_info_container {
-  width: 49%;
-  margin-right: 10px;
-  background-color: rgb(60, 60, 60);
+  width: 500px;
+  background-color: #3c3c3c;
 }
 
 .object_info {
@@ -38,7 +38,7 @@ li {
 }
 
 .actions_container {
-  background-color: rgb(60, 60, 60);
+  background-color: #3c3c3c;
   width: 49%;
   margin-left: 10px;
 }
@@ -59,7 +59,7 @@ hr {
 }
 
 .action_click:hover {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }
 
 .social_media_icons {

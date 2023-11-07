@@ -54,8 +54,7 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "rgb(60, 60, 60)",
-  border: "2px solid #000",
-  boxShadow: 24,
+  color: "rgb(3, 200, 200)",
   p: 4,
   borderRadius: "5px",
 };
@@ -97,11 +96,14 @@ export default function Collection() {
   const deployedAPI = "https://collectiondigitalbe.onrender.com/collections";
   const localAPI = "http://localhost:7070/collections";
 
+
   const resetFields = () => {
     setName("");
     setDescription("");
     setCollection_pic("");
   };
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -199,6 +201,7 @@ export default function Collection() {
       <div className="collection_header">
         <div className="heading">
           <h1>Welcome to your collections</h1>
+
           <CardsContainer>
             {collections ? (
               collections.map((collection) => (
@@ -222,6 +225,7 @@ export default function Collection() {
               </h2>
             )}
           </CardsContainer>
+
 
           <div className="collection_buttons">
             <button className="button-1" onClick={handleOpen}>
@@ -251,7 +255,8 @@ export default function Collection() {
                   </label>
                   <label>
                     <h3>Select pic:</h3>
-                    <input
+                    <input 
+                    id="file-upload-button"
                       type="file"
                       accept="image/*"
                       name="collection_pic"
@@ -265,7 +270,7 @@ export default function Collection() {
                       />
                     )}
                   </label>
-                  <button type="submit">Save Collection</button>
+                  <button className="save" type="submit">Save Collection</button>
                 </form>
               </Box>
             </Modal>
@@ -282,6 +287,26 @@ export default function Collection() {
               theme="colored"
             />
           </div>
+          <CardsContainer>
+            {collections ? (
+              collections.map((collection) => (
+                <Link to={`/collection/${collection._id}`} key={collection._id}>
+                  <Card>
+                    <CardImage
+                      src={collection.cloudinaryUrl}
+                      alt="image desc"
+                    />
+                    <CollectionName>{collection.name}</CollectionName>
+                    <CardDescription>{collection.description}</CardDescription>
+                  </Card>
+                </Link>
+              ))
+            ) : (
+              <h2 style={{ color: "white" }}>
+                Click on the button down below to create a new collection!
+              </h2>
+            )}
+          </CardsContainer>
         </div>
       </div>
     </>

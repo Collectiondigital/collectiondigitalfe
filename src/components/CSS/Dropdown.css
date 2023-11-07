@@ -7,10 +7,8 @@
 .dropdown-menu {
   display: none;
   position: absolute;
-  /*   background-color: #242424; */
-  background-color: rgb(60, 60, 60);
+  background-color: #3c3c3c;
   opacity: 92%;
-  border: 1px solid grey;
   width: auto;
 }
 
@@ -41,5 +39,5 @@
 }
 
 .dropdown-menu ul li a:hover {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }

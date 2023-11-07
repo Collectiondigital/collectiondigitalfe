@@ -9,7 +9,7 @@
 }
 
 .search_results_container h1 {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }
 
 .card_container {
@@ -34,7 +34,7 @@
 }
 
 .text_card {
-  background-color: rgb(60, 60, 60);
+  background-color: #3c3c3c;
   color: #fff;
   line-height: 26px;
   letter-spacing: 1.25px;
@@ -55,5 +55,6 @@
 }
 
 .favorite  {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }
+
