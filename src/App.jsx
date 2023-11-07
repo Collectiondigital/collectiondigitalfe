@@ -50,6 +50,10 @@ function App() {
           path="/collection/:id"
           element={token ? <Item /> : <Navigate to="/" />}
         />
+        <Route
+          path="/item/:id"
+          element={token ? <CollItemPage /> : <Navigate to="/" />}
+        />
 
         <Route
           path="/item/:id"

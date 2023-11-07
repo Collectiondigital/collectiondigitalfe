@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { CollectionsContext } from "../context/collectionsContext";
 import { useContext, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./CSS/CollItemPage.css";
 
 export default function CollItemPage() {
@@ -20,10 +21,13 @@ export default function CollItemPage() {
       }
     }
 
+
     if (foundItem) {
       break;
     }
   }
+
+
 
   console.log(foundItem);
 
