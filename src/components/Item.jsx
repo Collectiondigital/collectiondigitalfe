@@ -53,8 +53,7 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "rgb(60, 60, 60)",
-  border: "2px solid #000",
-  boxShadow: 24,
+  color: "rgb(3, 200, 200)",
   p: 4,
   borderRadius: "5px",
 };
@@ -202,7 +201,7 @@ export default function Item() {
                 onChange={(e) => setItemDate(e.target.value)}
               />
             </label>
-            <button type="submit">Save item</button>
+            <button className="save"type="submit">Save item</button>
           </form>
         </Box>
       </Modal>

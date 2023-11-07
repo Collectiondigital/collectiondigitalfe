@@ -3,7 +3,7 @@
   margin: auto;
 }
 .contact_container h1 {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }
 
 .contact_container {
@@ -18,12 +18,22 @@
   outline: none;
 }
 
-.submit_button {
-  background-color: rgb(60, 60, 60);
-  margin-top: 10px;
-  border: 1px solid rgb(3, 200, 200);
+.send_button {
+  background-color: #03c8c8;
+  border-radius: 8px;
+  border-style: none;
+  color: #3c3c3c;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  width: 80px;
+  height: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  transition: color 100ms;
 }
 
-.submit_button:hover {
-  color: rgb(3, 200, 200);
+.send_button:hover {
+  background-color: #3affff;
+  color: black;
 }
