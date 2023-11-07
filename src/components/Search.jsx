@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaSearch, FaHeart } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import "./CSS/Search.css";
 import "./CSS/Pagination.css";
 import { useContext } from "react";
@@ -12,9 +12,9 @@ export default function Search({ data, setData }) {
   const { token } = useContext(AuthContext);
   const [favorites, setFavorites] = useState([]);
 
-  //pagi pagiii
+  //pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9; // nr of items per page
+  const itemsPerPage = 9; // number of items per page
 
   const API = `https://api.vam.ac.uk/v2/objects/search?q=${query}&page=1&page_size=30`;
 

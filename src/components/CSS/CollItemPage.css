@@ -1,0 +1,88 @@
+.card_container {
+  display: flex;
+}
+.card_image {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+}
+
+.card {
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  background: #3c3c3c;
+}
+
+.card_text {
+  color: #fff;
+  font-size: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.card_text li {
+  color: #fff;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.actions_container {
+  background-color: #3c3c3c;
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr {
+  width: 80%;
+}
+
+.action_click {
+  margin: 40px;
+  cursor: pointer;
+}
+
+.action_click:hover {
+  color: #03c8c8;
+}
+
+.social_media_icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-2 {
+  background-color: #03c8c8;
+  border-radius: 8px;
+  border-style: none;
+  color: #3c3c3c;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px;
+  width: 150px;
+  margin: 30px;
+  padding: 10px;
+  transition: color 100ms;
+}
+
+.button-2:hover {
+  background-color: #3affff;
+  color: black;
+}

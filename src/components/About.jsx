@@ -7,18 +7,23 @@ export default function About() {
         <h1 id="developer_team">Developer Team</h1>
         <div className="about_card">
           <div className="about_image">
-            <img src="https://placehold.co/350x450" alt="" />
+            <img
+              className="about_image"
+              src="./Sonia.jpg"
+              alt="image sonia"
+            />
           </div>
 
           <div className="about_text">
             <h2>Sonia</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Praesentium assumenda sapiente architecto nostrum reprehenderit,
-              cum natus accusantium numquam earum voluptate voluptas adipisci
-              molestias vel ratione? Nulla corrupti laborum, suscipit alias
-              autem nobis iure explicabo provident fugit praesentium
-              consequatur. Quis aliquid debitis necessitatibus rerum.
+              Empathy and team spirit, honed through years in theatre, fuel my drive to develop user-centric
+              software solutions. Since I entered the tech world, my learning curve is rising, and I
+              have no plans to change that.
+              Resilience, cultivated in response to rejection and criticism on the stage, is the driving
+              force propelling my pursuit of excellence in programming.
+              I firmly believe that my passion for coding, combined with the soft skills nurtured in the
+              theatre, make me a natural fit for a fulfilling career as a programmer.
             </p>
 
             <div className="socialmedia">
@@ -40,16 +45,16 @@ export default function About() {
           <div className="about_text">
             <h2>Kevin</h2>
             <p>
-              Hello, I am Kevin! As a flexible and agile Person, I love to work
-              in a group and make progress as a team! Seeing a group bonding
-              together and progress further in their work makes me proud and
-              happy personally and professionally. I started coding in July 2023
-              and since then I loved it, creating something from scratch and
-              seeing my work and knowledge grow when time passes by. I started a
-              fullstack Webdeveloper course and learned various programs like
-              React.js. I also had group projects, with changing Teammembers, to
-              simulate diffrent workenviroments, in there we created
-              Webapplications such as Cookbooks or Blogs.
+              Hello, I'm Kevin! I'm a flexible and easy-going person. I love to work
+              in a group and make progress as a team! Seeing people bonding
+              and progressing further in their work makes me proud and
+              happy, personally and professionally. I started coding in July 2023
+              and from the start I loved it, creating something from scratch and
+              seeing my work and knowledge grow. In the Full-Stack Web Development
+              course at WBS Coding School I learned Javascript, React.js, Node.js, PostgreSQL,
+              and other programs for frontend & backend. I also had group projects; with changing
+              team members, to simulate different work environments, where we created web
+              applications such as cookbooks and blogs.
             </p>
 
             <div className="socialmedia">
