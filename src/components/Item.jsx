@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { CollectionsContext } from "../context/collectionsContext";
 import { AuthContext } from "../context/authContext";
@@ -89,6 +90,7 @@ export default function Item() {
   const [origin, setOrigin] = useState("");
   const [open, setOpen] = useState(false);
   const [itemDate, setItemDate] = useState("");
+  const [item_pic, setItem_pic] = useState("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const { collections, flag, setFlag } = useContext(CollectionsContext);
@@ -106,41 +108,104 @@ export default function Item() {
     setArtist("");
     setOrigin("");
     setItemDate("");
+    setItem_pic("");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch(localAPI, {
-      method: "POST",
+    // steeeep ooone
+
+    try {
+      const formData = new FormData();
+      formData.append("image", item_pic.file);
+
+      const imgRes = await fetch("http://localhost:7070/api/upload", {
+        method: "POST",
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+        body: formData,
+      });
+
+      const imgData = await imgRes.json();
+
+      if (!imgRes.ok) {
+        errorNotification(imgData.error);
+        return;
+      }
+      console.log("img data", imgData);
+      const cloudinaryUrl = imgData.cloudinaryUrl;
+      console.log("cloudUrl", imgData.cloudinaryUrl);
+
+      //steeep twoo
+      try {
+        const itemResponse = await fetch(localAPI, {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            object_type,
+            artist_maker: artist,
+            origin,
+            primary_date: itemDate,
+            collection_ID: id,
+            cloudinaryUrl,
+          }),
+        });
+
+        const data = await itemResponse.json();
+
+        console.log("SENT DATA", data);
+
+        if (!itemResponse.ok) {
+          errorNotification(data.error);
+          return;
+        }
+
+        successfulNotification();
+        resetFields();
+        setFlag(!flag);
+
+        setTimeout(() => {
+          handleClose();
+        }, 500);
+      } catch (itemError) {
+        console.error("Item Error:", itemError);
+      }
+    } catch (imgError) {
+      console.error("Image Error:", imgError);
+    }
+  };
+
+  // same as in coll
+  const handleImageChange = (e) => {
+    // Get the selected image file
+    const file = e.target.files[0];
+
+    // You can use FileReader to display a preview of the selected image
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        // Set the selected image and its preview
+        setItem_pic({
+          file,
+          preview: event.target.result,
+        });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const deleteItem = async (id) => {
+    await fetch(`http://localhost:7070/items/${id}`, {
+      method: "DELETE",
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
         authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({
-        object_type,
-        artist_maker: artist,
-        origin,
-        primary_date: itemDate,
-        collection_ID: id,
-      }),
     });
-
-    const data = await res.json();
-
-    console.log("SENT DATA", data);
-
-    if (!res.ok) {
-      errorNotification(data.error);
-    }
-
-    if (res.ok) {
-      successfulNotification();
-      resetFields();
-      setFlag(!flag);
-    }
-    setTimeout(() => {
-      handleClose();
-    }, 500);
+    setFlag(!flag);
   };
 
   return (
@@ -150,15 +215,21 @@ export default function Item() {
         <CardsContainer>
           {selectedCollectionItems?.length
             ? selectedCollectionItems.map((item) => (
-                <div key={item._id}>
+                /*   <Link to={`/item/${item._id}`} key={item._id}> */
+                <div>
+                  {console.log("item.cloudinaryUrl", item)}
                   <Card>
-                    <CardImage />
+                    <CardImage src={item.cloudinaryUrl} alt="item picture" />
                     <ItemName>{item.object_type}</ItemName>
                     <CardDescription>
                       Made by: {item.artist_maker}
                     </CardDescription>
+                    <button onClick={() => deleteItem(item._id)}>
+                      Delete Item
+                    </button>
                   </Card>
                 </div>
+                /*  </Link> */
               ))
             : "No items in this collection yet!"}
         </CardsContainer>
@@ -201,6 +272,22 @@ export default function Item() {
                 value={itemDate}
                 onChange={(e) => setItemDate(e.target.value)}
               />
+            </label>
+            <label>
+              <h3>Select picture:</h3>
+              <input
+                type="file"
+                accept="image/*"
+                name="item_pic"
+                onChange={handleImageChange}
+              />
+              {item_pic && (
+                <img
+                  src={item_pic.preview}
+                  alt="selected image"
+                  style={{ maxWidth: "100%", maxHeight: "200px" }}
+                />
+              )}
             </label>
             <button type="submit">Save item</button>
           </form>

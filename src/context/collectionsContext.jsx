@@ -34,7 +34,9 @@ export default function CollectionsContextProvider(props) {
   };
 
   useEffect(() => {
-    getCollections();
+    if (token) {
+      getCollections();
+    }
   }, [token, flag]);
 
   return (
