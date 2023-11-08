@@ -154,11 +154,12 @@ export default function Collection() {
 
         if (!collectionResponse.ok) {
           errorNotification(collectionData.error);
+          setIsLoading(false);
           return;
         }
 
         /////////////////////// END OF STEP 2 ////////////////////////
-
+        setIsLoading(false);
         setFlag(!flag);
         successfulNotification();
         resetFields();
@@ -204,113 +205,108 @@ export default function Collection() {
   const { decodedToken } = useJwt(token);
 
   return (
-    <>
-      <div className="collection_header">
-        <div className="heading">
-            {token !== null && (
-              <>
-                <h1 className="hello">Hello, {decodedToken?.name}!</h1>
-              </>
-            )}
-          <h1>Welcome to your collections</h1>
-          <CardsContainer>
-            {collections ? (
-              collections.map((collection) => (
-                <Link to={`/collection/${collection._id}`} key={collection._id}>
-                  <Card>
-                    <CardImage
-                      src={collection.cloudinaryUrl}
-                      alt="image desc"
+    <div className="collection_header">
+      <div className="heading">
+        {token !== null && (
+          <>
+            <h1 className="hello">Hello, {decodedToken?.name}!</h1>
+          </>
+        )}
+        <h1>Welcome to your collections</h1>
+        <CardsContainer>
+          {collections ? (
+            collections.map((collection) => (
+              <Link to={`/collection/${collection._id}`} key={collection._id}>
+                <Card>
+                  <CardImage src={collection.cloudinaryUrl} alt="image desc" />
+                  <CollectionName>{collection.name}</CollectionName>
+                  <CardDescription>{collection.description}</CardDescription>
+
+                  <button
+                    className="button-delete"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      deleteCollection(collection._id);
+                    }}
+                  >
+                    Delete Collection
+                  </button>
+                </Card>
+              </Link>
+            ))
+          ) : (
+            <h2 style={{ color: "white" }}>
+              Click on the button to create a new collection!
+            </h2>
+          )}
+        </CardsContainer>
+
+        <div className="collection_buttons">
+          <button className="button-1" onClick={handleOpen}>
+            Add New Collection
+          </button>
+
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style}>
+              <LoadingOverlay active={isLoading} spinner text="Uploading...">
+                <form onSubmit={handleSubmit} encType="multipart/form-data">
+                  <label>
+                    <h3>Name of collection:</h3>
+                    <input
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
-                    <CollectionName>{collection.name}</CollectionName>
-                    <CardDescription>{collection.description}</CardDescription>
-
-                    <button
-                      className="button-delete"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        deleteCollection(collection._id);
-                      }}
-                    >
-                      Delete Collection
-                    </button>
-                  </Card>
-                </Link>
-              ))
-            ) : (
-              <h2 style={{ color: "white" }}>
-                Click on the button to create a new collection!
-              </h2>
-            )}
-          </CardsContainer>
-
-          <div className="collection_buttons">
-            <button className="button-1" onClick={handleOpen}>
-              Add New Collection
-            </button>
-
-            <Modal
-              open={open}
-              onClose={handleClose}
-              aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
-            >
-              <Box sx={style}>
-                <LoadingOverlay active={isLoading} spinner text="Uploading...">
-                  <form onSubmit={handleSubmit} encType="multipart/form-data">
-                    <label>
-                      <h3>Name of collection:</h3>
-                      <input
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                  </label>
+                  <label>
+                    <h3>Description:</h3>
+                    <input
+                      value={description}
+                      onChange={(e) => setDescription(e.target.value)}
+                    />
+                  </label>
+                  <label>
+                    <h3>Select pic:</h3>
+                    <input
+                      type="file"
+                      accept="image/*"
+                      name="collection_pic"
+                      onChange={handleImageChange}
+                    />
+                    {collection_pic && (
+                      <img
+                        src={collection_pic.preview}
+                        alt="selected img"
+                        style={{ maxWidth: "100%", maxHeight: "200px" }}
                       />
-                    </label>
-                    <label>
-                      <h3>Description:</h3>
-                      <input
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                      />
-                    </label>
-                    <label>
-                      <h3>Select pic:</h3>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        name="collection_pic"
-                        onChange={handleImageChange}
-                      />
-                      {collection_pic && (
-                        <img
-                          src={collection_pic.preview}
-                          alt="selected img"
-                          style={{ maxWidth: "100%", maxHeight: "200px" }}
-                        />
-                      )}
-                    </label>
-                    <button className="button-1" type="submit">
-                      Save Collection
-                    </button>
-                  </form>
-                </LoadingOverlay>
-              </Box>
-            </Modal>
+                    )}
+                  </label>
+                  <button className="button-1" type="submit">
+                    Save Collection
+                  </button>
+                </form>
+              </LoadingOverlay>
+            </Box>
+          </Modal>
 
-            <ToastContainer
-              position="bottom-center"
-              autoClose={3000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="dark"
-            />
-          </div>
+          <ToastContainer
+            position="bottom-center"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
         </div>
       </div>
-    </>
+    </div>
   );
 }
