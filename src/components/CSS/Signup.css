@@ -4,14 +4,13 @@
 }
 
 label.label-text {
-  color:  #03c8c8;
+  color: #03c8c8;
 }
 
 .hello {
   color: white;
-  font-size: 20px;
-  text-align: end;
-  margin: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .logout-button {
