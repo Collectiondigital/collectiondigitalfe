@@ -9,6 +9,7 @@ import Modal from "@mui/material/Modal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
+import LoadingOverlay from "react-loading-overlay";
 // Documentation for this library: https://styled-components.com/docs/basics#motivation
 
 const CardsContainer = styled.div`
@@ -91,7 +92,7 @@ export default function Collection() {
   const [collection_pic, setCollection_pic] = useState("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
+  const [isLoading, setIsLoading] = useState(false);
   const deployedAPI = "https://collectiondigitalbe.onrender.com/collections";
   const localAPI = "http://localhost:7070/collections";
 
@@ -103,7 +104,7 @@ export default function Collection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     try {
       /////////////////////// Step 1: Send request for image upload///////////////////////////////
       const formData = new FormData();
@@ -124,9 +125,14 @@ export default function Collection() {
 
       if (!imageResponse.ok) {
         errorNotification(imageData.error);
+        setIsLoading(false);
         return;
       }
 
+      if (imageResponse.ok) {
+        errorNotification(imageData.error);
+        setIsLoading(false);
+      }
       // Set the Cloudinary URL
       const cloudinaryUrl = imageData.cloudinaryUrl;
       /////////////////////// END OF STEP 1 ///////////////////////////////
@@ -244,6 +250,7 @@ export default function Collection() {
             <button className="button-1" onClick={handleOpen}>
               Add New Collection
             </button>
+
             <Modal
               open={open}
               onClose={handleClose}
@@ -251,41 +258,46 @@ export default function Collection() {
               aria-describedby="modal-modal-description"
             >
               <Box sx={style}>
-                <form onSubmit={handleSubmit} encType="multipart/form-data">
-                  <label>
-                    <h3>Name of collection:</h3>
-                    <input
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                    />
-                  </label>
-                  <label>
-                    <h3>Description:</h3>
-                    <input
-                      value={description}
-                      onChange={(e) => setDescription(e.target.value)}
-                    />
-                  </label>
-                  <label>
-                    <h3>Select pic:</h3>
-                    <input
-                      type="file"
-                      accept="image/*"
-                      name="collection_pic"
-                      onChange={handleImageChange}
-                    />
-                    {collection_pic && (
-                      <img
-                        src={collection_pic.preview}
-                        alt="selected img"
-                        style={{ maxWidth: "100%", maxHeight: "200px" }}
+                <LoadingOverlay active={isLoading} spinner text="Uploading...">
+                  <form onSubmit={handleSubmit} encType="multipart/form-data">
+                    <label>
+                      <h3>Name of collection:</h3>
+                      <input
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                       />
-                    )}
-                  </label>
-                  <button className="button-1" type="submit">Save Collection</button>
-                </form>
+                    </label>
+                    <label>
+                      <h3>Description:</h3>
+                      <input
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                      />
+                    </label>
+                    <label>
+                      <h3>Select pic:</h3>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        name="collection_pic"
+                        onChange={handleImageChange}
+                      />
+                      {collection_pic && (
+                        <img
+                          src={collection_pic.preview}
+                          alt="selected img"
+                          style={{ maxWidth: "100%", maxHeight: "200px" }}
+                        />
+                      )}
+                    </label>
+                    <button className="button-1" type="submit">
+                      Save Collection
+                    </button>
+                  </form>
+                </LoadingOverlay>
               </Box>
             </Modal>
+
             <ToastContainer
               position="bottom-center"
               autoClose={3000}
