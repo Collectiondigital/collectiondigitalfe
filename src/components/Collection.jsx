@@ -212,7 +212,7 @@ export default function Collection() {
                     <CardDescription>{collection.description}</CardDescription>
 
                     <button 
-                      className="button-1"
+                      className="button-delete"
                       onClick={(e) => {
                         e.preventDefault();
                         deleteCollection(collection._id);

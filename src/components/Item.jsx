@@ -232,7 +232,7 @@ export default function Item() {
                       <CardDescription>
                         {item.artist_maker}
                       </CardDescription>
-                      <button className="button-1"
+                      <button className="button-delete"
                         onClick={(e) => {
                           e.preventDefault();
                           deleteItem(item._id);

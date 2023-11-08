@@ -20,7 +20,6 @@
 .card_text {
   color: #fff;
   font-size: 20px;
-  margin: 20px;
   display: flex;
   flex-direction: column;
 }
