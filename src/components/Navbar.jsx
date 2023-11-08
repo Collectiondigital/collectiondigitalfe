@@ -1,6 +1,8 @@
-import React, { useContext } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
+import { HashLink } from "react-router-hash-link";
+
 import "./CSS/Navbar.css";
 import "./CSS/Dropdown.css";
 
@@ -24,38 +26,40 @@ export default function Navbar() {
           <ul>
             <li>
               <div className="nav-link">
-                <NavLink to="/Pricing">Pricing</NavLink>
-              </div>
-            </li>
-            <li>
-              <div className="nav-link">
-                <NavLink to="/About">About</NavLink>
+                <NavLink to="/about">About</NavLink>
                 <div className="dropdown-menu">
                   <ul className="drop-ul">
-                    <li className="drop-li">
-                      <NavLink to="#team">Developer Team</NavLink>
+                    <li>
+                      <HashLink to="About/#developer_team">
+                        Developer Team
+                      </HashLink>
                     </li>
-                    <li className="drop-li">
-                      <NavLink to="#project">Our Project</NavLink>
+                    <li>
+                      <HashLink to="about/#our_project">Our Project</HashLink>
                     </li>
                   </ul>
                 </div>
               </div>
             </li>
             <li>
-              <NavLink to="/Contact">Contact</NavLink>
+              <div className="nav-link">
+                <NavLink to="/pricing">Pricing</NavLink>
+              </div>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
             <li>
               {token !== null && (
                 <>
-                  <NavLink to="/Search">Search</NavLink>
+                  <NavLink to="/search">Search</NavLink>
                 </>
               )}
             </li>
             <li>
               {token !== null && (
                 <>
-                  <NavLink to="/Collection">Collection</NavLink>
+                  <NavLink to="/collection">Collection</NavLink>
                 </>
               )}
             </li>

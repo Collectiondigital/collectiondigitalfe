@@ -1,14 +1,13 @@
 h1 {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }
 .homepage_container {
   display: flex;
   justify-content: space-around;
-  border-bottom: 1px solid grey;
   padding-bottom: 20px;
 }
 .homepage_card {
-  background-color: rgb(60, 60, 60);
+  background-color: #3c3c3c;
   width: 25%;
   padding: 15px;
   display: flex;
@@ -24,7 +23,7 @@ h1 {
 }
 
 .homepage_card {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
   margin: 5px;
 }
 
@@ -60,10 +59,10 @@ h1 {
 }
 
 .new_collections_card_text {
-  background-color: rgb(60, 60, 60);
+  background-color: #3c3c3c;
   color: #fff;
   width: 250px;
-  height: 200px;
+  height: 150px;
   line-height: 26px;
   letter-spacing: 1.25px;
   padding: 10px;

@@ -9,7 +9,6 @@ export default function Home() {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          borderBottom: "1px solid grey",
           paddingBottom: "2%",
           color: "white",
         }}
@@ -60,7 +59,7 @@ export default function Home() {
       </div>
 
       <h2 style={{ marginTop: "2%", marginBottom: "2%", color: "white" }}>
-        New Collections
+        New Items
       </h2>
 
       <div className="new_collections_card_container">
@@ -74,24 +73,23 @@ export default function Home() {
           </div>
           <div className="new_collections_card_text">
             <h3>Trading Cards</h3>
-            <p>Game: One Piece</p>
-            <p>Name: Portgas D.Ace</p>
             <p>Collector: KvK</p>
+            <p>Date: August 2023</p>
           </div>
         </div>
 
         <div className="new_collections_card">
           <div>
-
-            <img className="new_collections_card_image"
-              src="/IMG_3938.jpg" alt="collection image" />
-
+            <img
+              className="new_collections_card_image"
+              src="/IMG_3938.jpg"
+              alt="collection image"
+            />
           </div>
           <div className="new_collections_card_text">
-            <h3>Flyer</h3>
-            <p>Artist: Sonson</p>
-            <p>Date: 2021</p>
+            <h3>Flyers</h3>
             <p>Collector: Sonickaa</p>
+            <p>Date: February 2022</p>
           </div>
         </div>
 
@@ -104,10 +102,10 @@ export default function Home() {
             />
           </div>
           <div className="new_collections_card_text">
-            <h3>Costume Book</h3>
-            <p>Fashion and Fashion Plates 1800-1900</p>
-            <p>James Laver: 1943</p>
+            <h3>Costume Books</h3>
             <p>Collector: jenivere</p>
+            <p>Date: October 2021</p>
+            
           </div>
         </div>
       </div>

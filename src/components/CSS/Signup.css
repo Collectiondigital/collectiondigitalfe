@@ -4,7 +4,7 @@
 }
 
 label.label-text {
-  color: white;
+  color:  #03c8c8;
 }
 
 .hello {
@@ -61,20 +61,25 @@ input {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 100%;
-  border: 1px solid #ddd;
+  border: none;
   border-radius: 4px;
   box-sizing: border-box;
   outline: none;
 }
 
 form button {
-  background: var(--primary);
+  background-color: #03c8c8;
   border: 0;
-  color: #fff;
+  color: #3c3c3c;
   padding: 10px;
   font-family: Montserrat, sans-serif;
   border-radius: 4px;
   cursor: pointer;
+}
+
+form button:hover {
+  background-color: #3affff;
+  color: black;
 }
 
 div.error {
@@ -95,6 +100,6 @@ form.login {
   max-width: 400px;
   margin: 100px auto;
   padding: 20px;
-  background: rgb(60, 60, 60);
+  background: #3c3c3c;
   border-radius: 4px;
 }

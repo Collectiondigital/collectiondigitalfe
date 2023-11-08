@@ -9,7 +9,7 @@
 }
 
 .search_results_container h1 {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }
 
 .card_container {
@@ -20,7 +20,7 @@
 
 .item_card {
   width: 250px;
-  height: 400px;
+  height: 450px;
   margin-bottom: 20px;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .text_card {
-  background-color: rgb(60, 60, 60);
+  background-color: #3c3c3c;
   color: #fff;
   line-height: 26px;
   letter-spacing: 1.25px;
@@ -45,3 +45,16 @@
   opacity: 0.5;
   transition: 0.5s ease-out;
 }
+
+.color:hover {
+  cursor: pointer;
+}
+
+.white {
+  color: #fff;
+}
+
+.favorite  {
+  color: #03c8c8;
+}
+

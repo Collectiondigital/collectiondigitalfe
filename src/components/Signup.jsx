@@ -13,20 +13,20 @@ export default function Signup({ setUser }) {
 
   const { login } = useContext(AuthContext);
 
+  const deployedAPI = "https://collectiondigitalbe.onrender.com/user/signup";
+  const localAPI = "http://localhost:7070/user/signup";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch(
-      "https://collectiondigitalbe.onrender.com/user/signup",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password, username }),
-      }
-    );
+    const response = await fetch(deployedAPI, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password, username }),
+    });
 
     const data = await response.json();
 

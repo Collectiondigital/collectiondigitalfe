@@ -1,5 +1,5 @@
 .pricing {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
   margin-bottom: 20px;
 }
 
@@ -22,11 +22,11 @@
 }
 
 .pricing_card_text h3 {
-  color: rgb(3, 200, 200);
+  color: #03c8c8;
 }
 
 .pricing_card_text {
-  background-color: rgb(60, 60, 60);
+  background-color: #3c3c3c;
   color: #fff;
   width: 250px;
   height: 200px;

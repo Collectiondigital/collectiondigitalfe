@@ -1,8 +1,39 @@
-.contact_container h1{
-    color: rgb(3, 200, 200);
+.contact_container {
+  width: 50%;
+  margin: auto;
+}
+.contact_container h1 {
+  color: #03c8c8;
 }
 
+.contact_container {
+  color: white;
+}
 
+.message_field {
+  height: 100px;
+  width: 480px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
 
+.send_button {
+  background-color: #03c8c8;
+  border-radius: 8px;
+  border-style: none;
+  color: #3c3c3c;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  width: 80px;
+  height: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  transition: color 100ms;
+}
 
-
+.send_button:hover {
+  background-color: #3affff;
+  color: black;
+}
