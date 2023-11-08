@@ -166,13 +166,14 @@ export default function Item() {
 
         if (!itemResponse.ok) {
           errorNotification(data.error);
+          setIsLoading(false);
           return;
         }
 
         successfulNotification();
         resetFields();
         setFlag(!flag);
-
+        setIsLoading(false);
         setTimeout(() => {
           handleClose();
         }, 500);
