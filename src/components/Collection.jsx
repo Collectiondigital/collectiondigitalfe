@@ -3,6 +3,7 @@ import "./CSS/Collection.css";
 import { useContext, useState } from "react";
 import { CollectionsContext } from "../context/collectionsContext";
 import { AuthContext } from "../context/authContext";
+import { useJwt } from "react-jwt";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { ToastContainer, toast } from "react-toastify";
@@ -194,10 +195,19 @@ export default function Collection() {
     setFlag(!flag);
   };
 
+  const { decodedToken } = useJwt(token);
+
   return (
     <>
       <div className="collection_header">
         <div className="heading">
+        <div className="greeting_container">
+            {token !== null && (
+              <>
+                <h1 className="hello">Hello, {decodedToken?.name}!</h1>
+              </>
+            )}
+          </div>
           <h1>Welcome to your collections</h1>
           <CardsContainer>
             {collections ? (
@@ -211,7 +221,7 @@ export default function Collection() {
                     <CollectionName>{collection.name}</CollectionName>
                     <CardDescription>{collection.description}</CardDescription>
 
-                    <button 
+                    <button
                       className="button-delete"
                       onClick={(e) => {
                         e.preventDefault();
