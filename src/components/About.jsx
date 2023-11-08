@@ -72,7 +72,7 @@ export default function About() {
           </div>
 
           <div className="about_image">
-            <img src="https://placehold.co/350x450" alt="" />
+            <img src="./Kevin.jpeg" alt="image Kevin" />
           </div>
         </div>
 
@@ -80,7 +80,7 @@ export default function About() {
           <div>
             <img
               className="about_image"
-              src="./IMG_1939 crop bw 350.jpeg"
+              src="./Jen.jpg"
               alt="image jennifer"
             />
           </div>
