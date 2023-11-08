@@ -118,13 +118,16 @@ export default function Item() {
       const formData = new FormData();
       formData.append("image", item_pic.file);
 
-      const imgRes = await fetch("http://localhost:7070/api/upload", {
-        method: "POST",
-        headers: {
-          authorization: `Bearer ${token}`,
-        },
-        body: formData,
-      });
+      const imgRes = await fetch(
+        "https://collectiondigitalbe.onrender.com/api/upload",
+        {
+          method: "POST",
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+          body: formData,
+        }
+      );
 
       const imgData = await imgRes.json();
 
@@ -138,7 +141,7 @@ export default function Item() {
 
       //step two
       try {
-        const itemResponse = await fetch(localAPI, {
+        const itemResponse = await fetch(deployedAPI, {
           method: "POST",
           headers: {
             "Content-type": "application/json; charset=UTF-8",
@@ -198,7 +201,7 @@ export default function Item() {
   };
 
   const deleteItem = async (id) => {
-    await fetch(`http://localhost:7070/items/${id}`, {
+    await fetch(`https://collectiondigitalbe.onrender.com/items/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${token}`,
@@ -207,13 +210,13 @@ export default function Item() {
     setFlag(!flag);
   };
 
-  const navigate= useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div>
-        <span onClick={() => navigate(-1)}>
-          <img className="arrow-image" src="/arrow-back.png" alt="back" />
-        </span>
+      <span onClick={() => navigate(-1)}>
+        <img className="arrow-image" src="/arrow-back.png" alt="back" />
+      </span>
 
       <h1>Collection: {selectedCollection?.name}</h1>
       <h3 style={{ padding: "20px 0px", color: "whitesmoke" }}>
@@ -229,7 +232,7 @@ export default function Item() {
                       <CardDescription>
                         {item.artist_maker}
                       </CardDescription>
-                      <button className="button-1"
+                      <button className="button-delete"
                         onClick={(e) => {
                           e.preventDefault();
                           deleteItem(item._id);

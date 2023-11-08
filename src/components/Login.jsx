@@ -20,7 +20,7 @@ export default function Login() {
     setIsLoading(true);
     setError(null);
 
-    const response = await fetch(localAPI, {
+    const response = await fetch(deployedAPI, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

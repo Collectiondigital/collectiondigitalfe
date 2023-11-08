@@ -13,12 +13,15 @@ export default function CollectionsContextProvider(props) {
 
   const getCollections = async () => {
     try {
-      const res = await fetch(`http://localhost:7070/collections/`, {
-        headers: {
-          "Content-Type": "application/json",
-          authorization: `Bearer ${token}`,
-        },
-      });
+      const res = await fetch(
+        `https://collectiondigitalbe.onrender.com/collections/`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (res.status === 401) {
         // Handle unauthorized access
