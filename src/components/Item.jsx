@@ -7,6 +7,7 @@ import Modal from "@mui/material/Modal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styled from "styled-components";
+import LoadingOverlay from "react-loading-overlay";
 // Documentation for this library: https://styled-components.com/docs/basics#motivation
 
 const CardsContainer = styled.div`
@@ -54,7 +55,7 @@ const style = {
   width: "400px",
   height: "650px",
   bgcolor: "#3c3c3c",
-  color:"#03c8c8",
+  color: "#03c8c8",
   p: 4,
   borderRadius: "5px",
 };
@@ -95,7 +96,7 @@ export default function Item() {
   const { collections, flag, setFlag } = useContext(CollectionsContext);
   const { token } = useContext(AuthContext);
   const { id } = useParams();
-
+  const [isLoading, setIsLoading] = useState(false);
   const deployedAPI = "https://collectiondigitalbe.onrender.com/items";
   const localAPI = "http://localhost:7070/items";
 
@@ -112,6 +113,7 @@ export default function Item() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     // step one
 
     try {
@@ -133,6 +135,7 @@ export default function Item() {
 
       if (!imgRes.ok) {
         errorNotification(imgData.error);
+        setIsLoading(false);
         return;
       }
       console.log("img data", imgData);
@@ -163,13 +166,14 @@ export default function Item() {
 
         if (!itemResponse.ok) {
           errorNotification(data.error);
+          setIsLoading(false);
           return;
         }
 
         successfulNotification();
         resetFields();
         setFlag(!flag);
-
+        setIsLoading(false);
         setTimeout(() => {
           handleClose();
         }, 500);
@@ -229,10 +233,9 @@ export default function Item() {
                     <Card>
                       <CardImage src={item.cloudinaryUrl} alt="item picture" />
                       <ItemName>{item.object_type}</ItemName>
-                      <CardDescription>
-                        {item.artist_maker}
-                      </CardDescription>
-                      <button className="button-delete"
+                      <CardDescription>{item.artist_maker}</CardDescription>
+                      <button
+                        className="button-delete"
                         onClick={(e) => {
                           e.preventDefault();
                           deleteItem(item._id);
@@ -257,53 +260,57 @@ export default function Item() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <form onSubmit={handleSubmit}>
-            <label>
-              <h3>Title/Type of object:</h3>
-              <input
-                value={object_type}
-                onChange={(e) => setObject_type(e.target.value)}
-              />
-            </label>
-            <label>
-              <h3>Artist:</h3>
-              <input
-                value={artist}
-                onChange={(e) => setArtist(e.target.value)}
-              />
-            </label>
-            <label>
-              <h3>Origin:</h3>
-              <input
-                value={origin}
-                onChange={(e) => setOrigin(e.target.value)}
-              />
-            </label>
-            <label>
-              <h3>Item's creation date:</h3>
-              <input
-                value={itemDate}
-                onChange={(e) => setItemDate(e.target.value)}
-              />
-            </label>
-            <label>
-              <h3>Select picture:</h3>
-              <input
-                type="file"
-                accept="image/*"
-                name="item_pic"
-                onChange={handleImageChange}
-              />
-              {item_pic && (
-                <img
-                  src={item_pic.preview}
-                  alt="selected image"
-                  style={{ maxWidth: "100%", maxHeight: "100px" }}
+          <LoadingOverlay active={isLoading} spinner text="Uploading...">
+            <form onSubmit={handleSubmit}>
+              <label>
+                <h3>Title/Type of object:</h3>
+                <input
+                  value={object_type}
+                  onChange={(e) => setObject_type(e.target.value)}
                 />
-              )}
-            </label>
-            <button className="save" type="submit">Save item</button>
-          </form>
+              </label>
+              <label>
+                <h3>Artist:</h3>
+                <input
+                  value={artist}
+                  onChange={(e) => setArtist(e.target.value)}
+                />
+              </label>
+              <label>
+                <h3>Origin:</h3>
+                <input
+                  value={origin}
+                  onChange={(e) => setOrigin(e.target.value)}
+                />
+              </label>
+              <label>
+                <h3>Item's creation date:</h3>
+                <input
+                  value={itemDate}
+                  onChange={(e) => setItemDate(e.target.value)}
+                />
+              </label>
+              <label>
+                <h3>Select picture:</h3>
+                <input
+                  type="file"
+                  accept="image/*"
+                  name="item_pic"
+                  onChange={handleImageChange}
+                />
+                {item_pic && (
+                  <img
+                    src={item_pic.preview}
+                    alt="selected image"
+                    style={{ maxWidth: "100%", maxHeight: "100px" }}
+                  />
+                )}
+              </label>
+              <button className="save" type="submit">
+                Save item
+              </button>
+            </form>
+          </LoadingOverlay>
         </Box>
       </Modal>
       <ToastContainer

@@ -57,7 +57,9 @@ export default function Search({ data, setData }) {
     <>
       {token !== null && (
         <>
-          <h1 className="hello">Hello, {decodedToken?.name}!</h1>
+          <div className="heading">
+            <h1 className="hello">Hello, {decodedToken?.name}!</h1>
+          </div>
         </>
       )}
       <div className="searchbar_container">
