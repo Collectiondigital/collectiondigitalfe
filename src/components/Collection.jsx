@@ -60,7 +60,7 @@ const style = {
 
 const successfulNotification = () =>
   toast.success("Item saved successfully!", {
-    position: "bottom-center",
+    position: "top-right",
     autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: true,
@@ -72,7 +72,7 @@ const successfulNotification = () =>
 
 const errorNotification = (error) =>
   toast.error(error, {
-    position: "bottom-center",
+    position: "top-right",
     autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: true,
