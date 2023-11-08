@@ -166,9 +166,10 @@ export default function Item() {
 
         if (!itemResponse.ok) {
           errorNotification(data.error);
+          setIsLoading(false);
           return;
         }
-
+        setIsLoading(false);
         successfulNotification();
         resetFields();
         setFlag(!flag);
@@ -259,57 +260,55 @@ export default function Item() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <LoadingOverlay active={isLoading} spinner text="Uploading...">
-            <form onSubmit={handleSubmit}>
-              <label>
-                <h3>Title/Type of object:</h3>
-                <input
-                  value={object_type}
-                  onChange={(e) => setObject_type(e.target.value)}
+          <form onSubmit={handleSubmit}>
+            <label>
+              <h3>Title/Type of object:</h3>
+              <input
+                value={object_type}
+                onChange={(e) => setObject_type(e.target.value)}
+              />
+            </label>
+            <label>
+              <h3>Artist:</h3>
+              <input
+                value={artist}
+                onChange={(e) => setArtist(e.target.value)}
+              />
+            </label>
+            <label>
+              <h3>Origin:</h3>
+              <input
+                value={origin}
+                onChange={(e) => setOrigin(e.target.value)}
+              />
+            </label>
+            <label>
+              <h3>Item's creation date:</h3>
+              <input
+                value={itemDate}
+                onChange={(e) => setItemDate(e.target.value)}
+              />
+            </label>
+            <label>
+              <h3>Select picture:</h3>
+              <input
+                type="file"
+                accept="image/*"
+                name="item_pic"
+                onChange={handleImageChange}
+              />
+              {item_pic && (
+                <img
+                  src={item_pic.preview}
+                  alt="selected image"
+                  style={{ maxWidth: "100%", maxHeight: "100px" }}
                 />
-              </label>
-              <label>
-                <h3>Artist:</h3>
-                <input
-                  value={artist}
-                  onChange={(e) => setArtist(e.target.value)}
-                />
-              </label>
-              <label>
-                <h3>Origin:</h3>
-                <input
-                  value={origin}
-                  onChange={(e) => setOrigin(e.target.value)}
-                />
-              </label>
-              <label>
-                <h3>Item's creation date:</h3>
-                <input
-                  value={itemDate}
-                  onChange={(e) => setItemDate(e.target.value)}
-                />
-              </label>
-              <label>
-                <h3>Select picture:</h3>
-                <input
-                  type="file"
-                  accept="image/*"
-                  name="item_pic"
-                  onChange={handleImageChange}
-                />
-                {item_pic && (
-                  <img
-                    src={item_pic.preview}
-                    alt="selected image"
-                    style={{ maxWidth: "100%", maxHeight: "100px" }}
-                  />
-                )}
-              </label>
-              <button className="save" type="submit">
-                Save item
-              </button>
-            </form>
-          </LoadingOverlay>
+              )}
+            </label>
+            <button className="save" type="submit">
+              {isLoading ? "submitting..." : "Save Item"}
+            </button>
+          </form>
         </Box>
       </Modal>
       <ToastContainer

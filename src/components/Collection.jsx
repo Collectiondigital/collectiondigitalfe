@@ -154,11 +154,12 @@ export default function Collection() {
 
         if (!collectionResponse.ok) {
           errorNotification(collectionData.error);
+          setIsLoading(false);
           return;
         }
 
         /////////////////////// END OF STEP 2 ////////////////////////
-
+        setIsLoading(false);
         setFlag(!flag);
         successfulNotification();
         resetFields();
@@ -207,7 +208,7 @@ export default function Collection() {
     <>
       <div className="collection_header">
         <div className="heading">
-        <div className="greeting_container">
+          <div className="greeting_container">
             {token !== null && (
               <>
                 <h1 className="hello">Hello, {decodedToken?.name}!</h1>
