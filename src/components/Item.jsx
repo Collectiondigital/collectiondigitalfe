@@ -173,7 +173,7 @@ export default function Item() {
         successfulNotification();
         resetFields();
         setFlag(!flag);
-
+        setIsLoading(false);
         setTimeout(() => {
           handleClose();
         }, 500);

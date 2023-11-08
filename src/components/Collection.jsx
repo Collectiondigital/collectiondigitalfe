@@ -208,13 +208,14 @@ export default function Collection() {
     <>
       <div className="collection_header">
         <div className="heading">
+
           <div className="greeting_container">
+
             {token !== null && (
               <>
                 <h1 className="hello">Hello, {decodedToken?.name}!</h1>
               </>
             )}
-          </div>
           <h1>Welcome to your collections</h1>
           <CardsContainer>
             {collections ? (
