@@ -10,6 +10,8 @@ import styled from "styled-components";
 import LoadingOverlay from "react-loading-overlay";
 // Documentation for this library: https://styled-components.com/docs/basics#motivation
 
+// Collection page 2
+
 const CardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -217,7 +219,7 @@ export default function Item() {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="collection_container">
       <span onClick={() => navigate(-1)}>
         <img className="arrow-image" src="/arrow-back.png" alt="back" />
       </span>

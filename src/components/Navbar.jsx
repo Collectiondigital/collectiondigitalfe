@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 import { HashLink } from "react-router-hash-link";
@@ -8,10 +8,15 @@ import "./CSS/Dropdown.css";
 
 export default function Navbar() {
   const { logout, token } = useContext(AuthContext);
+  const [menuVisible, setMenuVisible] = useState(false);
 
   const handleClick = () => {
     localStorage.removeItem("token");
     logout();
+  };
+
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
   };
 
   return (
@@ -23,7 +28,15 @@ export default function Navbar() {
           </NavLink>
         </div>
         <div className="nav_items_container">
-          <ul>
+          {/* Hamburger Menu Icon */}
+          <div className="hamburger-menu" onClick={toggleMenu}>
+            <div className={`bar ${menuVisible ? "change" : ""}`} />
+            <div className={`bar ${menuVisible ? "change" : ""}`} />
+            <div className={`bar ${menuVisible ? "change" : ""}`} />
+          </div>
+
+          {/* Navigation Links */}
+          <ul className={`nav-list ${menuVisible ? "show" : ""}`}>
             <li>
               <div className="nav-link">
                 <NavLink to="/about">About</NavLink>

@@ -4,8 +4,6 @@
 }
 
 .main_image {
-  width: 500px;
-  height: 600px;
   display: block;
   margin: auto;
 }
@@ -18,7 +16,7 @@
 }
 
 .object_info_container {
-  width: 500px;
+  width: auto;
   background-color: #3c3c3c;
 }
 
@@ -39,8 +37,7 @@ li {
 
 .actions_container {
   background-color: #3c3c3c;
-  width: 49%;
-  margin-left: 10px;
+  width: 45%;
 }
 
 .action {
@@ -65,4 +62,26 @@ hr {
 .social_media_icons {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media (max-width: 600px) {
+  .collection_container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .itempage_container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .main_image {
+    width: 100%;
+  }
+
+  .arrow-image  {
+    width: 36px;
+  }
 }

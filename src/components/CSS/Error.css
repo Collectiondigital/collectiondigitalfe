@@ -1,0 +1,7 @@
+@media (max-width: 600px) {
+    .errorpage_container {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 20px;
+    }
+  }
