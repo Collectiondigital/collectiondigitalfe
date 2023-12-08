@@ -55,82 +55,84 @@ export default function Search({ data, setData }) {
 
   return (
     <>
-      {token !== null && (
-        <>
-          <div className="heading">
-            <h1 className="hello">Hello, {decodedToken?.name}!</h1>
-          </div>
-        </>
-      )}
-      <div className="searchbar_container">
-        <label
-          style={{
-            display: "flex",
-            margin: "0px",
-            padding: "0px",
-          }}
-        >
-          <button
+      <div className="search_container">
+        {token !== null && (
+          <>
+            <div className="heading">
+              <h1 className="hello">Hello, {decodedToken?.name}!</h1>
+            </div>
+          </>
+        )}
+        <div className="searchbar_container">
+          <label
+            style={{
+              display: "flex",
+              margin: "0px",
+              padding: "0px",
+            }}
+          >
+            <button
+              style={{
+                height: "100%",
+                width: "100%",
+                padding: "15px",
+                borderRadius: "0",
+                border: "none",
+              }}
+            >
+              <FaSearch />
+            </button>
+          </label>
+          <input
             style={{
               height: "100%",
               width: "100%",
-              padding: "15px",
+              margin: "0",
+              paddingLeft: "15px",
               borderRadius: "0",
-              border: "none",
+              outline: "none",
             }}
-          >
-            <FaSearch />
-          </button>
-        </label>
-        <input
-          style={{
-            height: "100%",
-            width: "100%",
-            margin: "0",
-            paddingLeft: "15px",
-            borderRadius: "0",
-            outline: "none",
-          }}
-          className="searchbar"
-          placeholder="Type here to search ..."
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-      </div>
-
-      <div className="search_results_container">
-        <h1>{`Most Popular : ${data.length} Items found`}</h1>
-      </div>
-
-      <div className="card_container">
-        {itemsToDisplay.map((record) => (
-          <CardComponent
-            key={record.systemNumber}
-            record={record}
-            favorites={favorites}
-            setFavorites={setFavorites}
+            className="searchbar"
+            placeholder="Type here to search ..."
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           />
-        ))}
-      </div>
-      {data.length === 0 && (
-        <h3 style={{ color: "white" }}>No results found for "{query}".</h3>
-      )}
-      <div className="pagination">
-        <button
-          className="pagi-button"
-          onClick={goToPrevPage}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
-        <button
-          className="pagi-button"
-          onClick={goToNextPage}
-          disabled={itemsToDisplay.length < itemsPerPage}
-        >
-          Next
-        </button>
+        </div>
+
+        <div className="search_results_container">
+          <h1>{`Most Popular : ${data.length} Items found`}</h1>
+        </div>
+
+        <div className="card_container">
+          {itemsToDisplay.map((record) => (
+            <CardComponent
+              key={record.systemNumber}
+              record={record}
+              favorites={favorites}
+              setFavorites={setFavorites}
+            />
+          ))}
+        </div>
+        {data.length === 0 && (
+          <h3 style={{ color: "white" }}>No results found for "{query}".</h3>
+        )}
+        <div className="pagination">
+          <button
+            className="pagi-button"
+            onClick={goToPrevPage}
+            disabled={currentPage === 1}
+          >
+            Previous
+          </button>
+          <button
+            className="pagi-button"
+            onClick={goToNextPage}
+            disabled={itemsToDisplay.length < itemsPerPage}
+          >
+            Next
+          </button>
+        </div>
       </div>
     </>
   );

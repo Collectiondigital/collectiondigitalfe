@@ -82,3 +82,15 @@
   background-color: #e7195a;
   color: white;
 }
+
+@media (max-width: 600px) {
+  .collection_header {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card_container {
+    justify-content: center;
+  }
+}

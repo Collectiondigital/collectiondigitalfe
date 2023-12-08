@@ -29,6 +29,7 @@ export default function Contact() {
 
   return (
     <>
+    <div className="contact_page_container">
       <h1 className="contact">Contact Us</h1>
       <div className="contact_container">
         <Form ref={form} onSubmit={sendEmail}>
@@ -57,6 +58,7 @@ export default function Contact() {
             Send
           </Button>
         </Form>
+      </div>
       </div>
     </>
   );
