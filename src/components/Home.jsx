@@ -5,7 +5,6 @@ export default function Home() {
     <>
       <div className="home_title_section"
         style={{
-          backgroundColor: "blue",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
