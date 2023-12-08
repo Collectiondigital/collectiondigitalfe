@@ -10,7 +10,7 @@
 
 .about_card {
   width: 100%;
-  height: 450px;
+  height: auto;
   margin-bottom: 20px;
   display: flex;
 }
@@ -31,7 +31,7 @@
 .project_container {
   background-color: #3c3c3c;
   width: 100%;
-  height: 400px;
+  height: auto;
   margin-bottom: 20px;
   padding: 20px;
   line-height: 26px;
@@ -42,3 +42,21 @@
   color: #fff;
 }
 
+@media (max-width: 600px) {
+  .about_container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+  .about_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about_text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
