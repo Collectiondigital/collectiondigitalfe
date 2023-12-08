@@ -42,6 +42,10 @@ export default function About() {
         </div>
 
         <div className="about_card">
+          <div className="about_image">
+            <img src="./Kevin.jpeg" alt="image Kevin" />
+          </div>
+
           <div className="about_text">
             <h2>Kevin</h2>
             <p>
@@ -69,10 +73,6 @@ export default function About() {
                 </a>
               </div>
             </div>
-          </div>
-
-          <div className="about_image">
-            <img src="./Kevin.jpeg" alt="image Kevin" />
           </div>
         </div>
 
