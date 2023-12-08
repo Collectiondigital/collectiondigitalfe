@@ -3,8 +3,9 @@ import "./CSS/Home.css";
 export default function Home() {
   return (
     <>
-      <div
+      <div className="home_title_section"
         style={{
+          backgroundColor: "blue",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
