@@ -17,9 +17,9 @@ export default function Home() {
         <h3>Share your passion for collecting with others</h3>
       </div>
 
-      <h2 style={{ marginTop: "2%", marginBottom: "2%", color: "white" }}>
-        What we offer
-      </h2>
+      <h2 className="homepage_card_section_header" style={{ marginTop: "2%", marginBottom: "2%", color: "white" }}>
+          What we offer
+        </h2>
 
       <div className="homepage_container">
         <div className="homepage_card">
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </div>
 
-      <h2 style={{ marginTop: "2%", marginBottom: "2%", color: "white" }}>
+      <h2 className="homepage_card_section_header" style={{ marginTop: "2%", marginBottom: "2%", color: "white" }}>
         New Items
       </h2>
 
@@ -105,7 +105,7 @@ export default function Home() {
             <h3>Costume Books</h3>
             <p>Collector: jenivere</p>
             <p>Date: October 2021</p>
-            
+
           </div>
         </div>
       </div>

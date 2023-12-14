@@ -7,9 +7,10 @@ h1 {
   justify-content: space-around;
   padding-bottom: 20px;
 }
+
 .homepage_card {
   background-color: #3c3c3c;
-  width: 25%;
+  width: auto;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -77,3 +78,29 @@ h1 {
   color: #fff;
 }
 
+/* Styles for smaller screens (less than 600px) */
+@media screen and (max-width: 600px) {
+  .home_title_section {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .homepage_card_section_header {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .homepage_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new_collections_card_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
