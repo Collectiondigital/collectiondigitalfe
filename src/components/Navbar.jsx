@@ -19,6 +19,11 @@ export default function Navbar() {
     setMenuVisible(!menuVisible);
   };
 
+  const handleMenuItemClick = () => {
+    // Close the menu when a menu item is clicked
+    setMenuVisible(false);
+  };
+
   return (
     <>
       <div className="navbar_container">
@@ -37,7 +42,7 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <ul className={`nav-list ${menuVisible ? "show" : ""}`}>
-            <li>
+          <li onClick={handleMenuItemClick}>
               <div className="nav-link">
                 <NavLink to="/about">About</NavLink>
                 <div className="dropdown-menu">
@@ -49,29 +54,29 @@ export default function Navbar() {
                 </div>
               </div>
             </li>
-            <li>
+            <li onClick={handleMenuItemClick}>
               <div className="nav-link">
                 <NavLink to="/pricing">Pricing</NavLink>
               </div>
             </li>
-            <li>
+            <li onClick={handleMenuItemClick}>
               <NavLink to="/contact">Contact</NavLink>
             </li>
-            <li>
+            <li onClick={handleMenuItemClick}>
               {token !== null && (
                 <>
                   <NavLink to="/search">Search</NavLink>
                 </>
               )}
             </li>
-            <li>
+            <li onClick={handleMenuItemClick}>
               {token !== null && (
                 <>
                   <NavLink to="/collection">Collection</NavLink>
                 </>
               )}
             </li>
-            <li className="logout">
+            <li onClick={handleMenuItemClick} className="logout">
               {token !== null && (
                 <>
                   <NavLink to="/" onClick={handleClick}>
