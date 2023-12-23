@@ -110,23 +110,4 @@ h1 {
   }
 }
 
-/* tablet */
-@media (max-width: 1023px) {
-  .homepage_card_section_header {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 20px;
-  }
 
-  .homepage_container {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 20px;
-  }
-
-  .new_collections_card_container {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 20px;
-  }
-}
