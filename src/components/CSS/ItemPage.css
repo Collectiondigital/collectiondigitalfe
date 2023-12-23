@@ -8,7 +8,7 @@
   margin: auto;
 }
 
-.arrow-image  {
+.arrow-image {
   width: 36px;
 }
 
@@ -84,10 +84,6 @@ hr {
 
   .main_image {
     width: 100%;
-  }
-
-  .arrow-image  {
-    width: 36px;
   }
 }
 
