@@ -4,7 +4,7 @@ import { AuthContext } from "./context/authContext";
 import "./App.css";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import ItemPage from "./components/ItemPage";
+import SearchResults from "./components/SearchResults";
 import Home from "./components/Home";
 import Search from "./components/Search";
 import Navbar from "./components/Navbar";
@@ -14,7 +14,7 @@ import About from "./components/About";
 import Collection from "./components/Collection";
 import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
-import Item from "./components/Item";
+import CollectionView from "./components/CollectionView";
 import CollItemPage from "./components/CollItemPage";
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
 
         <Route
           path="/collection/:id"
-          element={token ? <Item /> : <Navigate to="/" />}
+          element={token ? <CollectionView /> : <Navigate to="/" />}
         />
         <Route
           path="/item/:id"
@@ -69,7 +69,7 @@ function App() {
           <Route
             path="/itempage/:systemNumber"
             element={
-              token ? <ItemPage data={data} /> : <Navigate to="/search" />
+              token ? <SearchResults data={data} /> : <Navigate to="/search" />
             }
           />
         )}
