@@ -1,8 +1,8 @@
-// V&A Search Results 
-import "./CSS/SearchResults.css";
+// V&A Search Results item page
+import "./CSS/SearchResultsItem.css";
 import { useParams, NavLink } from "react-router-dom";
 
-export default function SearchResults({ data }) {
+export default function SearchResultsItem({ data }) {
   const { systemNumber } = useParams();
   console.log(systemNumber, data);
 
