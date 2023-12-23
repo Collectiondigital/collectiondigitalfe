@@ -27,6 +27,7 @@ body {
   max-width: 960px;
   margin: auto;
   background-color: #242424;
+  font-family: var(--ff-primary);
 }
 
 /* Colors 
