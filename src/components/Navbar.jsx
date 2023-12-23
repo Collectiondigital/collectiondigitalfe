@@ -42,7 +42,7 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <ul className={`nav-list ${menuVisible ? "show" : ""}`}>
-          <li onClick={handleMenuItemClick}>
+            <li onClick={handleMenuItemClick}>
               <div className="nav-link">
                 <NavLink to="/about">About</NavLink>
                 <div className="dropdown-menu">
@@ -85,15 +85,21 @@ export default function Navbar() {
                 </>
               )}
               {token === null && (
-                <>
-                  <NavLink to="/user/login" style={{ margin: "auto" }}>
-                    Login
-                  </NavLink>
-                  <NavLink to="/user/signup" style={{ margin: "0" }}>
-                    Signup
-                  </NavLink>
-                </>
+                <div className="login_container">
+                  <div className="login">
+                    <NavLink to="/user/login">
+                      Login
+                    </NavLink>
+                  </div>
+                  <div className="signup">
+                    <NavLink to="/user/signup">
+                      Signup
+                    </NavLink>
+                  </div>
+                </div>
               )}
+
+
             </li>
           </ul>
         </div>

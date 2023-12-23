@@ -64,7 +64,7 @@ hr {
   justify-content: space-evenly;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .collection_container {
     padding-left: 20px;
     padding-right: 20px;
