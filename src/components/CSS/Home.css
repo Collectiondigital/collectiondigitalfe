@@ -79,7 +79,7 @@ h1 {
 }
 
 /* Styles for smaller screens (less than 600px) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .home_title_section {
     padding-left: 20px;
     padding-right: 20px;

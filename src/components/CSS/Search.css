@@ -58,7 +58,7 @@
   color: #03c8c8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .search_container {
     padding-left: 20px;
     padding-right: 20px;
