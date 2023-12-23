@@ -1,13 +1,10 @@
 .contact_container {
-  width: 50%;
+  width: 60%;
   margin: auto;
+  color: white;
 }
 .contact_container h1 {
   color: #03c8c8;
-}
-
-.contact_container {
-  color: white;
 }
 
 .message_field {
@@ -16,6 +13,7 @@
   padding: 10px;
   border-radius: 5px;
   outline: none;
+  font-family: Arial;
 }
 
 .send_button {
@@ -40,7 +38,8 @@
 
 /* mobile */
 @media (max-width: 600px) {
-  .contact_page_container{
+  .contact_container{
+    width: 80%;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -48,7 +47,7 @@
 
 /* tablet */
 @media (max-width: 1023px) {
-  .contact_page_container{
+  .contact_container{
     padding-left: 20px;
     padding-right: 20px;
   }
