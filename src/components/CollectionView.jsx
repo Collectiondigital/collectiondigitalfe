@@ -86,7 +86,7 @@ const errorNotification = (error) =>
     theme: "dark",
   });
 
-export default function Item() {
+export default function CollectionView() {
   const [object_type, setObject_type] = useState("");
   const [artist, setArtist] = useState("");
   const [origin, setOrigin] = useState("");
