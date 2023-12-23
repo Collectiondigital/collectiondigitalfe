@@ -34,7 +34,7 @@ export default function Contact() {
       <div className="contact_container">
         <Form ref={form} onSubmit={sendEmail}>
           <Form.Group className="mb-2" controlId="inlineFormInput">
-            <Form.Control type="text" placeholder="Name" name="user_name" />
+            <Form.Control type="text" placeholder="Name" name="user_name"/>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -49,7 +49,7 @@ export default function Contact() {
             <Form.Control
               className="message_field"
               as="textarea"
-              placeholder="Leave a comment here"
+              placeholder="Message"
               name="user_subject"
             />
           </FloatingLabel>
