@@ -44,7 +44,7 @@ export default function CollItemPage() {
             src={foundItem.cloudinaryUrl}
             alt="image album cover" />
         </div>
-        <div className="card_container">
+        <div className="item_card_container">
           <div className="card">
             <ul className="card_text">
               <li><h3 className="item_name"> Title/Object Type :</h3>{foundItem.object_type}</li>
