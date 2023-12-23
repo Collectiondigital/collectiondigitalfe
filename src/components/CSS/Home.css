@@ -4,8 +4,7 @@ h1 {
 }
 .homepage_container {
   display: flex;
-  justify-content: space-around;
-  padding-bottom: 20px;
+  justify-content: space-evenly;
 }
 
 .homepage_card {
@@ -113,21 +112,23 @@ h1 {
 
 /* tablet */
 @media (max-width: 1023px) {
-  .home_title_section {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 20px;
-  }
-
   .homepage_card_section_header {
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 20px;
   }
 
-  .collection_container{
+  .homepage_container {
+    display: flex;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .new_collections_card_container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
   }
 }
 
