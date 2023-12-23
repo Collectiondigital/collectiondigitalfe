@@ -21,7 +21,7 @@ export default function Home() {
           What we offer
         </h2>
 
-      <div className="homepage_container">
+      <div className="homepage_card_container">
         <div className="homepage_card">
           <div>
             <h2>Document</h2>
@@ -62,7 +62,7 @@ export default function Home() {
         New Items
       </h2>
 
-      <div className="new_collections_card_container">
+      <div className="homepage_card_container">
         <div className="new_collections_card">
           <div>
             <img
