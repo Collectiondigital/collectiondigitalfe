@@ -8,6 +8,10 @@
   margin: auto;
 }
 
+.arrow-image  {
+  width: 36px;
+}
+
 .item_info_container {
   width: 100%;
   margin-bottom: 20px;
@@ -89,7 +93,7 @@ hr {
 
 /* tablet */
 @media (max-width: 1023px) {
-  .itempage_container {
+  .collection_container {
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 20px;
