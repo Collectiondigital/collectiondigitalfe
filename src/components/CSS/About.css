@@ -42,7 +42,8 @@
   color: #fff;
 }
 
-@media (max-width: 768px) {
+/* mobile */
+@media (max-width: 600px) {
   .about_container {
     padding-left: 20px;
     padding-right: 20px;
@@ -59,5 +60,14 @@
     width: auto;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+}
+
+/* tablet */
+@media (max-width: 1023px) {
+  .about_container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
   }
 }

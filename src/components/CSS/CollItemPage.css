@@ -84,6 +84,7 @@ hr {
   color: black;
 }
 
+/* mobile */
 @media (max-width: 600px) {
   .collitempage_container {
     padding-left: 20px;
@@ -105,5 +106,14 @@ hr {
   .actions_container {
     width: auto;
   }
-
 }
+
+/* tablet */
+@media (max-width: 1023px) {
+  .collitempage_container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
