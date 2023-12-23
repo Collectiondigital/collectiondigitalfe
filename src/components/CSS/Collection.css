@@ -13,6 +13,10 @@
   text-align: end;
 }
 
+.arrow-image  {
+  width: 36px;
+}
+
 .card_container {
   margin: 20px;
 } 
