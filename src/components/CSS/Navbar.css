@@ -121,11 +121,3 @@ li {
   }
 }
 
-/* tablet */
-@media (max-width: 1023px) {
-  .nav_items_container ul {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-}
