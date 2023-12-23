@@ -14,6 +14,7 @@
   src: url("./assets/fonts/Montserrat-Regular.woff2") format("woff2"),
     url("./assets/fonts/Montserrat-Regular.woff") format("woff");
   font-weight: var(--fw-regular);
+  font-style: var(--fw-regular);
 }
 
 @font-face {
@@ -21,6 +22,7 @@
   src: url("./assets/fonts/Montserrat-SemiBold.woff2") format("woff2"),
     url("./assets/fonts/Montserrat-SemiBold.woff") format("woff");
   font-weight: var(--fw-semibold);
+  font-style: var(--fw-semibold);
 }
 
 body {
