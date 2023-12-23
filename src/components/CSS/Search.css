@@ -13,7 +13,6 @@
 }
 
 .card_container {
-  background-color: blue;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
