@@ -3,6 +3,7 @@ h1 {
   margin-top: 10px;
 }
 .homepage_container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -43,6 +44,7 @@ h1 {
 }
 
 .new_collections_card_container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -110,4 +112,8 @@ h1 {
   }
 }
 
-
+@media (max-width: 1023px) {
+  .homepage_card_section_header {
+    padding-left: 20px;
+  }
+}
