@@ -27,7 +27,7 @@ li {
 }
 
 .nav_a {
-  color: #fff;
+  color: #ffffff;
   font-size: 16px;
 }
 
@@ -35,22 +35,20 @@ li {
   color: #03c8c8;
 }
 
-.login_signup_container {
+.login_container {
   display: flex;
 }
 
 .login {
-  color: #fff;
-  font-size: 16px;
+  margin-right: 50px;
+}
+
+.signup {
+  margin: 0;
 }
 
 .login:hover {
   color: #03c8c8;
-}
-
-.signup {
-  color: #fff;
-  font-size: 16px;
 }
 
 .signup:hover {
@@ -91,7 +89,7 @@ li {
 }
 
 /* Responsive Styles */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .hamburger-menu {
     display: block;
     float: right;
@@ -116,5 +114,14 @@ li {
     text-align: center;
     border-bottom: 1px solid #555;
   }
-}
 
+  .login_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logout {
+    width: 30%;
+  }
+}
