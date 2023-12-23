@@ -129,28 +129,8 @@ a:hover {
   margin-left: 1em;
 }
 
-@media screen and (max-width: 600px) {
-  .sb__footer-heading h1 {
-    font-size: 34px;
-    line-height: 42px;
-  }
-  .sb__footer-links div {
-    margin: 1rem 0;
-  }
-  .sb__footer-btn p {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .sb__footer-below {
-    justify-content: left;
-  }
-
-  .sb__footer-below-links p {
-    margin-top: 1rem;
-  }
-}
-
-@media screen and (max-width: 400px) {
+/* mobile */
+@media (max-width: 600px) {
   .sb__footer-heading h1 {
     font-size: 27px;
     line-height: 38px;
@@ -179,3 +159,27 @@ a:hover {
 .social1 img + img {
   border-radius: 50%;
 }
+
+/* tablet */
+@media (max-width: 1023px) {
+  .sb__footer-heading h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  .sb__footer-links div {
+    margin: 1rem 0;
+  }
+  .sb__footer-btn p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .sb__footer-below {
+    justify-content: left;
+  }
+
+  .sb__footer-below-links p {
+    margin-top: 1rem;
+  }
+}
+
+

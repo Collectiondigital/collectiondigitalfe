@@ -13,16 +13,14 @@
   font-family: var(--ff-primary);
   src: url("./assets/fonts/Montserrat-Regular.woff2") format("woff2"),
     url("./assets/fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: var(--fw-regular);
 }
 
 @font-face {
   font-family: var(--ff-primary);
   src: url("./assets/fonts/Montserrat-SemiBold.woff2") format("woff2"),
     url("./assets/fonts/Montserrat-SemiBold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
+  font-weight: var(--fw-semibold);
 }
 
 body {

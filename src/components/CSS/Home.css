@@ -78,8 +78,8 @@ h1 {
   color: #fff;
 }
 
-/* Styles for smaller screens (less than 600px) */
-@media screen and (max-width: 600px) {
+/* mobile */
+@media (max-width: 600px) {
   .home_title_section {
     padding-left: 20px;
     padding-right: 20px;
@@ -110,3 +110,24 @@ h1 {
     margin-bottom: 20px;
   }
 }
+
+/* tablet */
+@media (max-width: 1023px) {
+  .home_title_section {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .homepage_card_section_header {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .collection_container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+

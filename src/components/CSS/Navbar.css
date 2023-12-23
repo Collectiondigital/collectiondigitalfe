@@ -26,11 +26,6 @@ li {
   list-style-type: none;
 }
 
-.nav_a {
-  color: #ffffff;
-  font-size: 16px;
-}
-
 .nav_a:hover {
   color: #03c8c8;
 }
@@ -88,7 +83,7 @@ li {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Responsive Styles */
+/* mobile */
 @media (max-width: 600px) {
   .hamburger-menu {
     display: block;
@@ -124,4 +119,18 @@ li {
   .logout {
     width: 30%;
   }
+}
+
+/* tablet */
+@media (max-width: 1023px) {
+  .nav_items_container ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logout {
+    background-color: blueviolet;
+  }
+
 }

@@ -39,6 +39,7 @@
   color: #fff;
 }
 
+/* mobile */
 @media (max-width: 600px) {
   .pricing_container{
     padding-left: 20px;
@@ -60,3 +61,22 @@
     margin-bottom: 20px;
   }
 }
+
+/* tablet */
+@media (max-width: 1023px) {
+  .pricing_container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .pricing_card_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pricing_card {
+    margin-bottom: 20px;
+  }
+}
+

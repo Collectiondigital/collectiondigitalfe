@@ -94,3 +94,11 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 1023px) {
+  .collection_header {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+}
