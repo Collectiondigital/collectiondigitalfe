@@ -1,33 +1,31 @@
 /* Custom properties, method for declaring re-usable values and can be updated */
 :root {
   /* font-family */
-  --ff-primary: "Montserrat", sans-serif;
-
-  /* font-weight */
-  --fw-regular: 400;
-  --fw-semibold: 600;
+  --primary-font: "Montserrat", sans-serif;
 }
 
 /* Font-face rules outside of :root */
 @font-face {
-  font-family: var(--ff-primary);
+  font-family: var(--primary-font);
   src: url("./assets/fonts/Montserrat-Regular.woff2") format("woff2"),
     url("./assets/fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: var(--fw-regular);
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: var(--ff-primary);
+  font-family: var(--primary-font);
   src: url("./assets/fonts/Montserrat-SemiBold.woff2") format("woff2"),
     url("./assets/fonts/Montserrat-SemiBold.woff") format("woff");
-  font-weight: var(--fw-semibold);
+    font-weight: 600;
+    font-style: bold;
 }
 
 body {
   max-width: 960px;
   margin: auto;
   background-color: #242424;
-  font-family: var(--ff-primary);
+  font-family: var(--primary-font);
 }
 
 /* Colors 
