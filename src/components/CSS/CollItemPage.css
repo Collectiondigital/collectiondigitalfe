@@ -84,7 +84,7 @@ hr {
   color: black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .collitempage_container {
     padding-left: 20px;
     padding-right: 20px;
