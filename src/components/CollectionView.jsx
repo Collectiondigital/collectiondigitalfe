@@ -10,7 +10,7 @@ import styled from "styled-components";
 import LoadingOverlay from "react-loading-overlay";
 // Documentation for this library: https://styled-components.com/docs/basics#motivation
 
-// Collection page 2
+// Collection page 2, no CSS file
 
 const CardsContainer = styled.div`
   display: flex;
